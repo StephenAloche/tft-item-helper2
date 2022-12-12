@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of, Subject, takeUntil } from 'rxjs';
+import { Observable, of, Subject, takeUntil } from 'rxjs';
 import { currentSetNum } from 'src/app/app.component';
 import { cleanItemVariable } from '../helpers/cleanSource.helper';
 import { Item } from '../models/item.model';
@@ -13,6 +13,17 @@ export class ItemService {
   destroy$ = new Subject();
 
   private items: Item[] = [];
+
+  
+  public getAllItems = new Observable((subscriber)=>{
+    this.getListItem();
+  });
+
+  public jsonQuery = new Observable((subscriber)=>{
+    let jsonURL = `assets/dataSets/Set${currentSetNum}/itemData_Set${currentSetNum}.json`;
+    this.http.get(jsonURL)
+  });
+
   constructor(
     private http: HttpClient
   ) { }
@@ -47,13 +58,16 @@ export class ItemService {
       );
     }
   }
+  
 
   getAll(): Item[] {
+
     if (this.items.length < 1) {
-      of(this.getListItem());
+      this.getListItem()
     }
     return this.items;
   }
+
 
   getOtherItem(itemFull: Item, itemGot: Item): Item | undefined {
     var item;
