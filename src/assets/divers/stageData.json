@@ -1,0 +1,412 @@
+[
+    {
+        "stage" : 1,
+        "phase" : 1,
+        "prepDuration" :1,
+        "duration" : 10,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    }, 
+    {
+        "stage" : 1,
+        "phase" : 2,
+        "prepDuration" :5,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 1,
+        "phase" : 3,
+        "prepDuration" :15,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 2,
+        "phase" : 1,
+        "prepDuration" :45,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : true,
+        "isMonster" :false
+    },
+    {
+        "stage" : 2,
+        "phase" : 2,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 2,
+        "phase" : 3,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 2,
+        "phase" : 4,
+        "prepDuration" :0,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 2,
+        "phase" : 5,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 2,
+        "phase" : 6,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 2,
+        "phase" : 7,
+        "prepDuration" :20,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :true
+    },
+    
+    {
+        "stage" : 3,
+        "phase" : 1,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 3,
+        "phase" : 2,
+        "prepDuration" :50,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : true,
+        "isMonster" :false
+    },
+    {
+        "stage" : 3,
+        "phase" : 3,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 3,
+        "phase" : 4,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 3,
+        "phase" : 5,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 3,
+        "phase" : 6,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 3,
+        "phase" : 7,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :true
+    },
+    
+    {
+        "stage" : 4,
+        "phase" : 1,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 4,
+        "phase" : 2,
+        "prepDuration" :50,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : true,
+        "isMonster" :false
+    },
+    {
+        "stage" : 4,
+        "phase" : 3,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 4,
+        "phase" : 4,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 4,
+        "phase" : 5,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 4,
+        "phase" : 6,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 4,
+        "phase" : 7,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :true
+    },
+    
+    {
+        "stage" : 5,
+        "phase" : 1,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 5,
+        "phase" : 2,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 5,
+        "phase" : 3,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 5,
+        "phase" : 4,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 5,
+        "phase" : 5,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 5,
+        "phase" : 6,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 5,
+        "phase" : 7,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :true
+    },
+    
+    {
+        "stage" : 6,
+        "phase" : 1,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 6,
+        "phase" : 2,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 6,
+        "phase" : 3,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 6,
+        "phase" : 4,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 6,
+        "phase" : 5,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 6,
+        "phase" : 6,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 6,
+        "phase" : 7,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :true
+    },
+    
+    {
+        "stage" : 7,
+        "phase" : 1,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 7,
+        "phase" : 2,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 7,
+        "phase" : 3,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 7,
+        "phase" : 4,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 7,
+        "phase" : 5,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :true,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 7,
+        "phase" : 6,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :false
+    },
+    {
+        "stage" : 7,
+        "phase" : 7,
+        "prepDuration" :30,
+        "duration" : 30,
+        "isCarouselle" :false,
+        "isAugment" : false,
+        "isMonster" :true
+    }
+]

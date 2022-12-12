@@ -1,0 +1,21 @@
+Json https://raw.communitydragon.org/latest/cdragon/tft/en_us.json
+Json https://raw.communitydragon.org/latest/cdragon/tft/fr_fr.json
+
+icones durant les parties
+https://raw.communitydragon.org/latest/game/assets/ux/tft/stageicons/
+
+traits et classes
+https://raw.communitydragon.org/latest/game/assets/ux/traiticons/
+
+//a utiliser 
+https://raw.communitydragon.org/latest/game/assets/ux/tft/stageicons/draftupcoming.png
+
+https://raw.communitydragon.org/latest/game/assets/ux/tft/stageicons/galaxy_manateesdelight.png
+ou 
+https://raw.communitydragon.org/latest/game/assets/ux/tft/stageicons/galaxy_galacticarmory.png
+
+
+select braquets CTRL+SHIFT+M
+
+select bracket item
+select bracket setData

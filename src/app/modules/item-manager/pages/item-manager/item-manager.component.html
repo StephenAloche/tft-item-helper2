@@ -1,0 +1,210 @@
+<div class="container-fluid">
+    <div class="row">
+        <!--
+        <div class="col-1 flex-column">
+            <div class="row ">
+                <div class="flex-item deleteField" cdkDropList id="removeBin" (cdkDropListDropped)="dropItem($event)">
+                    <span class="fas fa-trash-alt" style="font-size: 5vw;" (click)="ClearAll()"></span>
+                </div>
+            </div>
+            <div>
+                <button (click)="showMyContainer=!showMyContainer">Show/Hide Craftable Items</button>
+                <button (click)="saveCurrent()">Save Current</button>
+                <button (click)="loadCurrent()">Load Current</button>
+                <div id="craftableItems" *ngIf="showMyContainer">
+                    <span>Items réalisable</span>
+                    <div class="items-side" cdkDropList id="myItemList" [cdkDropListData]="craftableItems"
+                        [cdkDropListConnectedTo]="LIST_IDS">
+                        <div *ngFor="let item of craftableItems">
+
+                            <ng-template #itemTooltip>
+                                <span style="color:orange">{{item.name}}</span>
+                                <div [innerHTML]="item.desc"></div>
+                                <img *ngFor="let itemr of item.recipe"
+                                    src="https://raw.communitydragon.org/latest/game/{{itemr.icon}}"
+                                    class="selectElem" />
+                            </ng-template>
+
+                            <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
+                                tooltipClass="itemTooltipStyle">
+                                <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" cdkDrag />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="myitems">
+                    <span class="my-items-ico">My Items</span>
+                    <div class="items-side" cdkDropList id="myItemList" [cdkDropListData]="myItems"
+                        [cdkDropListConnectedTo]="LIST_IDS">
+                        <div *ngFor="let item of myItems">
+                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" cdkDrag />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="draft-ico" (click)="checkItemCaroussel()">Carousel</div>
+                <div class="items-side">
+                    <div *ngFor="let item of itemsCarousel" class="flex-column">
+                        <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                            (click)="getItemCaroussel(item)" />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button (click)="getChampForItems()">Champion for item</button>
+            </div>
+            <div id="allTraits" class="allTraits">
+                <div *ngFor="let trait of allTraits" class="col flex-column d-flex"
+                    style="--trait-url : url('https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}' )">
+                    <img src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"
+                        (click)="SelectTrait(trait)" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-7">
+            <div id="mybench" class="mybench">
+                <div class="row">
+                    <span>My Bench</span>
+                </div>
+                <div class="row">
+                    <div class="myChampionList col" cdkDropList id="mychampionslist" [cdkDropListData]="myChampions"
+                        [cdkDropListConnectedTo]="['removeBin']">
+
+                        <div *ngFor="let champion of myChampions" class="row cost-{{champion.cost}}" id="championFull"
+                            cdkDrag>
+
+                            <app-champion-tile [champion]="champion" class="col-2" style="position : relative"
+                                (click)="DeleteChampion(champion)" (contextmenu)="onRightClick(champion)">
+                            </app-champion-tile>
+
+                            <div class="col" id="recommandedItemDiv">
+                                <div class="row">
+                                    <div *ngFor="let item of champion.recommandedItems" class="d-flex"
+                                        style="max-width: 20%;" id="item"
+                                        [ngStyle]="{'opacity': item.ratio<10?'0.5':''}">
+                                        <div style="width:66.66%">
+                                            <div [ngClass]="{'anim-border' : item.isGlowing}">
+
+
+                                                <ng-template #itemTooltip>
+                                                    <span style="color:orange">{{item.name}}</span>
+                                                    <div [innerHTML]="item.desc"></div>
+                                                </ng-template>
+
+                                                <span [tooltip]="$any(itemTooltip)" contentType="template"
+                                                    [showDelay]="300" tooltipClass="itemTooltipStyle">
+                                                    <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                                                        class="d-flex flex-row" />
+                                                    <span>{{item.ratio}}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div id="itemRecipe" style="width:33.33%" class="d-flex flex-column">
+                                            <div *ngFor="let itemr of item.recipe"
+                                                [ngClass]="{'anim-border' : itemr.isGlowing}">
+
+
+                                                <ng-template #itemTooltip>
+                                                    <span style="color:orange">{{item.name}}</span>
+                                                    <div [innerHTML]="item.desc"></div>
+                                                </ng-template>
+
+                                                <span [tooltip]="$any(itemTooltip)" contentType="template"
+                                                    [showDelay]="300" tooltipClass="itemTooltipStyle">
+                                                    <img
+                                                        src="https://raw.communitydragon.org/latest/game/{{itemr.icon}}" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-2 d-flex" id="equippedItemDiv">
+                                <div class="dropzone d-flex" cdkDropList id="cdk-drop-list-champion-{{champion.id}}"
+                                    [cdkDropListData]="champion.equippedItems" [cdkDropListConnectedTo]="['myItemList']"
+                                    (cdkDropListDropped)="equipItem($event,champion)">
+                                    <div *ngFor="let item of champion.equippedItems" class="col equipped-item">
+
+
+                                        <ng-template #itemTooltip>
+                                            <span style="color:orange">{{item.name}}</span>
+                                            <div [innerHTML]="item.desc"></div>
+                                        </ng-template>
+
+                                        <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
+                                            tooltipClass="itemTooltipStyle">
+                                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                                                class="equiped" [ngClass]="{'equiped-wrong' : item.isWrong}">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <mat-form-field class="selector" appearance="fill">
+                        <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto"
+                            [(ngModel)]="filterName">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayProperty"
+                            (optionSelected)="selectChampion($event.option.value)">
+                            <mat-option *ngFor="let champ of filteredChampions | async" [value]="champ">
+                                {{champ.name}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <button type="button" mat-button matSuffix mat-icon-button aria-label="Clear"
+                            (click)="resetfilter()">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                </div>
+            </div>
+        </div>-->
+
+        <div class="col">
+            Champions
+            <!-- <div class="d-flex">
+                <div>
+                    <i class="fas fa-sort-alpha-down" (click)="orderByName()"> Name</i>
+                </div>
+                <div>
+                    <i class="fas fa-sort-numeric-down" (click)="orderByCost()"> Cost</i>
+                </div>
+            </div> -->
+            <!-- <app-champion-list [champions]="champions" (childEvent)="selectChampion($event)"></app-champion-list> -->
+
+                Items
+                <div class="items-grid">
+                    <div *ngFor="let item of items" class="selectElem item-in-grid"
+                        style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[1] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[0] }};"
+                        (click)="selectItem(item)">
+                        {{item.name}}
+                        <ng-template #itemTooltip>
+                            <span style="color:orange">{{item.name}}</span>
+                            <div [innerHTML]="item.desc"></div>
+                        </ng-template>
+
+                        <!-- <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
+                            tooltipClass="itemTooltipStyle">
+                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="itemSelect" />
+                        </span> -->
+                    </div>
+
+                    <div *ngFor="let item of itemsComble" class="selectElem item-in-grid"
+                        style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[0] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[1] }};"
+                        (click)="selectItem(item)">
+                        <span>
+                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="itemSelect" />
+                        </span>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</div>

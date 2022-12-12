@@ -1,0 +1,8 @@
+<div>    
+    <div *ngFor="let champion of champions; let i = index" class="selectElem" (click)="selectChampion(champion)" 
+    [ngStyle]="{'margin-left': (i> 0 && firstLetter(champion.name) != firstLetter(champions[i-1].name) )?'12px':'0px'}">
+      <img src="https://raw.communitydragon.org/latest/game/{{champion.icon}}" class="cost-{{champion.cost}} championSelect guide-champion-item champion-border" />
+      <span class="elemText">{{ champion.name }}</span>
+    </div>
+  </div>
+  

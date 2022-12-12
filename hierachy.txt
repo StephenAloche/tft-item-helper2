@@ -1,0 +1,24 @@
+Structure du dossier pour le volume Windows
+Le num�ro de s�rie du volume est 00000034 CA8C:9BBA
+C:\APPLI\TFTItemManager\TFT-ITEM-HELPER2\SRC\APP
+|   app-routing.module.ts
+|   app.component.html
+|   app.component.scss
+|   app.component.spec.ts
+|   app.component.ts
+|   app.module.ts
+|   
++---core
+|   \---authentication
++---helpers
++---modules
+|   \---accueil
+|           accueil.module.ts
+|           
++---shared
+\---store
+    +---actions
+    +---adapters
+    +---effects
+    +---reducers
+    \---selectors
