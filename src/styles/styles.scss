@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+/*01_variables*/
+@import "./01_variables/tft-colors.scss";
+
+/*04_tags*/
+@import "./04_tags/tags.scss";
+
+
+/*06_components*/
+@import "./06_components/tooltip.scss";

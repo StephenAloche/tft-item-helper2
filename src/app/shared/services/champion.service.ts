@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
 import { currentSetNum } from 'src/app/app.component';
 import { TypeAdAp } from '../enums/TypeAdAp.enum';
 import { cleanName } from '../helpers/cleanSource.helper';
@@ -13,17 +14,15 @@ import { TraitService } from './trait.service';
 })
 export class ChampionService {
   champions :Champion[]
+  private readonly unsubscribe$ = new Subject();
   
   constructor(
     private setService : SetService,
     private itemService : ItemService,
-    private traitService: TraitService
-    
+    private traitService: TraitService    
     ) 
-    { 
-      
-    }
-    
+    {}
+
     getAll(): Champion[] {
       if(!this.champions){
         
@@ -50,10 +49,8 @@ export class ChampionService {
             champ.stats.critMultiplier = Math.round((champ.stats?.attackSpeed??0) *100)/100;
             champ.stats.critChance = Math.round((champ.stats?.attackSpeed??0) *100)/100;
             champ.stats!.dps = champ.stats!.dpsDisplay = Math.round(((champ.stats.damageDisplay * champ.stats.attackSpeed) ??0) *100)/100;
-          }
-          
-          this.LoadDataTraits(champ);
-          //champ.traitsIcon = champ.traits?.map((t: string) => `${this.TRAITURL}${this.TRAITSUFFIXE}${this.setNum}_${t.toLowerCase()}.png`);
+          }          
+          this.LoadDataTraits(champ);          
         }); 
         orderBy(champs,"name");
         this.champions = champs;

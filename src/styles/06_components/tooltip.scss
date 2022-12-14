@@ -1,0 +1,6 @@
+::ng-deep .tooltip--item {
+    max-width: unset !important;
+    width: 300px !important;
+    font-size: 15px;
+    /*verifier dans le code source les éléments modifié après compilation*/
+  }

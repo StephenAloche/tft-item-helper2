@@ -1,14 +1,13 @@
 <div class="container-fluid">
-    <div class="row">
-        <!--
+    <div class="row">        
         <div class="col-1 flex-column">
             <div class="row ">
-                <div class="flex-item deleteField" cdkDropList id="removeBin" (cdkDropListDropped)="dropItem($event)">
+                <!-- <div class="flex-item deleteField" cdkDropList id="removeBin" (cdkDropListDropped)="dropItem($event)">
                     <span class="fas fa-trash-alt" style="font-size: 5vw;" (click)="ClearAll()"></span>
-                </div>
+                </div> -->
             </div>
             <div>
-                <button (click)="showMyContainer=!showMyContainer">Show/Hide Craftable Items</button>
+                <!-- <button (click)="showMyContainer=!showMyContainer">Show/Hide Craftable Items</button>
                 <button (click)="saveCurrent()">Save Current</button>
                 <button (click)="loadCurrent()">Load Current</button>
                 <div id="craftableItems" *ngIf="showMyContainer">
@@ -31,39 +30,38 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div>
                 <div id="myitems">
                     <span class="my-items-ico">My Items</span>
-                    <div class="items-side" cdkDropList id="myItemList" [cdkDropListData]="myItems"
+                    <!-- <div class="items-side" cdkDropList id="myItemList" [cdkDropListData]="myItems"
                         [cdkDropListConnectedTo]="LIST_IDS">
                         <div *ngFor="let item of myItems">
                             <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" cdkDrag />
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div>
-                <div class="draft-ico" (click)="checkItemCaroussel()">Carousel</div>
+                <!-- <div class="draft-ico" (click)="checkItemCaroussel()">Carousel</div>
                 <div class="items-side">
                     <div *ngFor="let item of itemsCarousel" class="flex-column">
                         <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
                             (click)="getItemCaroussel(item)" />
                     </div>
-                </div>
+                </div> -->
             </div>
             <div>
-                <button (click)="getChampForItems()">Champion for item</button>
+                <!-- <button (click)="getChampForItems()">Champion for item</button> -->
             </div>
             <div id="allTraits" class="allTraits">
-                <div *ngFor="let trait of allTraits" class="col flex-column d-flex"
+                <!-- <div *ngFor="let trait of allTraits" class="col flex-column d-flex"
                     style="--trait-url : url('https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}' )">
                     <img src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"
                         (click)="SelectTrait(trait)" />
-                </div>
+                </div> -->
             </div>
-
         </div>
 
         <div class="col-7">
@@ -71,7 +69,7 @@
                 <div class="row">
                     <span>My Bench</span>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="myChampionList col" cdkDropList id="mychampionslist" [cdkDropListData]="myChampions"
                         [cdkDropListConnectedTo]="['removeBin']">
 
@@ -163,44 +161,42 @@
                         </button>
                     </mat-form-field>
 
-                </div>
+                </div> -->
             </div>
-        </div>-->
+        </div>
 
         <div class="col">
             Champions
-            <!-- <div class="d-flex">
-                <div>
+            <div class="d-flex">
+                <!-- <div>
                     <i class="fas fa-sort-alpha-down" (click)="orderByName()"> Name</i>
                 </div>
                 <div>
                     <i class="fas fa-sort-numeric-down" (click)="orderByCost()"> Cost</i>
-                </div>
-            </div> -->
-            <!-- <app-champion-list [champions]="champions" (childEvent)="selectChampion($event)"></app-champion-list> -->
+                </div> -->
+            </div>
+            <app-champion-list [champions]="champions" (childEvent)="selectChampion($event)"></app-champion-list>
 
                 Items
                 <div class="items-grid">
-                    <div *ngFor="let item of items" class="selectElem item-in-grid"
+                    <div *ngFor="let item of items" class="items-grid__item" 
                         style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[1] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[0] }};"
                         (click)="selectItem(item)">
-                        {{item.name}}
                         <ng-template #itemTooltip>
                             <span style="color:orange">{{item.name}}</span>
                             <div [innerHTML]="item.desc"></div>
                         </ng-template>
 
-                        <!-- <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
-                            tooltipClass="itemTooltipStyle">
-                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="itemSelect" />
-                        </span> -->
+                        <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300" tooltipClass="tooltip--item">
+                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="items-grid__item__img" />
+                        </span> 
                     </div>
 
-                    <div *ngFor="let item of itemsComble" class="selectElem item-in-grid"
+                    <div *ngFor="let item of itemsComble" class="items-grid__item"
                         style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[0] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[1] }};"
                         (click)="selectItem(item)">
                         <span>
-                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="itemSelect" />
+                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="items-grid__item__img" />
                         </span>
                     </div>
 

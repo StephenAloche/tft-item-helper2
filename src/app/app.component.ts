@@ -15,8 +15,9 @@ export class AppComponent {
   
   ngOnInit(): void {
     this.setService.LoadSetData();
+
   }  
 }
 
-export const currentSetNum : number = 7;
+export const currentSetNum : number = 8;
 export const currentpatchNum : string = "12.17";

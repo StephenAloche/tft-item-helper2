@@ -42,8 +42,9 @@ export class ItemManagerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //this.champions = this.championService.getAll();
 
+    this.champions = this.championService.getAll();
+    
     this.itemService.getAll()?.subscribe(items => {
       this.items = items
       this.itemsComble = this.items.filter(i => i.id < 10);

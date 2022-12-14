@@ -26,13 +26,14 @@ const httpOptions = {
 })
 export class SetService {
   
-  destroy$ = new Subject();
+private readonly unsubscribe$ = new Subject();
   SETDATAURL : string = "https://raw.communitydragon.org/latest/cdragon/tft/en_us.json"
   TRAITURL : string = "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/"
   TRAITSUFFIXE : string = "trait_icon_"//exemple trait_icon_6_hero.png
   setData : SetData[];
   
   setDataFiltered : SetData;
+  setDataFiltered$ : Observable<string>;
   dataTraits: Trait[];
   dataChampions: Champion[];
   
@@ -40,35 +41,25 @@ export class SetService {
   constructor(
     private http: HttpClient
     ) { }
-    
+
     ngOnDestroy() {
-      this.destroy$.next(undefined);
-      this.destroy$.complete();
+      this.unsubscribe$.next(undefined);
+      this.unsubscribe$.complete();
     }
     
     LoadSetData() : void{
       if(!this.setDataFiltered)
       {
         this.http.get<string>(`${this.SETDATAURL}?${new Date().getTime()}`)
-        .pipe(takeUntil(this.destroy$))
+        .pipe(takeUntil(this.unsubscribe$))
         .subscribe((response : any)=> {
           this.setData = response.setData;
           
-          this.setDataFiltered = this.setData.filter(set=>set.number==currentSetNum && set.mutator.includes("Stage2"))[0];        
+          //TODO : faire les verif de demi-set (stage2) :  && set.mutator.includes("Stage2")
+          this.setDataFiltered = this.setData.filter(set=>set.number==currentSetNum)[0];        
         }
-        )
-        /*
-        var request = new XMLHttpRequest();
-        //request.open('GET', this.SETDATAURL, false);
-        request.open('GET', this.SETDATAURL+'?'+ new Date().getTime(), false);  // sans cache 
-        request.send(null);
-        const response2 = JSON.parse(request.responseText);
-        
-        this.setData = response2.setData;
-        */
-        
-        var listJsonRecoItem = [];
-        
+        )        
+        var listJsonRecoItem = [];        
       }
     }
     
@@ -99,30 +90,6 @@ export class SetService {
       }
 
       return this.dataChampions;
-      
-      /*
-      dataChampions?.forEach(champ => {
-        this.LoadDataTraits(champ)   ;
-      });
-      
-      if(dataChampions)
-      {
-        this.championService.LoadChampions(dataChampions)
-      }
-      */
-    }
-    /*
-    LoadDataTraits(champ : Champion):void{
-      champ.dataTraits = [];
-      
-      champ.traits?.forEach(trait => {
-        if (this.dataTraits) {
-          var traitSelect = this.dataTraits?.filter(t=>t.name == trait)[0]
-          traitSelect = this.traitsService.LoadTraitDesc(traitSelect);
-          champ.dataTraits?.push(traitSelect);          
-        }
-      });   
-    }
-    */
+    }    
   }
   

@@ -1,0 +1,816 @@
+[
+    {
+        "apiName": "TFT_Item_RabadonsDeathcap",
+        "desc": "Grant %i:scaleAP% @BonusAP@ bonus Ability Power.",
+        "effects": {
+            "AP": 20.0,
+            "{d49caf5d}": 50.0
+        },
+        "from": [
+            3,
+            3
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Rabadons_Deathcap.dds",
+        "id": 33,
+        "name": "Rabadon's Deathcap",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_InfinityEdge",
+        "desc": "Grant %i:scaleAD% @BonusAD*100@% bonus Attack Damage and %i:scaleCrit% @BonusCritChance@% bonus Critical Strike Chance. <br><br>Damage from an Ability can critically strike.",
+        "effects": {
+            "AD": 0.10000000149011612,
+            "BonusAD": 0.15000000596046448,
+            "CritChance": 20.0,
+            "{c34a89ec}": 15.0
+        },
+        "from": [
+            1,
+            9
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Infinity_Edge.dds",
+        "id": 19,
+        "name": "Infinity Edge",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_FrozenHeart",
+        "desc": "Grant %i:scaleMana% @BonusMana@ bonus starting Mana. <br><br>Once per combat: At @HealthThreshold@% Health, gain a @ShieldHealthPercent@% maximum Health shield that lasts up to @ShieldDuration@ seconds and %i:scaleArmor% @Stats@ Armor and %i:scaleMR% @Stats@ Magic Resist for the rest of combat.",
+        "effects": {
+            "Armor": 20.0,
+            "HealthThreshold": 40.0,
+            "Mana": 15.0,
+            "ShieldDuration": 5.0,
+            "{0034a6ef}": 25.0,
+            "{43012963}": 15.0,
+            "{6a311cec}": 35.0
+        },
+        "from": [
+            4,
+            5
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Winters_Approach.dds",
+        "id": 45,
+        "name": "Protector's Vow",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_Shroud",
+        "desc": "Grant %i:scaleHealth% @BonusHP@ bonus Health.<br>Combat start: Shoot a beam that @CostIncrease@% <TFTKeyword>Mana Reaves</TFTKeyword> enemies.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Mana Reave</tftbold>: increase maximum Mana until the next cast</tftitemrules>",
+        "effects": {
+            "Armor": 20.0,
+            "BonusHP": 250.0,
+            "CritChance": 20.0,
+            "{4516a18d}": 60.0,
+            "{a861afa0}": 35.0
+        },
+        "from": [
+            5,
+            9
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Shroud_of_Stillness.dds",
+        "id": 59,
+        "name": "Shroud of Stillness",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_Redemption",
+        "desc": "Heal allies within 1 hex for @MissingHealthHeal@% of their missing Health every @HealTickRate@ seconds. They also take @AoEDamageReduction@% less multi-target damage for @HealTickRate@ seconds (damage reduction does not stack).<br><br><tftitemrules>[Aura item]</tftitemrules>",
+        "effects": {
+            "Health": 150.0,
+            "Mana": 15.0,
+            "MaxHeal": 1000.0,
+            "{033de552}": 25.0,
+            "{5cc52ba8}": 1.0,
+            "{7b6cc2f7}": 18.0,
+            "{c9f222c0}": 5.0
+        },
+        "from": [
+            4,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Redemption.dds",
+        "id": 47,
+        "name": "Redemption",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_Zephyr",
+        "desc": "Grant %i:scaleAS% @BonusAS@% bonus Attack Speed.<br>Combat start: Summon a whirlwind on the opposite side of the arena that removes the closest enemy from combat for @BanishDuration@ seconds. <br><br><tftitemrules>[Ignores crowd control immunity.]<br>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "BonusAS": 15.0,
+            "Health": 150.0,
+            "MagicResist": 20.0,
+            "{510fdb6a}": 5.0
+        },
+        "from": [
+            6,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Zephyr.dds",
+        "id": 67,
+        "name": "Zephyr",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_ZekesHerald",
+        "desc": "Combat start: Grant %i:scaleAS% @AttackSpeed@% Attack Speed to the holder and allies within 1 hex in the same row.<br><br>\u200b\u200b<tftitemrules>[Aura item]</tftitemrules>",
+        "effects": {
+            "AD": 0.10000000149011612,
+            "AttackSpeed": 20.0,
+            "Health": 150.0,
+            "{9b1e8f37}": 1.0
+        },
+        "from": [
+            1,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Zekes_Herald.dds",
+        "id": 17,
+        "name": "Zeke's Herald",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_ThiefsGloves",
+        "desc": "Each round: Equip 2 random items.<br><br><tftitemrules>[Consumes 3 item slots.]</tftitemrules>",
+        "effects": {
+            "CritChance": 40.0
+        },
+        "from": [
+            9,
+            9
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Thieves_Gloves.dds",
+        "id": 99,
+        "name": "Thief's Gloves",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_GuinsoosRageblade",
+        "desc": "Attacks grant %i:scaleAS% @AttackSpeedPerStack@% bonus Attack Speed. This effect stacks.",
+        "effects": {
+            "AP": 10.0,
+            "AS": 10.0,
+            "AttackSpeedPerStack": 5.0
+        },
+        "from": [
+            2,
+            3
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Guinsoos_Rageblade.dds",
+        "id": 23,
+        "name": "Guinsoo's Rageblade",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_IonicSpark",
+        "desc": "@MRShred@% <TFTKeyword>Shred</TFTKeyword> enemies within @HexRange@ hexes. When enemies cast an Ability, they are also zapped for magic damage equal to @ManaRatio@% of their maximum Mana.<br><br><tftitemrules>[Direct damage item]<br><tftbold>Shred</tftbold>: reduce Magic Resist</tftitemrules>",
+        "effects": {
+            "AP": 10.0,
+            "Damage": 250.0,
+            "MagicResist": 20.0,
+            "{9b1e8f37}": 2.0,
+            "{df6f64b9}": 185.0,
+            "{fe079f34}": 50.0
+        },
+        "from": [
+            3,
+            6
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Ionic_Spark.dds",
+        "id": 36,
+        "name": "Ionic Spark",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_DragonsClaw",
+        "desc": "Grant %i:scaleMR% @BonusMR@ bonus Magic Resist. Every @HealthRegenInterval@ seconds, regenerate @PercentHealthDamage@% maximum Health.",
+        "effects": {
+            "BonusMR": 20.0,
+            "ICD": 0.5,
+            "MagicResist": 40.0,
+            "PercentHealthDamage": 5.0,
+            "{52358605}": 2.0
+        },
+        "from": [
+            6,
+            6
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Dragons_Claw.dds",
+        "id": 66,
+        "name": "Dragon's Claw",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_PowerGauntlet",
+        "desc": "Grant %i:scaleAD% @BonusAD*100@% bonus Attack Damage and %i:scaleAP% @BonusAP@ bonus Ability Power. After damaging a shielded enemy, Abilities and attacks deal @DamageAmpPct@% more damage for @Duration@ seconds.",
+        "effects": {
+            "BonusAD": 0.20000000298023224,
+            "CritChance": 20.0,
+            "Duration": 3.0,
+            "Health": 150.0,
+            "{6689e9ad}": 30.0,
+            "{d49caf5d}": 20.0
+        },
+        "from": [
+            7,
+            9
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Stridebreaker.dds",
+        "id": 79,
+        "name": "Guardbreaker",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_GargoyleStoneplate",
+        "desc": "Grants %i:scaleArmor% @ArmorPerEnemy@ Armor and %i:scaleMR% @MRPerEnemy@ Magic Resist for each enemy targeting the holder.",
+        "effects": {
+            "Armor": 20.0,
+            "MagicResist": 20.0,
+            "{7ba8c0e3}": 15.0,
+            "{7c694b41}": 15.0
+        },
+        "from": [
+            5,
+            6
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Gargoyle_Stoneplate.dds",
+        "id": 56,
+        "name": "Gargoyle Stoneplate",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_BrambleVest",
+        "desc": "Grant %i:scaleArmor% @BonusArmor@ bonus Armor. Negates @CritReduction*100@% bonus damage from incoming critical strikes. When struck by an attack, deal @1StarAoEDamage@/@2StarAoEDamage@/@3StarAoEDamage@ %i:star% magic damage to all nearby enemies (once every @ICD@ seconds).<br><br><tftitemrules>[Direct damage item]</tftitemrules>",
+        "effects": {
+            "Armor": 40.0,
+            "BonusArmor": 30.0,
+            "ICD": 2.5,
+            "{156febb8}": 150.0,
+            "{1ee760be}": 75.0,
+            "{6688a0d5}": 100.0,
+            "{79a4455a}": 0.75,
+            "{a3b999e9}": 100.0,
+            "{b5c2a66b}": 200.0
+        },
+        "from": [
+            5,
+            5
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Bramble_Vest.dds",
+        "id": 55,
+        "name": "Bramble Vest",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_ChainVest",
+        "desc": "%i:scaleArmor% +@Armor@ Armor",
+        "effects": {
+            "Armor": 20.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Chain_Vest.dds",
+        "id": 5,
+        "name": "Chain Vest",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_RecurveBow",
+        "desc": "%i:scaleAS% +@AS@% Attack Speed",
+        "effects": {
+            "AS": 10.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Recurve_Bow.dds",
+        "id": 2,
+        "name": "Recurve Bow",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_MadredsBloodrazor",
+        "desc": "Grant %i:scaleAD% @BonusAD*100@% bonus Attack Damage and %i:scaleAP% @BonusAP@ bonus Ability Power. Abilities and attacks deal @LargeBonusPct@% more damage to enemies with more than @HealthThreshold@ maximum Health.",
+        "effects": {
+            "AD": 0.10000000149011612,
+            "AS": 10.0,
+            "BonusAD": 0.20000000298023224,
+            "HealthThreshold": 1600.0,
+            "{b8ae7546}": 30.0,
+            "{d49caf5d}": 20.0
+        },
+        "from": [
+            1,
+            2
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Giant_Slayer.dds",
+        "id": 12,
+        "name": "Giant Slayer",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_RedBuff",
+        "desc": "Grant %i:scaleHealth% @BonusHP@ bonus Health. Every @ICD@ seconds, an enemy within @HexRange@ hexes is @BurnPercent@% <TFTKeyword>Burned</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wounded</TFTKeyword> for @BurnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: deals some of the target's maximum Health as true damage<br><tftbold>Wound</tftbold>: reduces healing received</tftitemrules>",
+        "effects": {
+            "Armor": 20.0,
+            "BonusHP": 150.0,
+            "Health": 150.0,
+            "ICD": 2.0,
+            "MonsterCap": 100.0,
+            "{2161bfa2}": 33.0,
+            "{57706a69}": 10.0,
+            "{97e52ce8}": 10.0,
+            "{9b1e8f37}": 2.0
+        },
+        "from": [
+            5,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Sunfire_Cape.dds",
+        "id": 57,
+        "name": "Sunfire Cape",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_UnstableConcoction",
+        "desc": "Grant 2 effects:<li>%i:scaleAD% +@BaseAD*100@% Attack Damage and %i:scaleAP% +@BaseSP@ Ability Power.<li>@BaseHeal@% <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Each round, randomly double 1 of these effects.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>",
+        "effects": {
+            "BaseHeal": 10.0,
+            "CritChance": 20.0,
+            "Mana": 15.0,
+            "{19a89153}": 15.0,
+            "{41cb628d}": 0.15000000596046448,
+            "{693a77ae}": 0.15000000596046448,
+            "{a60806db}": 66.66699981689453,
+            "{c0c9af7f}": 15.0
+        },
+        "from": [
+            4,
+            9
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Hand_of_Justice.dds",
+        "id": 49,
+        "name": "Hand Of Justice",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_GuardianAngel",
+        "desc": "Once per combat: At @HealthThreshold@% Health, briefly become untargetable and shed negative effects. Then, gain %i:scaleAS% @AttackSpeed@% bonus Attack Speed.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "AD": 0.10000000149011612,
+            "Armor": 20.0,
+            "AttackSpeed": 15.0,
+            "DamageReduction": 100.0,
+            "HealthThreshold": 60.0,
+            "{b1442c34}": 1.0
+        },
+        "from": [
+            1,
+            5
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Edge_Of_Night.dds",
+        "id": 94,
+        "name": "Edge of Night",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_SeraphsEmbrace",
+        "desc": "Grant %i:scaleMana% @BonusMana@ bonus starting Mana and %i:scaleAP% @BonusAP@ bonus Ability Power. Abilities cost %i:scaleMana% @ManaReduction@ less Mana to cast. <br><br>If the holder gets at least 1 takedown within @TakedownTimer@ seconds of casting, gain %i:scaleMana% @ManaOnTakedown@ Mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>",
+        "effects": {
+            "Mana": 30.0,
+            "{0cea77dc}": 10.0,
+            "{2a5b6a9f}": 3.0,
+            "{43012963}": 10.0,
+            "{7ccd3647}": 10.0,
+            "{d49caf5d}": 15.0
+        },
+        "from": [
+            4,
+            4
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds",
+        "id": 44,
+        "name": "Blue Buff",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_TearOfTheGoddess",
+        "desc": "%i:scaleMana% +@Mana@ Mana",
+        "effects": {
+            "Mana": 15.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tear_of_the_Goddess.dds",
+        "id": 4,
+        "name": "Tear of the Goddess",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_NegatronCloak",
+        "desc": "%i:scaleMR% +@MagicResist@ Magic Resist",
+        "effects": {
+            "MagicResist": 20.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Negatron_Cloak.dds",
+        "id": 6,
+        "name": "Negatron Cloak",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_TitansResolve",
+        "desc": "Grants %i:scaleAD% @StackingAD*100@% Attack Damage and %i:scaleAP% @StackingAD*100@ Ability Power when attacking or taking damage, stacking up to @StackCap@ times.  <br><br>At full stacks, grant %i:scaleArmor% @BonusResistsAtStackCap@ Armor and %i:scaleMR% @BonusResistsAtStackCap@ Magic Resist.",
+        "effects": {
+            "AS": 10.0,
+            "Armor": 20.0,
+            "{9396f00d}": 25.0,
+            "{b3b8f644}": 0.019999999552965164,
+            "{b55019fa}": 25.0,
+            "{cb9689ca}": 2.0
+        },
+        "from": [
+            5,
+            2
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Titans_Resolve.dds",
+        "id": 25,
+        "name": "Titan's Resolve",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_RunaansHurricane",
+        "desc": "Grants %i:scaleAD% @BonusAD*100@% bonus Attack Damage. Attacks fire a bolt at a nearby enemy, dealing @MultiplierForDamage@% Attack Damage %i:scaleAD% as physical damage.<br><br><tftitemrules>\u200b\u200b[Direct damage item]</tftitemrules>",
+        "effects": {
+            "AS": 10.0,
+            "AdditionalTargets": 1.0,
+            "BonusAD": 0.20000000298023224,
+            "MagicResist": 20.0,
+            "{276ba2c8}": 50.0
+        },
+        "from": [
+            6,
+            2
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Runaans_Hurricane.dds",
+        "id": 26,
+        "name": "Runaan's Hurricane",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_SparringGloves",
+        "desc": "+@CritChance@ Critical Strike Chance",
+        "effects": {
+            "CritChance": 20.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Sparring_Gloves.dds",
+        "id": 9,
+        "name": "Sparring Gloves",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_Bloodthirster",
+        "desc": "Grant @Lifesteal@% <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Once per combat at @HealthThreshold@% Health, gain a @ShieldHealthPercent@% maximum Health shield that lasts up to @ShieldDuration@ seconds.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>",
+        "effects": {
+            "AD": 0.10000000149011612,
+            "HealthThreshold": 40.0,
+            "LifeSteal": 20.0,
+            "MagicResist": 20.0,
+            "ShieldDuration": 5.0,
+            "{0034a6ef}": 25.0
+        },
+        "from": [
+            1,
+            6
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Bloodthirster.dds",
+        "id": 16,
+        "name": "Bloodthirster",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_ArchangelsStaff",
+        "desc": "Grant %i:scaleAP% @BonusAP@ bonus Ability Power.<br><br>Combat start: Grant %i:scaleAP% @APPerInterval@ Ability Power every @IntervalSeconds@ seconds.",
+        "effects": {
+            "AP": 10.0,
+            "Mana": 15.0,
+            "{5deb4eb2}": 20.0,
+            "{a7db7345}": 5.0,
+            "{d49caf5d}": 10.0
+        },
+        "from": [
+            3,
+            4
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Archangel_Staff.dds",
+        "id": 34,
+        "name": "Archangel's Staff",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_TitanicHydra",
+        "desc": "Combat start: <TFTKeyword>Taunt</TFTKeyword>.<br>On death, a Voidspawn arises, <TFTKeyword>Taunting</TFTKeyword> nearby enemies. <br><br><tftitemrules><tftbold>Taunt</tftbold>: enemies that are able and in range must attack the taunter</tftitemrules>",
+        "effects": {
+            "AS": 10.0,
+            "Health": 150.0,
+            "{7ff4f3b6}": 25.0
+        },
+        "from": [
+            2,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds",
+        "id": 27,
+        "name": "Zz'Rot Portal",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_SpearOfShojin",
+        "desc": "Grant %i:scaleAP% @BonusAP@ bonus Ability Power. Every 3rd attack restores %i:scaleMana% @FlatManaRestore@ additional Mana. ",
+        "effects": {
+            "AD": 0.10000000149011612,
+            "Mana": 15.0,
+            "{4b9a3b61}": 20.0,
+            "{d49caf5d}": 15.0
+        },
+        "from": [
+            1,
+            4
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Spear_of_Shojin.dds",
+        "id": 14,
+        "name": "Spear of Shojin",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_Spatula",
+        "desc": "It must do <i>something</i>...",
+        "effects": {
+            "{fe9818ef}": 5.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Spatula.dds",
+        "id": 8,
+        "name": "Spatula",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_LocketOfTheIronSolari",
+        "desc": "Combat start: Shields the holder and allies within @HexRange@ hexes in the same row for @1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@ %i:star% damage for @ShieldDuration@ seconds.<br><br>\u200b\u200b<tftitemrules>[Aura item]</tftitemrules>",
+        "effects": {
+            "AP": 10.0,
+            "Armor": 20.0,
+            "ShieldDuration": 15.0,
+            "{0d46330d}": 350.0,
+            "{6fb9af6a}": 300.0,
+            "{829e6cec}": 400.0,
+            "{9b1e8f37}": 2.0,
+            "{c78af25f}": 800.0
+        },
+        "from": [
+            3,
+            5
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Locket_of_the_Iron_Solari.dds",
+        "id": 35,
+        "name": "Locket of the Iron Solari",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_Morellonomicon",
+        "desc": "Grant %i:scaleAP% @BonusAP@ bonus Ability Power. Magic or true damage from the holder's Ability @BurnPercent@% <TFTKeyword>Burns</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wounds</TFTKeyword> enemies for @BurnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: deals some of the target's maximum Health as true damage<br><tftbold>Wound</tftbold>: reduces healing received</tftitemrules>",
+        "effects": {
+            "AP": 10.0,
+            "Health": 150.0,
+            "MonsterCap": 100.0,
+            "TicksPerSecond": 1.0,
+            "{2161bfa2}": 33.0,
+            "{57706a69}": 10.0,
+            "{97e52ce8}": 10.0,
+            "{d49caf5d}": 10.0
+        },
+        "from": [
+            3,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Morellonomicon.dds",
+        "id": 37,
+        "name": "Morellonomicon",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_RapidFireCannon",
+        "desc": "Grant %i:scaleAS% @BonusAS@% bonus Attack Speed and %i:scaleRange% @HexRangeIncrease@ bonus Attack Range.<br><br>Attacks cannot miss.",
+        "effects": {
+            "AS": 20.0,
+            "BonusAS": 30.0,
+            "{16394c87}": 1.0,
+            "{9f5117db}": 100.0
+        },
+        "from": [
+            2,
+            2
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Rapid_Fire_Cannon.dds",
+        "id": 22,
+        "name": "Rapid Firecannon",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_BFSword",
+        "desc": "%i:scaleAD% +@AD*100@% Attack Damage",
+        "effects": {
+            "AD": 0.10000000149011612
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/BF_Sword.dds",
+        "id": 1,
+        "name": "B.F. Sword",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_LastWhisper",
+        "desc": "Grant %i:scaleAD% @BonusAD*100@% bonus Attack Damage. Any physical damage dealt @ArmorReductionPercent@% <TFTKeyword>Sunders</TFTKeyword> the target for @ArmorBreakDuration@ seconds. This effect does not stack.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Sunder</tftbold>: reduce Armor</tftitemrules>",
+        "effects": {
+            "AS": 10.0,
+            "BonusAD": 0.10000000149011612,
+            "CritChance": 20.0,
+            "{5079c7a2}": 50.0,
+            "{cc9fefa7}": 5.0
+        },
+        "from": [
+            2,
+            9
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Last_Whisper.dds",
+        "id": 29,
+        "name": "Last Whisper",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_JeweledGauntlet",
+        "desc": "Grants %i:scaleAP% @BonusAP@ bonus Ability Power and %i:scaleCrit% @BonusCritChance@% Critical Strike Chance. <br><br>Damage from an Ability can critically strike.",
+        "effects": {
+            "AP": 10.0,
+            "CritChance": 20.0,
+            "{c34a89ec}": 15.0,
+            "{d49caf5d}": 15.0
+        },
+        "from": [
+            3,
+            9
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Jeweled_Guantlet.dds",
+        "id": 39,
+        "name": "Jeweled Gauntlet",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_GiantsBelt",
+        "desc": "%i:scaleHealth% +@Health@ Health",
+        "effects": {
+            "Health": 150.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Gaints_Belt.dds",
+        "id": 7,
+        "name": "Giant's Belt",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_NeedlesslyLargeRod",
+        "desc": "%i:scaleAP% +@AP@ Ability Power",
+        "effects": {
+            "AP": 10.0
+        },
+        "from": [],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Needlessly_Large_Rod.dds",
+        "id": 3,
+        "name": "Needlessly Large Rod",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_ForceOfNature",
+        "desc": "Your team gains +@MaxArmySizeIncrease@ maximum team size.",
+        "effects": {
+            "{ec9a04d1}": 1.0
+        },
+        "from": [
+            8,
+            8
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Crown.dds",
+        "id": 88,
+        "name": "Tactician's Crown",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_Quicksilver",
+        "desc": "Grant %i:scaleAS% @BonusAS@% bonus Attack Speed.<br><br>Combat start: Grant immunity to crowd control for @SpellShieldDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "BonusAS": 30.0,
+            "CritChance": 20.0,
+            "MagicResist": 20.0,
+            "{a2b76524}": 15.0
+        },
+        "from": [
+            9,
+            6
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Quicksilver.dds",
+        "id": 69,
+        "name": "Quicksilver",
+        "unique": true
+    },
+    {
+        "apiName": "TFT_Item_Deathblade",
+        "desc": "Grant %i:scaleAD% @BonusAD*100@% bonus Attack Damage.",
+        "effects": {
+            "AD": 0.20000000298023224,
+            "BonusAD": 0.4000000059604645
+        },
+        "from": [
+            1,
+            1
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Death_Blade.dds",
+        "id": 11,
+        "name": "Deathblade",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_Chalice",
+        "desc": "Combat start: Grant %i:scaleAP% @ChaliceAP@ Ability Power to the holder and allies within 1 hex in the same row.<br><br>\u200b\u200b<tftitemrules>[Aura item]</tftitemrules>",
+        "effects": {
+            "MagicResist": 20.0,
+            "Mana": 15.0,
+            "ManaRestore": 10.0,
+            "{8f0882cf}": 25.0,
+            "{9b1e8f37}": 1.0,
+            "{9fd37c1c}": 20.0
+        },
+        "from": [
+            6,
+            4
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Chalice_of_Power.dds",
+        "id": 46,
+        "name": "Chalice of Power",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_WarmogsArmor",
+        "desc": "Grant %i:scaleHealth% @BonusHP@ bonus Health.",
+        "effects": {
+            "BonusHP": 700.0,
+            "Health": 300.0
+        },
+        "from": [
+            7,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Warmogs_Armor.dds",
+        "id": 77,
+        "name": "Warmog's Armor",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_StatikkShiv",
+        "desc": "Grants %i:scaleAP% @BonusAP@ bonus Ability Power. Every 3rd attack unleashes chain lightning that bounces to @1StarBounces@ enemies, dealing @Damage@ magic damage and @MRShred@% <TFTKeyword>Shredding</TFTKeyword> them for @MRShredDuration@ seconds.<br><br><tftitemrules>[Direct damage item]<br><tftbold>Shred</tftbold>: reduce Magic Resist</tftitemrules>",
+        "effects": {
+            "AS": 10.0,
+            "Damage": 30.0,
+            "Mana": 15.0,
+            "{12a15e9e}": 4.0,
+            "{15144cec}": 4.0,
+            "{440f813d}": 4.0,
+            "{79e2ec7b}": 4.0,
+            "{b223097c}": 5.0,
+            "{d49caf5d}": 15.0,
+            "{fe079f34}": 50.0
+        },
+        "from": [
+            2,
+            4
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Statikk_Shiv.dds",
+        "id": 24,
+        "name": "Statikk Shiv",
+        "unique": false
+    },
+    {
+        "apiName": "TFT_Item_HextechGunblade",
+        "desc": "Grant @OmniVamp@% <TFTKeyword>Omnivamp</TFTKeyword>, which also heals the lowest percent Health ally.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>",
+        "effects": {
+            "AD": 0.10000000149011612,
+            "AP": 10.0,
+            "{ad16f688}": 20.0
+        },
+        "from": [
+            1,
+            3
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Hextech_Gunblade.dds",
+        "id": 13,
+        "name": "Hextech Gunblade",
+        "unique": false
+    }
+]

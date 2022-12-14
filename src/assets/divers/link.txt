@@ -19,3 +19,12 @@ select braquets CTRL+SHIFT+M
 
 select bracket item
 select bracket setData
+
+clean des items :
+recherche regex sur les id sup a 3 : "id": ([0-9]{3,}) -> find all -> depalcement -> selection des braquets ctrl + shif + m -> del
+atention les spatules du set seront supprimmer il faudra les réajouter manuellement
+remplacer les ids des objets et des recettes  id 8 = spatule id 9 = gants
+verifier si il ne reste pas des objets d'ancien set aves setX ou TFTX ou X est le num du set
+supprimmer les objets tutorial
+le ficheir doit faire dans les 900 lignes
+
