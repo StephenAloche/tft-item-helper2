@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable, of, Subject, takeUntil } from 'rxjs';
+import { Injectable, OnInit } from '@angular/core';
+import { Observable, of, Subject, takeUntil, switchMap, } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { currentSetNum } from 'src/app/app.component';
 import { cleanItemVariable } from '../helpers/cleanSource.helper';
 import { Item } from '../models/item.model';
@@ -8,66 +9,62 @@ import { Item } from '../models/item.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ItemService {
+export class ItemService implements OnInit {
 
   destroy$ = new Subject();
 
-  private items: Item[] = [];
+  private _items: Item[];
+  public get items(): Item[] {
+    if (this._items.length < 1) {
+      this.getAll().subscribe(items => this.items = items)
+    }
+    return this._items;
+  }
+  public set items(v: Item[]) {
+    this._items = v;
+  }
 
-  
-  public getAllItems = new Observable((subscriber)=>{
-    this.getListItem();
-  });
-
-  public jsonQuery = new Observable((subscriber)=>{
-    let jsonURL = `assets/dataSets/Set${currentSetNum}/itemData_Set${currentSetNum}.json`;
-    this.http.get(jsonURL)
-  });
 
   constructor(
     private http: HttpClient
   ) { }
+
+  ngOnInit(): void {
+    const getListItemObserver = {
+      next: (item: any) => this.getListItem(),
+      error: (error: any) => console.error(error.toString()),
+      compelte: () => null,
+    }
+  }
 
   ngOnDestroy() {
     this.destroy$.next(undefined);
     this.destroy$.complete();
   }
 
-  private getListItem() {
-    if (this.items.length < 1) {
-      var listItem: any[] = [];
+  public getListItem(): Observable<Item[]> {
+    let jsonURL = `assets/dataSets/Set${currentSetNum}/itemData_Set${currentSetNum}.json`;
+    return this.http.get<Item[]>(jsonURL);
+  }
 
-      let jsonURL = `assets/dataSets/Set${currentSetNum}/itemData_Set${currentSetNum}.json`;
 
-      this.http.get(jsonURL).subscribe(
-        {
-          next: (data: any) => {
-            listItem = data;
-            try {
-              this.items = cleanItemVariable(listItem);
-              this.items.forEach(item => {
-                this.formatItem(item);
-                this.getItemRecipe(item);
-              });
-            } catch (error) {
-
-            }
-          },
-          error: (error) => console.error(error.toString())
+  getAll(): Observable<Item[]> {
+    return this.getListItem().pipe(map(
+      (listItem: Item[]) => {
+        try {
+          listItem = cleanItemVariable(listItem);
+          listItem.forEach(item => {
+            this.formatItem(item);
+            //this.getItemRecipe(item);
+          });
+        } catch (error) {
+          console.error(error);
         }
-      );
-    }
+        this.items = listItem
+        return listItem
+      }
+    ));
   }
-  
-
-  getAll(): Item[] {
-
-    if (this.items.length < 1) {
-      this.getListItem()
-    }
-    return this.items;
-  }
-
 
   getOtherItem(itemFull: Item, itemGot: Item): Item | undefined {
     var item;
@@ -84,35 +81,67 @@ export class ItemService {
     return item;
   }
 
-  getByName(name: string): Item | undefined {
-    var item = this.getAll()?.find(it => it?.name?.trim().toUpperCase().includes(name.trim().toUpperCase().replace('’', '\'')));
-    if (item) {
-      this.getItemRecipe(item);
-    }
-    return item;
+  getByName(name: string): Observable<Item | undefined> {
+    return this.getAll().pipe(map(
+      (items: Item[]) => {
+        var item = items.find(
+          it => it?.name?.trim().toUpperCase().includes(name.trim().toUpperCase().replace('’', '\''))
+        )
+        if (item) {
+          this.getItemRecipe(item);
+        }
+        return item
+      }
+    )
+    );
+
+
+
+    var item: Item | undefined;
+    return this.getAll().pipe(map(
+      (items: Item[]) => {
+        var item = items.find(
+          it => it?.name?.trim().toUpperCase().includes(name.trim().toUpperCase().replace('’', '\''))
+        )
+        if (item) {
+          this.getItemRecipe(item);
+        }
+        return item
+      }
+    ));
+    return of(item);
   }
 
-  getById(id: number): Item | undefined {
-    var item = this.getAll()?.find(it => it?.id == id);
-    if (item) {
-      this.getItemRecipe(item);
-    }
-    return item;
+  getById(id: number): Observable<Item | undefined> {
+    var item: Item | undefined;
+    this.getAll().subscribe(
+      items => {
+        item = items.find(
+          it => it?.id == id
+        )
+        if (item) {
+          this.getItemRecipe(item);
+        }
+      }
+    );
+    return of(item);
   }
 
   getItemRecipe(item: Item) {
     item.recipe = [];
     var i: number = 0;
     item.from?.forEach(id => {
-      var itemSource = this.getById(id);
-      if (itemSource) {
-        this.formatItem(itemSource);
-        var tempcopy = JSON.stringify(itemSource)
-        var copy = JSON.parse(tempcopy);
-        item.recipe.push(copy);
-        i == 0 ? item.recipeItem1 = copy : item.recipeItem2 = copy;
-        i++;
+      this.getById(id).subscribe(itemSource => {
+        if (itemSource) {
+          this.formatItem(itemSource);
+          var tempcopy = JSON.stringify(itemSource)
+          var copy = JSON.parse(tempcopy);
+          item.recipe.push(copy);
+          i == 0 ? item.recipeItem1 = copy : item.recipeItem2 = copy;
+          i++;
+        }
       }
+      );
     });
   }
 

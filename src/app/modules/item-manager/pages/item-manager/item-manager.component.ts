@@ -17,69 +17,72 @@ import { TraitService } from 'src/app/shared/services/trait.service';
 
 export class ItemManagerComponent implements OnInit {
   //#region variable
-  showMyContainer : boolean = false;
+  showMyContainer: boolean = false;
   champions: Champion[] = [];
-  items : Item[] = [];
-  itemsComble : Item[] = [];
-  
-  myChampions : Champion[] = [];
-  myItems : Item[] = [];
-  LIST_IDS : string[] = ["removeBin"];
-  
-  craftableItems : Item[] = [];
-  allTraits : Trait[] = [];
-  itemsCarousel : Item[] = [];
+  items: Item[] = [];
+  itemsComble: Item[] = [];
+
+  myChampions: Champion[] = [];
+  myItems: Item[] = [];
+  LIST_IDS: string[] = ["removeBin"];
+
+  craftableItems: Item[] = [];
+  allTraits: Trait[] = [];
+  itemsCarousel: Item[] = [];
   //#endregion
 
   filteredChampions: Observable<Champion[]> | undefined;
-  filterName:string = "";
-  
+  filterName: string = "";
+
   constructor(
     private championService: ChampionService,
     private itemService: ItemService,
     private traitService: TraitService,
-     private route:Router 
-    ) { }
-  
+    private route: Router
+  ) { }
+
   ngOnInit(): void {
-    this.champions = this.championService.getAll();
-    this.items = this.itemService.getAll();
-    this.itemsComble = this.items.filter(i=>i.id<10);
-    
-    this.allTraits = OrderBy(this.traitService.getPerma(),"name");
+    //this.champions = this.championService.getAll();
+
+    this.itemService.getAll()?.subscribe(items => {
+      this.items = items
+      this.itemsComble = this.items.filter(i => i.id < 10);
+    }
+    );
+
+    //this.allTraits = OrderBy(this.traitService.getPerma(), "name");
   }
-  
-  selectChampion(champ : Champion) : void{
+
+  selectChampion(champ: Champion): void {
     this.championService.getRecommandedItem(champ);
     var newChamp = Object.assign({}, champ);
     newChamp.equippedItems = [];
-    
+
     //TODO créer un clone pour ne pas avoir la meme liste d'item
-    newChamp.ability={};
-    newChamp.synergies=[];
-    newChamp.dataTraits.forEach(trait =>{trait.desc="";trait.effects=[],trait.champions=[] });
-    newChamp.stats=undefined;
+    newChamp.ability = {};
+    newChamp.synergies = [];
+    newChamp.dataTraits.forEach(trait => { trait.desc = ""; trait.effects = [], trait.champions = [] });
+    newChamp.stats = undefined;
     var o = newChamp.typeAdAp;
     var tempcopy = JSON.stringify(newChamp)
     var cloneChamp = JSON.parse(tempcopy);
     this.myChampions?.push(cloneChamp);
-    
+
     //pour la gestion des multi drop zone
     //generation d'un id random
-    var id : number = Math.floor((Math.random()*(999-1))+1); 
+    var id: number = Math.floor((Math.random() * (999 - 1)) + 1);
     var i = 0;
-    while(this.LIST_IDS.some(lid=>lid == 'cdk-drop-list-champion-'+id) && i <1000)
-    {
-      id = Math.floor((Math.random()*(999-1))+1); 
+    while (this.LIST_IDS.some(lid => lid == 'cdk-drop-list-champion-' + id) && i < 1000) {
+      id = Math.floor((Math.random() * (999 - 1)) + 1);
       i++;
     }
     cloneChamp.id = id;
-    this.LIST_IDS.push('cdk-drop-list-champion-' + cloneChamp.id )
-    
+    this.LIST_IDS.push('cdk-drop-list-champion-' + cloneChamp.id)
+
     //this.refreshItemDisplay();
   }
-  
-  selectItem(item : Item) : void{
+
+  selectItem(item: Item): void {
     this.myItems?.push(item);
     //verifier si l'item en question est présent dans la liste de recipe pour chaques item pour chaques champion
     //si oui 
