@@ -2,6 +2,7 @@
 import { Trait } from './traits.model';
 import { Item } from './item.model';
 import { TypeAdAp } from '../enums/TypeAdAp.enum';
+import { Observable } from 'rxjs';
 
 export class Champion {    
     
@@ -18,11 +19,13 @@ export class Champion {
     id : number = 0;
     recommendedItemsId : number[] = new Array();
     recommandedItems : Item[] = new Array();
+    
     equippedItems : Item[] = new Array();
     dataTraits: Trait[] = [];
     synergies : Synergie[] = [];
     typeAdAp : TypeAdAp = TypeAdAp.Ad;        
     
+    recommandedItemsObs$ : Observable<Item[]>;
 }
 
 export class Variable {

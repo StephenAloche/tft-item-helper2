@@ -68,7 +68,9 @@ export function cleanItemVariable<Type> (data : Type[]):Type[] {
     stringified = stringified.replace(/{276ba2c9}/g,"MultiplierForDamage");
     stringified = stringified.replace(/{df6f64b8}/g,"ManaRatio");
     stringified = stringified.replace(/{7ba9c0e3}/g,"ArmorPerEnemy");
+    stringified = stringified.replace(/{7ba8c0e3}/g,"ArmorPerEnemy");
     stringified = stringified.replace(/{7c684b41}/g,"MRPerEnemy");
+    stringified = stringified.replace(/{7c694b41}/g,"MRPerEnemy");
     stringified = stringified.replace(/{7ff4f3b6}/g,"SummonedStatReduction");
     //Morello
     stringified = stringified.replace(/{57706a68}/g,"BurnPercent");

@@ -1,0 +1,24 @@
+.sc-champion-tile__img{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px 8px 8px 8px;
+    max-height:94px
+}
+//TODO : renommer et revoir les px
+.sc-champion-tile__ico{
+    position: absolute;  
+    width: 26px;
+  }
+
+  .sc-champion-tile__name{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 24px;
+  }
+
+  .sc-champion-tile__traits{
+    position: absolute;
+    bottom: 0;
+    height: 25px;
+  }

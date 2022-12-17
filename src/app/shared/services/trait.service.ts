@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { map, Observable } from 'rxjs';
 import { State } from '../enums/State.enum';
 import { Trait } from '../models/traits.model';
 import { ItemService } from './item.service';
@@ -13,23 +14,28 @@ export class TraitService {
     private itemService: ItemService
     ) { }
     
-    getAll(): Trait[] {
+    getAll(): Observable<Trait[]> {
       var traits = this.setService.getTraits();
       return traits;
     }
     
-    getPerma(): Trait[] {
+    getPerma(): Observable<Trait[]> {
       var traits = this.setService.getTraits();
       return traits;
     }
     
-    getByName(name : string) : Trait | undefined {
-      var trait = this.getAll()?.find(tr=>tr?.name?.includes(name)||tr?.apiName?.includes(name));
-      if (trait) {
-        this.LoadTraitDesc(trait);      
-      }
-      return trait;
-    }
+    getByName(name: string): Observable<Trait | undefined> {
+      return this.getAll().pipe(map(
+        (traits: Trait[]) => {
+          let trait = traits.find(tr=>tr?.name?.includes(name)||tr?.apiName?.includes(name));
+          if (trait) {
+            this.LoadTraitDesc(trait);
+          } 
+          return trait;
+        }
+      )
+      );
+    }    
     
     LoadTraitDesc(trait : Trait) : Trait{
       //duplication des lignes par effets

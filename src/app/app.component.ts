@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ItemService } from './shared/services/item.service';
 import { SetService } from './shared/services/set.service';
 
 @Component({
@@ -11,10 +12,11 @@ import { SetService } from './shared/services/set.service';
 export class AppComponent {
   title = 'tft-itemManager';
   
-  constructor(private setService: SetService) { }
+  constructor(private setService: SetService,private itemService: ItemService) { }
   
   ngOnInit(): void {
     this.setService.LoadSetData();
+    this.itemService.loadItems()
 
   }  
 }

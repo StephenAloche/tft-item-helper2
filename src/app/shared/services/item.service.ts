@@ -11,19 +11,9 @@ import { Item } from '../models/item.model';
 })
 export class ItemService implements OnInit {
 
-  destroy$ = new Subject();
+  unsubscribe$ = new Subject();
 
-  private _items: Item[];
-  public get items(): Item[] {
-    if (this._items.length < 1) {
-      this.getAll().subscribe(items => this.items = items)
-    }
-    return this._items;
-  }
-  public set items(v: Item[]) {
-    this._items = v;
-  }
-
+  public itemsList: Item[];  
 
   constructor(
     private http: HttpClient
@@ -38,8 +28,8 @@ export class ItemService implements OnInit {
   }
 
   ngOnDestroy() {
-    this.destroy$.next(undefined);
-    this.destroy$.complete();
+    this.unsubscribe$.next(undefined);
+    this.unsubscribe$.complete();
   }
 
   public getListItem(): Observable<Item[]> {
@@ -47,21 +37,40 @@ export class ItemService implements OnInit {
     return this.http.get<Item[]>(jsonURL);
   }
 
-
-  getAll(): Observable<Item[]> {
-    return this.getListItem().pipe(map(
+  loadItems(): void {
+    this.getListItem().pipe(takeUntil(this.unsubscribe$))
+    .subscribe(
       (listItem: Item[]) => {
         try {
-          listItem = cleanItemVariable(listItem);
-          listItem.forEach(item => {
+          this.itemsList =  cleanItemVariable(listItem);
+          this.itemsList.forEach(item => {
             this.formatItem(item);
-            //this.getItemRecipe(item);
+            this.getItemRecipe(item);
           });
         } catch (error) {
           console.error(error);
         }
-        this.items = listItem
-        return listItem
+      }
+    );
+  }
+
+  getAll(): Observable<Item[]> {
+    if(this.itemsList)
+    {
+      return of(this.itemsList)
+    }
+    return this.getListItem().pipe(map(
+      (listItem: Item[]) => {
+        try {
+          this.itemsList = cleanItemVariable(listItem);
+          this.itemsList.forEach(item => {
+            this.formatItem(item);
+            this.getItemRecipe(item);
+          });
+        } catch (error) {
+          console.error(error);
+        }
+        return this.itemsList
       }
     ));
   }
@@ -84,47 +93,25 @@ export class ItemService implements OnInit {
   getByName(name: string): Observable<Item | undefined> {
     return this.getAll().pipe(map(
       (items: Item[]) => {
-        var item = items.find(
+        let item = items.find(
           it => it?.name?.trim().toUpperCase().includes(name.trim().toUpperCase().replace('’', '\''))
         )
-        if (item) {
-          this.getItemRecipe(item);
-        }
         return item
       }
     )
     );
-
-
-
-    var item: Item | undefined;
-    return this.getAll().pipe(map(
-      (items: Item[]) => {
-        var item = items.find(
-          it => it?.name?.trim().toUpperCase().includes(name.trim().toUpperCase().replace('’', '\''))
-        )
-        if (item) {
-          this.getItemRecipe(item);
-        }
-        return item
-      }
-    ));
-    return of(item);
   }
 
   getById(id: number): Observable<Item | undefined> {
-    var item: Item | undefined;
-    this.getAll().subscribe(
-      items => {
-        item = items.find(
+    return this.getAll().pipe(map(
+      (items: Item[]) => {
+        let item = items.find(
           it => it?.id == id
         )
-        if (item) {
-          this.getItemRecipe(item);
-        }
+        return item
       }
+    )
     );
-    return of(item);
   }
 
   getItemRecipe(item: Item) {
