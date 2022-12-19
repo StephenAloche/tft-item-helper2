@@ -4,23 +4,23 @@
         "items": [
             {
                 "name": "Sunfire Cape",
-                "ratio": "4.63%"
-            },
-            {
-                "name": "Warmog's Armor",
-                "ratio": "4.08%"
+                "ratio": "3.80%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "3.59%"
+                "ratio": "3.75%"
+            },
+            {
+                "name": "Warmog's Armor",
+                "ratio": "3.37%"
             },
             {
                 "name": "Zz'Rot Portal",
-                "ratio": "2.94%"
+                "ratio": "2.95%"
             },
             {
-                "name": "Redemption",
-                "ratio": "2.41%"
+                "name": "Thief's Gloves",
+                "ratio": "2.89%"
             }
         ]
     },
@@ -29,23 +29,23 @@
         "items": [
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "36.16%"
+                "ratio": "42.08%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "27.30%"
+                "ratio": "30.64%"
             },
             {
                 "name": "Sunfire Cape",
-                "ratio": "18.99%"
-            },
-            {
-                "name": "Dragon's Claw",
-                "ratio": "14.22%"
+                "ratio": "24.87%"
             },
             {
                 "name": "Ionic Spark",
-                "ratio": "13.60%"
+                "ratio": "18.64%"
+            },
+            {
+                "name": "Dragon's Claw",
+                "ratio": "17.18%"
             }
         ]
     },
@@ -54,23 +54,23 @@
         "items": [
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "35.49%"
+                "ratio": "40.24%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "26.93%"
+                "ratio": "28.11%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "14.55%"
-            },
-            {
-                "name": "Last Whisper",
-                "ratio": "14.12%"
+                "ratio": "17.52%"
             },
             {
                 "name": "Infinity Edge",
-                "ratio": "14.08%"
+                "ratio": "15.11%"
+            },
+            {
+                "name": "Last Whisper",
+                "ratio": "14.99%"
             }
         ]
     },
@@ -79,23 +79,23 @@
         "items": [
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "74.39%"
+                "ratio": "70.01%"
             },
             {
                 "name": "Last Whisper",
-                "ratio": "52.33%"
+                "ratio": "50.70%"
             },
             {
                 "name": "Deathblade",
-                "ratio": "48.65%"
+                "ratio": "42.17%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "29.70%"
+                "ratio": "30.46%"
             },
             {
                 "name": "Runaan's Hurricane",
-                "ratio": "25.07%"
+                "ratio": "21.65%"
             }
         ]
     },
@@ -104,23 +104,23 @@
         "items": [
             {
                 "name": "Spear of Shojin",
-                "ratio": "50.56%"
+                "ratio": "51.94%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "43.56%"
+                "ratio": "44.75%"
             },
             {
                 "name": "Archangel's Staff",
-                "ratio": "29.95%"
+                "ratio": "28.29%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "15.11%"
+                "ratio": "17.33%"
             },
             {
                 "name": "Rabadon's Deathcap",
-                "ratio": "10.06%"
+                "ratio": "10.89%"
             }
         ]
     },
@@ -129,23 +129,23 @@
         "items": [
             {
                 "name": "Bloodthirster",
-                "ratio": "31.72%"
+                "ratio": "30.31%"
             },
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "31.07%"
+                "ratio": "28.27%"
             },
             {
                 "name": "Last Whisper",
-                "ratio": "24.68%"
+                "ratio": "24.46%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "15.98%"
+                "ratio": "16.98%"
             },
             {
                 "name": "Titan’s Resolve",
-                "ratio": "13.52%"
+                "ratio": "13.64%"
             }
         ]
     },
@@ -154,23 +154,23 @@
         "items": [
             {
                 "name": "Sunfire Cape",
-                "ratio": "1.47%"
+                "ratio": "3.51%"
+            },
+            {
+                "name": "Warmog's Armor",
+                "ratio": "2.82%"
             },
             {
                 "name": "Redemption",
-                "ratio": "1.40%"
-            },
-            {
-                "name": "Zephyr",
-                "ratio": "1.35%"
+                "ratio": "2.75%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "1.17%"
+                "ratio": "2.28%"
             },
             {
-                "name": "Shroud of Stillness",
-                "ratio": "1.11%"
+                "name": "Zz'Rot Portal",
+                "ratio": "1.80%"
             }
         ]
     },
@@ -179,23 +179,23 @@
         "items": [
             {
                 "name": "Titan’s Resolve",
-                "ratio": "39.06%"
+                "ratio": "63.94%"
             },
             {
                 "name": "Bloodthirster",
-                "ratio": "38.19%"
+                "ratio": "62.30%"
             },
             {
                 "name": "Infinity Edge",
-                "ratio": "32.12%"
+                "ratio": "54.30%"
             },
             {
-                "name": "Ox Force Emblem",
-                "ratio": "5.48%"
+                "name": "Giant Slayer",
+                "ratio": "7.20%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "4.69%"
+                "ratio": "6.26%"
             }
         ]
     },
@@ -204,23 +204,23 @@
         "items": [
             {
                 "name": "Dragon's Claw",
-                "ratio": "9.93%"
+                "ratio": "11.22%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "9.80%"
+                "ratio": "9.60%"
             },
             {
                 "name": "Ionic Spark",
-                "ratio": "5.53%"
+                "ratio": "5.74%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "4.83%"
+                "ratio": "5.38%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "4.37%"
+                "ratio": "5.13%"
             }
         ]
     },
@@ -228,24 +228,24 @@
         "champion": "Draven",
         "items": [
             {
-                "name": "Infinity Edge",
-                "ratio": "8.44%"
-            },
-            {
                 "name": "Bloodthirster",
-                "ratio": "7.35%"
+                "ratio": "16.74%"
             },
             {
-                "name": "Guinsoo's Rageblade",
-                "ratio": "5.61%"
+                "name": "Infinity Edge",
+                "ratio": "16.42%"
             },
             {
                 "name": "Titan’s Resolve",
-                "ratio": "4.56%"
+                "ratio": "11.13%"
+            },
+            {
+                "name": "Guinsoo's Rageblade",
+                "ratio": "9.48%"
             },
             {
                 "name": "Last Whisper",
-                "ratio": "3.42%"
+                "ratio": "5.72%"
             }
         ]
     },
@@ -254,23 +254,23 @@
         "items": [
             {
                 "name": "Thief's Gloves",
-                "ratio": "6.60%"
+                "ratio": "7.17%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "4.31%"
-            },
-            {
-                "name": "Warmog's Armor",
-                "ratio": "4.18%"
-            },
-            {
-                "name": "Ionic Spark",
-                "ratio": "3.94%"
+                "ratio": "4.51%"
             },
             {
                 "name": "Sunfire Cape",
-                "ratio": "3.92%"
+                "ratio": "4.41%"
+            },
+            {
+                "name": "Warmog's Armor",
+                "ratio": "4.22%"
+            },
+            {
+                "name": "Ionic Spark",
+                "ratio": "4.08%"
             }
         ]
     },
@@ -278,24 +278,24 @@
         "champion": "Ezreal",
         "items": [
             {
-                "name": "Blue Buff",
-                "ratio": "18.95%"
+                "name": "Jeweled Gauntlet",
+                "ratio": "21.48%"
             },
             {
-                "name": "Jeweled Gauntlet",
-                "ratio": "17.99%"
+                "name": "Blue Buff",
+                "ratio": "20.29%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "14.62%"
+                "ratio": "18.40%"
             },
             {
-                "name": "Zeke's Herald",
-                "ratio": "7.30%"
+                "name": "Statikk Shiv",
+                "ratio": "9.05%"
             },
             {
-                "name": "Spear of Shojin",
-                "ratio": "3.72%"
+                "name": "Heart Emblem",
+                "ratio": "7.36%"
             }
         ]
     },
@@ -304,23 +304,23 @@
         "items": [
             {
                 "name": "Morellonomicon",
-                "ratio": "10.83%"
+                "ratio": "10.82%"
             },
             {
                 "name": "Ionic Spark",
-                "ratio": "7.63%"
+                "ratio": "8.90%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "6.05%"
+                "ratio": "7.15%"
             },
             {
                 "name": "Archangel's Staff",
-                "ratio": "6.03%"
+                "ratio": "6.51%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "5.04%"
+                "ratio": "5.41%"
             }
         ]
     },
@@ -329,23 +329,23 @@
         "items": [
             {
                 "name": "Thief's Gloves",
-                "ratio": "2.46%"
-            },
-            {
-                "name": "Zeke's Herald",
-                "ratio": "1.26%"
-            },
-            {
-                "name": "Renegade Emblem",
-                "ratio": "1.25%"
+                "ratio": "3.48%"
             },
             {
                 "name": "Sunfire Cape",
-                "ratio": "1.03%"
+                "ratio": "1.92%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "1.01%"
+                "ratio": "1.72%"
+            },
+            {
+                "name": "Redemption",
+                "ratio": "1.52%"
+            },
+            {
+                "name": "Titan’s Resolve",
+                "ratio": "1.36%"
             }
         ]
     },
@@ -354,23 +354,23 @@
         "items": [
             {
                 "name": "Sunfire Cape",
-                "ratio": "13.31%"
-            },
-            {
-                "name": "Warmog's Armor",
-                "ratio": "10.26%"
+                "ratio": "16.67%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "9.44%"
+                "ratio": "12.74%"
+            },
+            {
+                "name": "Warmog's Armor",
+                "ratio": "12.33%"
             },
             {
                 "name": "Ionic Spark",
-                "ratio": "7.99%"
+                "ratio": "10.59%"
             },
             {
                 "name": "Dragon's Claw",
-                "ratio": "6.88%"
+                "ratio": "8.84%"
             }
         ]
     },
@@ -378,24 +378,24 @@
         "champion": "Gangplank",
         "items": [
             {
+                "name": "Mascot Emblem",
+                "ratio": "6.69%"
+            },
+            {
                 "name": "Thief's Gloves",
-                "ratio": "5.35%"
+                "ratio": "3.89%"
+            },
+            {
+                "name": "Heart Emblem",
+                "ratio": "3.47%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "4.74%"
-            },
-            {
-                "name": "Hand of Justice",
-                "ratio": "4.15%"
-            },
-            {
-                "name": "Archangel's Staff",
-                "ratio": "3.68%"
-            },
-            {
-                "name": "Zeke's Herald",
                 "ratio": "3.05%"
+            },
+            {
+                "name": "Chalice of Power",
+                "ratio": "2.19%"
             }
         ]
     },
@@ -404,23 +404,23 @@
         "items": [
             {
                 "name": "Spear of Shojin",
-                "ratio": "2.34%"
-            },
-            {
-                "name": "Redemption",
-                "ratio": "1.84%"
+                "ratio": "2.46%"
             },
             {
                 "name": "Chalice of Power",
-                "ratio": "1.76%"
+                "ratio": "2.19%"
+            },
+            {
+                "name": "Redemption",
+                "ratio": "1.73%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "1.59%"
+                "ratio": "1.62%"
             },
             {
                 "name": "Morellonomicon",
-                "ratio": "1.40%"
+                "ratio": "1.50%"
             }
         ]
     },
@@ -429,23 +429,23 @@
         "items": [
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "77.70%"
+                "ratio": "71.04%"
             },
             {
                 "name": "Bloodthirster",
-                "ratio": "73.64%"
+                "ratio": "67.69%"
             },
             {
                 "name": "Titan’s Resolve",
-                "ratio": "44.11%"
+                "ratio": "36.75%"
             },
             {
                 "name": "Quicksilver",
-                "ratio": "20.30%"
+                "ratio": "20.52%"
             },
             {
                 "name": "Rapid Firecannon",
-                "ratio": "10.96%"
+                "ratio": "13.84%"
             }
         ]
     },
@@ -453,24 +453,24 @@
         "champion": "Jinx",
         "items": [
             {
-                "name": "Zeke's Herald",
-                "ratio": "4.66%"
+                "name": "Recon Emblem",
+                "ratio": "5.91%"
             },
             {
-                "name": "Recon Emblem",
-                "ratio": "3.86%"
+                "name": "Zeke's Herald",
+                "ratio": "4.97%"
             },
             {
                 "name": "Chalice of Power",
-                "ratio": "3.29%"
+                "ratio": "2.65%"
             },
             {
                 "name": "Statikk Shiv",
-                "ratio": "2.84%"
+                "ratio": "2.30%"
             },
             {
                 "name": "Spear of Shojin",
-                "ratio": "2.12%"
+                "ratio": "1.92%"
             }
         ]
     },
@@ -478,24 +478,24 @@
         "champion": "Kai'Sa",
         "items": [
             {
-                "name": "Statikk Shiv",
-                "ratio": "45.69%"
+                "name": "Guinsoo's Rageblade",
+                "ratio": "47.27%"
             },
             {
-                "name": "Guinsoo's Rageblade",
-                "ratio": "44.21%"
+                "name": "Statikk Shiv",
+                "ratio": "43.40%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "32.39%"
+                "ratio": "40.70%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "31.37%"
+                "ratio": "36.30%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "11.01%"
+                "ratio": "12.05%"
             }
         ]
     },
@@ -504,23 +504,23 @@
         "items": [
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "44.99%"
+                "ratio": "31.84%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "33.56%"
+                "ratio": "25.33%"
             },
             {
                 "name": "Infinity Edge",
-                "ratio": "24.42%"
+                "ratio": "17.45%"
             },
             {
                 "name": "Deathblade",
-                "ratio": "18.65%"
+                "ratio": "14.26%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "15.13%"
+                "ratio": "10.75%"
             }
         ]
     },
@@ -529,23 +529,23 @@
         "items": [
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "17.56%"
+                "ratio": "15.52%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "14.52%"
-            },
-            {
-                "name": "Blue Buff",
-                "ratio": "8.92%"
-            },
-            {
-                "name": "Spear of Shojin",
-                "ratio": "8.11%"
+                "ratio": "13.19%"
             },
             {
                 "name": "Archangel's Staff",
-                "ratio": "7.40%"
+                "ratio": "7.02%"
+            },
+            {
+                "name": "Spear of Shojin",
+                "ratio": "6.95%"
+            },
+            {
+                "name": "Blue Buff",
+                "ratio": "6.95%"
             }
         ]
     },
@@ -553,24 +553,24 @@
         "champion": "Lee Sin",
         "items": [
             {
-                "name": "Sunfire Cape",
-                "ratio": "6.75%"
+                "name": "Mascot Emblem",
+                "ratio": "10.61%"
             },
             {
-                "name": "Redemption",
-                "ratio": "5.35%"
+                "name": "Sunfire Cape",
+                "ratio": "6.43%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "5.32%"
+                "ratio": "4.67%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "4.19%"
+                "ratio": "4.63%"
             },
             {
-                "name": "Gargoyle Stoneplate",
-                "ratio": "3.96%"
+                "name": "Redemption",
+                "ratio": "4.59%"
             }
         ]
     },
@@ -579,23 +579,23 @@
         "items": [
             {
                 "name": "Warmog's Armor",
-                "ratio": "9.52%"
-            },
-            {
-                "name": "Sunfire Cape",
-                "ratio": "6.55%"
+                "ratio": "9.25%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "5.97%"
+                "ratio": "7.06%"
+            },
+            {
+                "name": "Sunfire Cape",
+                "ratio": "7.06%"
             },
             {
                 "name": "Redemption",
-                "ratio": "5.45%"
+                "ratio": "5.87%"
             },
             {
-                "name": "Thief's Gloves",
-                "ratio": "5.19%"
+                "name": "Bramble Vest",
+                "ratio": "5.10%"
             }
         ]
     },
@@ -604,23 +604,23 @@
         "items": [
             {
                 "name": "Blue Buff",
-                "ratio": "1.72%"
+                "ratio": "4.44%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "1.52%"
-            },
-            {
-                "name": "Chalice of Power",
-                "ratio": "1.43%"
-            },
-            {
-                "name": "Zephyr",
-                "ratio": "1.17%"
+                "ratio": "3.79%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "1.01%"
+                "ratio": "2.94%"
+            },
+            {
+                "name": "Zephyr",
+                "ratio": "1.44%"
+            },
+            {
+                "name": "Hextech Gunblade",
+                "ratio": "1.29%"
             }
         ]
     },
@@ -629,23 +629,23 @@
         "items": [
             {
                 "name": "Chalice of Power",
-                "ratio": "3.00%"
+                "ratio": "2.64%"
             },
             {
                 "name": "Heart Emblem",
-                "ratio": "1.79%"
+                "ratio": "1.89%"
             },
             {
                 "name": "Zephyr",
-                "ratio": "1.67%"
+                "ratio": "1.41%"
+            },
+            {
+                "name": "Jeweled Gauntlet",
+                "ratio": "1.08%"
             },
             {
                 "name": "Statikk Shiv",
                 "ratio": "0.98%"
-            },
-            {
-                "name": "Jeweled Gauntlet",
-                "ratio": "0.84%"
             }
         ]
     },
@@ -654,23 +654,23 @@
         "items": [
             {
                 "name": "Sunfire Cape",
-                "ratio": "6.02%"
+                "ratio": "11.85%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "5.57%"
+                "ratio": "11.46%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "4.94%"
+                "ratio": "9.96%"
             },
             {
-                "name": "Redemption",
-                "ratio": "4.77%"
+                "name": "Dragon's Claw",
+                "ratio": "8.26%"
             },
             {
-                "name": "Thief's Gloves",
-                "ratio": "3.88%"
+                "name": "Ionic Spark",
+                "ratio": "7.87%"
             }
         ]
     },
@@ -679,23 +679,23 @@
         "items": [
             {
                 "name": "Spear of Shojin",
-                "ratio": "72.50%"
+                "ratio": "72.17%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "58.47%"
+                "ratio": "60.68%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "36.37%"
+                "ratio": "38.78%"
             },
             {
                 "name": "Archangel's Staff",
-                "ratio": "21.11%"
+                "ratio": "18.89%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "9.12%"
+                "ratio": "8.46%"
             }
         ]
     },
@@ -704,23 +704,23 @@
         "items": [
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "12.72%"
+                "ratio": "12.25%"
             },
             {
                 "name": "Archangel's Staff",
-                "ratio": "11.68%"
+                "ratio": "9.01%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "7.88%"
+                "ratio": "7.57%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "7.64%"
+                "ratio": "7.46%"
             },
             {
                 "name": "Morellonomicon",
-                "ratio": "6.78%"
+                "ratio": "5.92%"
             }
         ]
     },
@@ -729,23 +729,23 @@
         "items": [
             {
                 "name": "Bloodthirster",
-                "ratio": "12.54%"
+                "ratio": "6.02%"
             },
             {
                 "name": "Titan’s Resolve",
-                "ratio": "11.06%"
-            },
-            {
-                "name": "Rapid Firecannon",
-                "ratio": "6.15%"
-            },
-            {
-                "name": "Infinity Edge",
-                "ratio": "3.14%"
+                "ratio": "5.93%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "2.99%"
+                "ratio": "5.83%"
+            },
+            {
+                "name": "Sunfire Cape",
+                "ratio": "2.41%"
+            },
+            {
+                "name": "Infinity Edge",
+                "ratio": "2.35%"
             }
         ]
     },
@@ -753,24 +753,24 @@
         "champion": "Nilah",
         "items": [
             {
-                "name": "Warmog's Armor",
-                "ratio": "16.33%"
+                "name": "Sunfire Cape",
+                "ratio": "18.89%"
             },
             {
-                "name": "Sunfire Cape",
-                "ratio": "14.28%"
+                "name": "Warmog's Armor",
+                "ratio": "18.29%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "13.50%"
+                "ratio": "15.84%"
             },
             {
                 "name": "Redemption",
-                "ratio": "11.29%"
+                "ratio": "13.99%"
             },
             {
                 "name": "Dragon's Claw",
-                "ratio": "11.20%"
+                "ratio": "12.77%"
             }
         ]
     },
@@ -779,23 +779,23 @@
         "items": [
             {
                 "name": "Ionic Spark",
-                "ratio": "7.93%"
-            },
-            {
-                "name": "Thief's Gloves",
-                "ratio": "6.01%"
+                "ratio": "8.76%"
             },
             {
                 "name": "Hextech Gunblade",
-                "ratio": "5.06%"
+                "ratio": "5.94%"
+            },
+            {
+                "name": "Thief's Gloves",
+                "ratio": "5.87%"
             },
             {
                 "name": "Morellonomicon",
-                "ratio": "5.03%"
+                "ratio": "5.81%"
             },
             {
-                "name": "Archangel's Staff",
-                "ratio": "4.60%"
+                "name": "Warmog's Armor",
+                "ratio": "5.03%"
             }
         ]
     },
@@ -803,24 +803,24 @@
         "champion": "Poppy",
         "items": [
             {
-                "name": "Zephyr",
-                "ratio": "2.63%"
-            },
-            {
-                "name": "Zeke's Herald",
-                "ratio": "1.96%"
-            },
-            {
-                "name": "Mecha: PRIME Emblem",
-                "ratio": "1.75%"
-            },
-            {
                 "name": "Thief's Gloves",
-                "ratio": "1.46%"
+                "ratio": "1.87%"
             },
             {
-                "name": "Locket of the Iron Solari",
-                "ratio": "1.04%"
+                "name": "Gargoyle Stoneplate",
+                "ratio": "1.60%"
+            },
+            {
+                "name": "Bramble Vest",
+                "ratio": "1.16%"
+            },
+            {
+                "name": "Redemption",
+                "ratio": "0.98%"
+            },
+            {
+                "name": "Sunfire Cape",
+                "ratio": "0.89%"
             }
         ]
     },
@@ -829,23 +829,23 @@
         "items": [
             {
                 "name": "Bramble Vest",
-                "ratio": "25.70%"
+                "ratio": "23.20%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "22.87%"
+                "ratio": "21.75%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "22.13%"
+                "ratio": "21.38%"
             },
             {
                 "name": "Sunfire Cape",
-                "ratio": "19.19%"
+                "ratio": "20.96%"
             },
             {
                 "name": "Dragon's Claw",
-                "ratio": "14.35%"
+                "ratio": "13.02%"
             }
         ]
     },
@@ -854,23 +854,23 @@
         "items": [
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "10.42%"
-            },
-            {
-                "name": "Warmog's Armor",
-                "ratio": "8.78%"
+                "ratio": "12.28%"
             },
             {
                 "name": "Sunfire Cape",
-                "ratio": "8.36%"
+                "ratio": "9.68%"
+            },
+            {
+                "name": "Warmog's Armor",
+                "ratio": "9.25%"
             },
             {
                 "name": "Dragon's Claw",
-                "ratio": "4.96%"
+                "ratio": "5.81%"
             },
             {
                 "name": "Bramble Vest",
-                "ratio": "4.19%"
+                "ratio": "4.74%"
             }
         ]
     },
@@ -878,24 +878,24 @@
         "champion": "Renekton",
         "items": [
             {
-                "name": "Warmog's Armor",
-                "ratio": "20.94%"
+                "name": "Sunfire Cape",
+                "ratio": "14.95%"
             },
             {
-                "name": "Sunfire Cape",
-                "ratio": "19.97%"
+                "name": "Warmog's Armor",
+                "ratio": "14.68%"
             },
             {
                 "name": "Redemption",
-                "ratio": "15.78%"
+                "ratio": "12.47%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "15.01%"
+                "ratio": "11.51%"
             },
             {
                 "name": "Dragon's Claw",
-                "ratio": "13.23%"
+                "ratio": "9.78%"
             }
         ]
     },
@@ -904,23 +904,23 @@
         "items": [
             {
                 "name": "Sunfire Cape",
-                "ratio": "16.26%"
+                "ratio": "17.32%"
             },
             {
                 "name": "Redemption",
-                "ratio": "15.28%"
+                "ratio": "13.83%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "13.07%"
-            },
-            {
-                "name": "Ionic Spark",
-                "ratio": "9.85%"
+                "ratio": "13.39%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "8.87%"
+                "ratio": "10.91%"
+            },
+            {
+                "name": "Ionic Spark",
+                "ratio": "9.34%"
             }
         ]
     },
@@ -929,23 +929,23 @@
         "items": [
             {
                 "name": "Last Whisper",
-                "ratio": "55.63%"
+                "ratio": "59.57%"
             },
             {
                 "name": "Infinity Edge",
-                "ratio": "37.66%"
+                "ratio": "40.34%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "34.11%"
+                "ratio": "39.61%"
             },
             {
                 "name": "Runaan's Hurricane",
-                "ratio": "21.41%"
+                "ratio": "22.28%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "18.04%"
+                "ratio": "20.04%"
             }
         ]
     },
@@ -954,23 +954,23 @@
         "items": [
             {
                 "name": "Warmog's Armor",
-                "ratio": "17.65%"
-            },
-            {
-                "name": "Morellonomicon",
-                "ratio": "15.53%"
-            },
-            {
-                "name": "Redemption",
-                "ratio": "14.62%"
+                "ratio": "16.84%"
             },
             {
                 "name": "Sunfire Cape",
-                "ratio": "14.56%"
+                "ratio": "15.10%"
+            },
+            {
+                "name": "Redemption",
+                "ratio": "14.51%"
+            },
+            {
+                "name": "Morellonomicon",
+                "ratio": "14.21%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "13.04%"
+                "ratio": "12.33%"
             }
         ]
     },
@@ -979,23 +979,23 @@
         "items": [
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "9.88%"
+                "ratio": "11.03%"
             },
             {
                 "name": "Last Whisper",
-                "ratio": "6.58%"
+                "ratio": "8.55%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "4.28%"
+                "ratio": "5.93%"
+            },
+            {
+                "name": "Infinity Edge",
+                "ratio": "5.33%"
             },
             {
                 "name": "Deathblade",
-                "ratio": "4.05%"
-            },
-            {
-                "name": "Zeke's Herald",
-                "ratio": "3.71%"
+                "ratio": "4.52%"
             }
         ]
     },
@@ -1004,23 +1004,23 @@
         "items": [
             {
                 "name": "Thief's Gloves",
-                "ratio": "4.63%"
-            },
-            {
-                "name": "Brawler Emblem",
-                "ratio": "3.38%"
-            },
-            {
-                "name": "Titan’s Resolve",
-                "ratio": "2.68%"
-            },
-            {
-                "name": "Warmog's Armor",
-                "ratio": "2.31%"
+                "ratio": "3.80%"
             },
             {
                 "name": "Redemption",
-                "ratio": "2.19%"
+                "ratio": "3.38%"
+            },
+            {
+                "name": "Sunfire Cape",
+                "ratio": "3.30%"
+            },
+            {
+                "name": "Brawler Emblem",
+                "ratio": "3.05%"
+            },
+            {
+                "name": "Gargoyle Stoneplate",
+                "ratio": "3.03%"
             }
         ]
     },
@@ -1029,22 +1029,22 @@
         "items": [
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "10.77%"
+                "ratio": "6.95%"
             },
             {
                 "name": "Last Whisper",
-                "ratio": "6.06%"
-            },
-            {
-                "name": "Deathblade",
-                "ratio": "5.35%"
-            },
-            {
-                "name": "Zeke's Herald",
-                "ratio": "4.12%"
+                "ratio": "5.72%"
             },
             {
                 "name": "Giant Slayer",
+                "ratio": "4.48%"
+            },
+            {
+                "name": "Zeke's Herald",
+                "ratio": "4.27%"
+            },
+            {
+                "name": "Runaan's Hurricane",
                 "ratio": "3.52%"
             }
         ]
@@ -1053,24 +1053,24 @@
         "champion": "Sona",
         "items": [
             {
-                "name": "Chalice of Power",
-                "ratio": "5.70%"
+                "name": "Blue Buff",
+                "ratio": "17.76%"
             },
             {
-                "name": "Blue Buff",
-                "ratio": "5.57%"
+                "name": "Giant Slayer",
+                "ratio": "11.89%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "3.33%"
+                "ratio": "10.38%"
             },
             {
-                "name": "Statikk Shiv",
-                "ratio": "3.19%"
+                "name": "Rabadon's Deathcap",
+                "ratio": "6.36%"
             },
             {
-                "name": "Spear of Shojin",
-                "ratio": "2.54%"
+                "name": "Chalice of Power",
+                "ratio": "5.94%"
             }
         ]
     },
@@ -1079,23 +1079,23 @@
         "items": [
             {
                 "name": "Blue Buff",
-                "ratio": "23.99%"
+                "ratio": "26.11%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "15.77%"
+                "ratio": "18.88%"
             },
             {
                 "name": "Brawler Emblem",
-                "ratio": "12.41%"
-            },
-            {
-                "name": "Archangel's Staff",
-                "ratio": "11.74%"
+                "ratio": "15.01%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "11.36%"
+                "ratio": "12.70%"
+            },
+            {
+                "name": "Archangel's Staff",
+                "ratio": "12.14%"
             }
         ]
     },
@@ -1104,23 +1104,23 @@
         "items": [
             {
                 "name": "Sunfire Cape",
-                "ratio": "4.87%"
+                "ratio": "4.17%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "4.66%"
-            },
-            {
-                "name": "Gargoyle Stoneplate",
-                "ratio": "2.84%"
+                "ratio": "3.82%"
             },
             {
                 "name": "Redemption",
-                "ratio": "2.75%"
+                "ratio": "2.50%"
+            },
+            {
+                "name": "Gargoyle Stoneplate",
+                "ratio": "2.46%"
             },
             {
                 "name": "Dragon's Claw",
-                "ratio": "1.87%"
+                "ratio": "1.61%"
             }
         ]
     },
@@ -1129,23 +1129,23 @@
         "items": [
             {
                 "name": "Spear of Shojin",
-                "ratio": "11.43%"
+                "ratio": "12.48%"
             },
             {
                 "name": "Statikk Shiv",
-                "ratio": "6.31%"
+                "ratio": "7.12%"
             },
             {
                 "name": "Chalice of Power",
-                "ratio": "5.17%"
-            },
-            {
-                "name": "Thief's Gloves",
-                "ratio": "3.73%"
+                "ratio": "5.45%"
             },
             {
                 "name": "Blue Buff",
-                "ratio": "3.62%"
+                "ratio": "4.15%"
+            },
+            {
+                "name": "Thief's Gloves",
+                "ratio": "3.68%"
             }
         ]
     },
@@ -1154,23 +1154,23 @@
         "items": [
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "62.63%"
+                "ratio": "64.56%"
             },
             {
                 "name": "Spear of Shojin",
-                "ratio": "52.33%"
+                "ratio": "56.24%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "27.76%"
+                "ratio": "31.88%"
             },
             {
                 "name": "Archangel's Staff",
-                "ratio": "27.16%"
+                "ratio": "21.88%"
             },
             {
                 "name": "Hextech Gunblade",
-                "ratio": "16.36%"
+                "ratio": "19.33%"
             }
         ]
     },
@@ -1179,23 +1179,23 @@
         "items": [
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "3.48%"
+                "ratio": "3.96%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "3.17%"
+                "ratio": "3.23%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "3.04%"
+                "ratio": "3.12%"
             },
             {
-                "name": "Zephyr",
-                "ratio": "1.32%"
+                "name": "A.D.M.I.N. Crest",
+                "ratio": "2.65%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "1.01%"
+                "ratio": "1.33%"
             }
         ]
     },
@@ -1204,23 +1204,23 @@
         "items": [
             {
                 "name": "Thief's Gloves",
-                "ratio": "5.37%"
+                "ratio": "5.56%"
             },
             {
                 "name": "Statikk Shiv",
-                "ratio": "4.95%"
+                "ratio": "4.52%"
             },
             {
                 "name": "Spear of Shojin",
-                "ratio": "4.05%"
+                "ratio": "3.79%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "3.15%"
+                "ratio": "2.74%"
             },
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "2.67%"
+                "ratio": "2.56%"
             }
         ]
     },
@@ -1229,23 +1229,23 @@
         "items": [
             {
                 "name": "Guinsoo's Rageblade",
-                "ratio": "18.75%"
+                "ratio": "25.07%"
             },
             {
                 "name": "Infinity Edge",
-                "ratio": "11.28%"
+                "ratio": "17.21%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "10.51%"
-            },
-            {
-                "name": "Edge of Night",
-                "ratio": "8.26%"
+                "ratio": "16.06%"
             },
             {
                 "name": "Last Whisper",
-                "ratio": "7.50%"
+                "ratio": "10.92%"
+            },
+            {
+                "name": "Edge of Night",
+                "ratio": "10.70%"
             }
         ]
     },
@@ -1254,23 +1254,23 @@
         "items": [
             {
                 "name": "Spear of Shojin",
-                "ratio": "24.05%"
+                "ratio": "21.19%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "16.68%"
-            },
-            {
-                "name": "Archangel's Staff",
-                "ratio": "11.07%"
+                "ratio": "16.04%"
             },
             {
                 "name": "Statikk Shiv",
-                "ratio": "9.98%"
+                "ratio": "10.27%"
+            },
+            {
+                "name": "Archangel's Staff",
+                "ratio": "9.74%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "6.99%"
+                "ratio": "6.19%"
             }
         ]
     },
@@ -1279,23 +1279,23 @@
         "items": [
             {
                 "name": "Sunfire Cape",
-                "ratio": "4.68%"
-            },
-            {
-                "name": "Redemption",
-                "ratio": "4.61%"
-            },
-            {
-                "name": "Zeke's Herald",
-                "ratio": "4.51%"
+                "ratio": "5.67%"
             },
             {
                 "name": "Warmog's Armor",
-                "ratio": "3.56%"
+                "ratio": "4.46%"
+            },
+            {
+                "name": "Redemption",
+                "ratio": "4.31%"
+            },
+            {
+                "name": "Gargoyle Stoneplate",
+                "ratio": "3.29%"
             },
             {
                 "name": "Thief's Gloves",
-                "ratio": "3.21%"
+                "ratio": "3.01%"
             }
         ]
     },
@@ -1304,23 +1304,23 @@
         "items": [
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "58.51%"
+                "ratio": "42.34%"
             },
             {
                 "name": "Hand of Justice",
-                "ratio": "43.71%"
-            },
-            {
-                "name": "Ionic Spark",
-                "ratio": "28.56%"
+                "ratio": "26.88%"
             },
             {
                 "name": "Archangel's Staff",
-                "ratio": "25.88%"
+                "ratio": "23.58%"
+            },
+            {
+                "name": "Ionic Spark",
+                "ratio": "22.88%"
             },
             {
                 "name": "Bloodthirster",
-                "ratio": "24.00%"
+                "ratio": "20.48%"
             }
         ]
     },
@@ -1329,23 +1329,23 @@
         "items": [
             {
                 "name": "Brawler Emblem",
-                "ratio": "1.83%"
+                "ratio": "1.54%"
             },
             {
                 "name": "Zeke's Herald",
-                "ratio": "1.12%"
+                "ratio": "1.26%"
             },
             {
-                "name": "Chalice of Power",
-                "ratio": "0.31%"
+                "name": "Titan’s Resolve",
+                "ratio": "0.88%"
+            },
+            {
+                "name": "Bloodthirster",
+                "ratio": "0.85%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "0.20%"
-            },
-            {
-                "name": "Zephyr",
-                "ratio": "0.19%"
+                "ratio": "0.79%"
             }
         ]
     },
@@ -1353,24 +1353,24 @@
         "champion": "Yasuo",
         "items": [
             {
-                "name": "Hand of Justice",
-                "ratio": "14.51%"
+                "name": "Jeweled Gauntlet",
+                "ratio": "14.93%"
             },
             {
-                "name": "Jeweled Gauntlet",
-                "ratio": "14.21%"
+                "name": "Hand of Justice",
+                "ratio": "13.97%"
             },
             {
                 "name": "Titan’s Resolve",
-                "ratio": "9.58%"
-            },
-            {
-                "name": "Thief's Gloves",
-                "ratio": "6.41%"
+                "ratio": "10.35%"
             },
             {
                 "name": "Bloodthirster",
-                "ratio": "6.40%"
+                "ratio": "7.14%"
+            },
+            {
+                "name": "Thief's Gloves",
+                "ratio": "6.25%"
             }
         ]
     },
@@ -1379,23 +1379,23 @@
         "items": [
             {
                 "name": "Blue Buff",
-                "ratio": "12.29%"
-            },
-            {
-                "name": "Giant Slayer",
-                "ratio": "8.88%"
+                "ratio": "51.63%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "8.69%"
+                "ratio": "41.78%"
+            },
+            {
+                "name": "Giant Slayer",
+                "ratio": "41.42%"
             },
             {
                 "name": "Hextech Gunblade",
-                "ratio": "4.37%"
+                "ratio": "10.23%"
             },
             {
-                "name": "Archangel's Staff",
-                "ratio": "3.30%"
+                "name": "Rabadon's Deathcap",
+                "ratio": "9.77%"
             }
         ]
     },
@@ -1404,23 +1404,23 @@
         "items": [
             {
                 "name": "Warmog's Armor",
-                "ratio": "17.45%"
+                "ratio": "13.87%"
             },
             {
                 "name": "Gargoyle Stoneplate",
-                "ratio": "13.40%"
+                "ratio": "10.29%"
             },
             {
                 "name": "Sunfire Cape",
-                "ratio": "12.27%"
-            },
-            {
-                "name": "Bramble Vest",
-                "ratio": "6.73%"
+                "ratio": "9.95%"
             },
             {
                 "name": "Dragon's Claw",
-                "ratio": "6.59%"
+                "ratio": "5.61%"
+            },
+            {
+                "name": "Bramble Vest",
+                "ratio": "5.14%"
             }
         ]
     },
@@ -1429,23 +1429,23 @@
         "items": [
             {
                 "name": "Edge of Night",
-                "ratio": "51.74%"
+                "ratio": "55.71%"
             },
             {
                 "name": "Runaan's Hurricane",
-                "ratio": "40.39%"
+                "ratio": "42.29%"
             },
             {
                 "name": "Last Whisper",
-                "ratio": "30.67%"
+                "ratio": "33.38%"
             },
             {
                 "name": "Infinity Edge",
-                "ratio": "12.07%"
+                "ratio": "12.66%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "10.17%"
+                "ratio": "11.25%"
             }
         ]
     },
@@ -1454,23 +1454,23 @@
         "items": [
             {
                 "name": "Blue Buff",
-                "ratio": "51.20%"
+                "ratio": "39.60%"
             },
             {
                 "name": "Morellonomicon",
-                "ratio": "36.69%"
+                "ratio": "31.46%"
             },
             {
                 "name": "Jeweled Gauntlet",
-                "ratio": "19.27%"
-            },
-            {
-                "name": "Hextech Gunblade",
-                "ratio": "15.66%"
+                "ratio": "14.29%"
             },
             {
                 "name": "Giant Slayer",
-                "ratio": "13.24%"
+                "ratio": "11.49%"
+            },
+            {
+                "name": "Hextech Gunblade",
+                "ratio": "10.07%"
             }
         ]
     }

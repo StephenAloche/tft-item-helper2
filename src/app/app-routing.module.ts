@@ -7,20 +7,23 @@ const routes: Routes = [
   loadChildren: () => import('./modules/accueil/accueil.module').then(mod => mod.AccueilModule)
   },
   {
+    path: 'accueil',
+    loadChildren: () => import('./modules/accueil/accueil.module').then(mod => mod.AccueilModule)
+  },
+  {
     path: 'itemManager',
     loadChildren: () => import('./modules/item-manager/item-manager.module').then(mod => mod.ItemManagerModule)
   },
   {
-    path: 'championManager',
+    path: '²',
     loadChildren: () => import('./modules/champion-manager/champion-manager.module').then(mod => mod.ChampionManagerModule
       )
+  },
+  {
+    path: 'traitManager',
+    loadChildren: () => import('./modules/trait-manager/trait-manager.module').then(mod => mod.TraitManagerModule
+      )
   }
-  //exemple
-  // {
-  //   path: 'chantier',
-  //   loadChildren: () => import('./modules/chantier/chantier.module').then(mod => mod.ItemHelperModule),
-  //   canActivate : [AuthGuard,]
-  // },
 ];
 
 @NgModule({

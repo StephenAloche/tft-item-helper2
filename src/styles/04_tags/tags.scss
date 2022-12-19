@@ -1,17 +1,13 @@
-html {
+html, body {
   height: 100%;
 }
 
 body {
-  height: 100%;
   max-height: 100vh;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  /*background-image: url(https://nexus.leagueoflegends.com/wp-content/uploads/2019/10/01_Banner_TFT_Learnings_8y7ikpvhe5um9bhprf2o.jpg);*/
-  /*background-image: url(https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta3aa171b05a30208/62045e4e76c7544993fa3c69/TFT_12_4_Banner.jpg);/*12.4*/
-  /*background: rgb(0 0 0 / 63%) url(https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltf8380771c88f86ba/630ec170cb61f5555c55c5cb/TFT_MID722_Comms_GameplayOverview_ArticleHeader_v001_NSanch.jpg) fixed;*/
-  background: rgb(0 0 0 / 63%) url(https://images.squarespace-cdn.com/content/v1/58af450eb3db2b0582612f1d/1595246989815-HRFRZPQVJ9JJ3KY8YCCT/TFT.S3_GALAXIES.ARTICLE-2.jpg?format=1500w) fixed;
-  /*set 7*/
+  background-color: rgb(0 0 0 / 63%);
+  background-image: url(https://images.squarespace-cdn.com/content/v1/58af450eb3db2b0582612f1d/1595246989815-HRFRZPQVJ9JJ3KY8YCCT/TFT.S3_GALAXIES.ARTICLE-2.jpg?format=1500w);
+  background-attachment: fixed;
   background-blend-mode: darken;
 
   background-size: cover;

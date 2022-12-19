@@ -20,6 +20,7 @@ import { ChampionTileModule } from 'src/app/shared/components/champion/champion-
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { ChampionItemsListModule } from 'src/app/shared/components/champion/champion-items-list/champion-items-list.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
     ItemManagerRoutingModule,
     ChampionListModule,
+    ChampionItemsListModule,
     ChampionTileModule,
     FontAwesomeModule,
     TooltipModule,

@@ -1,0 +1,36 @@
+    <div class="row">
+        <div *ngFor="let item of champion.recommandedItems"
+            class="d-flex sc-champion-items-list__reco-item"
+            [ngStyle]="{'opacity': item.ratio<10?'0.5':''}">
+            <div [ngClass]="{'sc-champion-items-list__item-anim-border' : item.isGlowing}">
+
+                <ng-template #itemTooltip>
+                    <span style="color:orange">{{item.name}}</span>
+                    <div [innerHTML]="item.desc"></div>
+                </ng-template>
+
+                <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
+                    tooltipClass="tooltip--item">
+                    <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                        class="d-flex flex-row" />
+                    <span>{{item.ratio}}</span>
+                </span>
+            </div>
+            <div id="itemRecipe" class="d-flex flex-column">
+                <div *ngFor="let itemr of item.recipe"
+                    [ngClass]="{'sc-champion-items-list__item-anim-border' : itemr.isGlowing}">
+
+                    <ng-template #itemTooltip>
+                        <span style="color:orange">{{item.name}}</span>
+                        <div [innerHTML]="item.desc"></div>
+                    </ng-template>
+
+                    <span [tooltip]="$any(itemTooltip)" contentType="template"
+                        [showDelay]="300" tooltipClass="tooltip--item">
+                        <img
+                            src="https://raw.communitydragon.org/latest/game/{{itemr.icon}}" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>

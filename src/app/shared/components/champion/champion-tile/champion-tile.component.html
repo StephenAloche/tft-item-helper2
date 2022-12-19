@@ -3,6 +3,6 @@
   <img src="https://raw.communitydragon.org/latest/game/{{champion.icon}}" class="brd-cost-{{champion.cost}} sc-champion-tile__img"/>
 </div>
 <span class="sc-champion-tile__name" [ngStyle]="{'color': (champion.priorItem)?'yellow':''}">{{champion.name}}</span>
-<div class="d-flex" class="sc-champion-tile__trait">
+<div class="d-flex" class="sc-champion-tile__traits">
     <img  *ngFor="let trait of champion.dataTraits" src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"/>
 </div>  

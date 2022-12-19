@@ -51,17 +51,25 @@ export class ChampionService {
     return champ;
   }
 
-  getByTrait(traitName: string): Champion[] {
-    var champs: Champion[] = this.champions.filter(c => c.traits?.some(t => t.toLowerCase() == traitName.toLowerCase()));
-    //tiré par cout
-    champs = champs.sort((a, b) => {
-      const ageDiff = a.cost - b.cost;
-      if (ageDiff) return ageDiff;
-      return a.name.localeCompare(b.name); // Use a polyfill for IE support
-    });
-
-    return champs;
-  }
+  getByTrait(traitName: string): Observable<Champion[]> {
+    let champs: Champion[] = [];
+    return this.getAll().pipe(
+      map(
+        (champions : Champion[]) => {
+          champs = champions.filter(c => c.traits?.some(t => t.toLowerCase() == traitName.toLowerCase()));
+       //tiré par cout
+       champs = champs.sort((a, b) => {
+         const costDiff = a.cost - b.cost;
+         if (costDiff) return costDiff;
+         return a.name.localeCompare(b.name); // Use a polyfill for IE support
+       });
+   
+       return champs;
+        }
+      )
+    )
+    return of(champs);
+   }
 
   getRecommandedItem(champion: Champion): Observable<Item[]> {
     let jsonURL = `assets/dataSets/Set${currentSetNum}/championRecoItem_Set${currentSetNum}.json`;

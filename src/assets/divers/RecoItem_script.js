@@ -1,7 +1,7 @@
 
   //basé sur la récupération d'information sur le site https://lolchess.gg/statistics/items dans item trend
 
-var tr = document.querySelectorAll('.table tbody tr');
+  var tr = document.querySelectorAll('.table tbody tr');
   var data = [];
   for(var i=0; i < tr.length;i++)
   {
@@ -10,7 +10,9 @@ var tr = document.querySelectorAll('.table tbody tr');
     var items =  tr[i].querySelectorAll(".items");
       var itemBuild = [];
       for (let index = 0; index < items.length; index++) {
-          itemCustom = {name : items[index].querySelector(".combination span.name").innerHTML, ratio : items[index].querySelector(".combination span.ratio").innerHTML };
+          itemCustom = {
+              name : items[index].querySelector(".combination span.name").innerHTML,
+              ratio : items[index].querySelector(".combination span.ratio").innerHTML.split('|')[0].replace('\\n','').trim() };
           itemBuild.push(itemCustom);
       }
     info.champion = champion;
@@ -18,4 +20,5 @@ var tr = document.querySelectorAll('.table tbody tr');
     data.push(info);
     JSON.stringify(data);
   }
+
 

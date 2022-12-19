@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from 'src/app/shared/layouts/main-layout/main-layout.component';
-import { ItemManagerComponent } from './pages/item-manager/item-manager.component';
+import { TraitManagerComponent } from './pages/trait-manager.component';
+
 
 const routes: Routes = [
   {
     path : '',
     component : MainLayoutComponent,
     children: [
-      { path: '', component: ItemManagerComponent }
+      { path: '', component: TraitManagerComponent }
     ],
   }
 ];
@@ -17,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ItemManagerRoutingModule { }
+export class TraitManagerRoutingModule { }

@@ -1,0 +1,29 @@
+.accueil-menu-bar{
+    height: 100%;
+    align-items: center;
+}
+
+.accueil-menu-bar__col-placeholder{
+    text-align: -webkit-center;
+    height: 100%;
+}
+
+
+.accueil-menu-bar__link-placeholder{
+    height:100%;
+    align-items: center;
+    background-color: #00000075;
+    display: flex;
+}
+
+.accueil-menu-bar__link{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.accueil-menu-bar__img{
+    max-width : 100%
+}
