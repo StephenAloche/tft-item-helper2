@@ -15,14 +15,20 @@ const routes: Routes = [
     loadChildren: () => import('./modules/item-manager/item-manager.module').then(mod => mod.ItemManagerModule)
   },
   {
-    path: '²',
-    loadChildren: () => import('./modules/champion-manager/champion-manager.module').then(mod => mod.ChampionManagerModule
-      )
+    path: 'championManager',
+    loadChildren: () => import('./modules/champion-manager/champion-manager.module').then(mod => mod.ChampionManagerModule)
+  },
+  {
+    path: 'pivotManager',
+    loadChildren: () => import('./modules/pivot-manager/pivot-manager.module').then(mod => mod.PivotManagerModule)
   },
   {
     path: 'traitManager',
-    loadChildren: () => import('./modules/trait-manager/trait-manager.module').then(mod => mod.TraitManagerModule
-      )
+    loadChildren: () => import('./modules/trait-manager/trait-manager.module').then(mod => mod.TraitManagerModule)
+  },
+  {
+    path: 'guide',
+    loadChildren: () => import('./modules/guide/guide.module').then(mod => mod.GuideModule)
   }
 ];
 
