@@ -1,1 +1,105 @@
-<p>pivot-manager works!</p>
+<div class="container-fluid" >
+    <button (click)="loadRandom()">load Random</button>            
+    <button (click)="clearAll()">Clear All.</button>
+    <div class="center">        
+        <div class="d-flex">
+            <input matInput value="{{currentStage.stage}}" type="number" [(ngModel)]="currentStage.stage" max="7" min="1"> - <input matInput value="{{currentStage.phase}}" type="number" [(ngModel)]="currentStage.phase" max="7" min="1">
+        </div>
+        <ng-container *ngIf="currentStage.isCarouselle; else testAugment">Carousel</ng-container>
+        
+        <ng-template #testAugment>
+            <ng-container  *ngIf="currentStage.isAugment; else testMonster">Augment</ng-container>
+            
+        </ng-template> 
+        <ng-template #testMonster>
+            <ng-container #testMonster *ngIf="currentStage.isMonster; else testFight">Monster</ng-container>
+        </ng-template>
+        <ng-template #testFight>Fight</ng-template>
+
+        <button (click)="startTimer()">Start run</button>
+        <button (click)="stopTimer()">Stop run</button>
+        <button (click)="endRound()">End Roung</button>
+        
+        <div class="col-1">{{timeLeft}}</div>        
+    </div>
+    
+    <div class="" >        
+        <div class="progress col">
+            <div class="progress-bar" [ngClass]="{'fight' : (currentStage.IsFight && prepaDone)}" role="progressbar" aria-valuenow="timeLeft" aria-valuemin="0" aria-valuemax="currentStage.prepDuration" [style.width.%]="timerDisplay">
+            </div>
+        </div>
+    </div>
+     
+    <div class="row-board">
+        <div class="col-1 scroll" (drop)="sellChampion($event)" (dragover)="allowDrop($event)">
+            <app-active-traits [activesTraits]="activesTraitsPH"></app-active-traits>
+        </div>
+        <div class="col field">                 
+            <app-board [board]="board" (onDropEvent)="onDrop($event)" (onDragEvent)="onDrag($event)" (allowDropEvent)="allowDrop($event)" >
+            </app-board> 
+            
+            
+            <table id="bench">
+                <tbody>
+                    <tr>
+                        <td *ngFor="let hexBenchChamp of bench; let i = index;">
+                            <div class="case" id="div-bench-{{i}}"  (drop)="onDrop($event)" (dragover)="allowDrop($event)">
+                                <app-champion-hexagone id="hexdrag-bench-{{i}}" [champion]="hexBenchChamp.champion" draggable="true" (dragstart)="onDrag($event)"></app-champion-hexagone>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="col-3">
+            <app-champion-list (childEvent)="selectChampion($event)"></app-champion-list>
+        </div>
+    </div>
+    
+    <div class="row" >
+        <div class="col">            
+            <div class="row" >
+                <div class="col-2 d-flex">
+                    <span>Niv. {{currentLevel.level}}</span>
+                    <mat-slider min="1" max="10" step="1" valueChange="onLevelChange($event)">
+                        <input matSliderThumb [(ngModel)]="currentLevel.level">
+                    </mat-slider>
+                    <span>Niv. {{currentLevel.currentXp}}</span> /  <span>Niv. {{currentLevel.xpNeed}}</span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="this.currentLevel.currentXp" aria-valuemin="0" aria-valuemax="this.currentLevel.xpNeed" [style.width.%]="timerDisplay">
+                        </div>
+                    </div>
+                    <div class="col-4" >
+                        <span class="tier cost-1">{{reRoll[currentLevel.level-1].tier1}}%</span>
+                        <span class="tier cost-2">{{reRoll[currentLevel.level-1].tier2}}%</span>
+                        <span class="tier cost-3">{{reRoll[currentLevel.level-1].tier3}}%</span>
+                        <span class="tier cost-4">{{reRoll[currentLevel.level-1].tier4}}%</span>
+                        <span class="tier cost-5">{{reRoll[currentLevel.level-1].tier5}}%</span>
+                    </div>
+                    <div class="col-1">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <input matInput value="{{currentGold}}" type="number" [(ngModel)]="currentGold" >
+                        </mat-form-field>
+                    </div>
+                    <span>gold expend : {{goldExpend}}</span>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <div class="d-flex">
+                            <button class="btn-refresh" (click)="doRefresh(true)">Refresh Free</button>
+                            <button class="btn-refresh" (click)="(currentGold>2) && doRefresh(false)" [disabled]="currentGold<2">Refresh</button> -->
+                        </div>
+                        <button  (click)="buyXP()" [disabled]="currentGold<4">Buy XP</button>
+                    </div>
+                    <div id="shop" class="col d-flex">
+                        <div *ngFor="let champion of shop"  [ngStyle]="{'filter': champion.cost>currentGold?'brightness(0.5)':''}" (click)="(champion.cost<currentGold || champion.cost==currentGold) && selectChampionShop(champion)">
+                            <app-champion-tile [champion]="champion"></app-champion-tile>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>

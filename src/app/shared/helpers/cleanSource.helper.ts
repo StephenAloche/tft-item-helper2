@@ -102,5 +102,8 @@ export function cleanItemVariable<Type> (data : Type[]):Type[] {
 }
 
 export function cleanName(name : string) : string{
+    if(name=='Nunu & Willump'){
+        name = 'Nunu';
+    }
     return name.replaceAll(' ','').replaceAll('.','').replaceAll('\'','').replaceAll('-','');
 }

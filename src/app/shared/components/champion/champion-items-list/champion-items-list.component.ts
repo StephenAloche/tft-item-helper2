@@ -10,7 +10,6 @@ export class ChampionItemsListComponent implements OnInit {
   @Input() champion : Champion = new Champion ();
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }  
 
 }

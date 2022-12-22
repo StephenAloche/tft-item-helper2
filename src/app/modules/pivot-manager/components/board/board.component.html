@@ -1,0 +1,13 @@
+
+<table id="board">
+    <tbody>
+        <tr *ngFor="let row of board; let itr = index">
+            <td *ngFor="let hexBoardChamp of row; let itd = index">
+                <div class="case" id="div-board-{{itr}}-{{itd}}"  (drop)="onDrop($event)" (dragover)="allowDrop($event)">
+                    <app-champion-hexagone id="hexdrag-board-{{itr}}-{{itd}}" [champion]="hexBoardChamp.champion" draggable="true" (dragstart)="onDrag($event)"></app-champion-hexagone>
+                </div>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>

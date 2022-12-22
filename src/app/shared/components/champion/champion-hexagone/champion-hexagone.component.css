@@ -1,0 +1,54 @@
+.hex-all{    
+    margin-bottom: 15px;/*TODO : revoir tout le css*/
+}
+
+.champ-miniature{
+    width: 171px;
+    height: 98px;
+    x: -77px;
+    y: -1px;
+}
+
+.hex-champ{
+    display: block;
+    margin: auto;
+    top: 7px;
+    z-index: -1;
+    position: relative;
+}
+
+.trait-over-image{
+    display: flex;
+    position : relative;
+    justify-content: space-evenly;
+    height : 0px;
+  }
+
+  .item-under-image{
+    top: -35px;
+    position: relative;
+    height : 0px;
+  }
+  .label-under-image{
+    top: -35px;
+    position: relative;
+  }
+
+  .trait-over-image > img{
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: #787878;
+    padding: 2px;
+    height: 25px;
+  }
+
+
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.equiped{
+    width: 30px;
+    height: 30px;
+}
