@@ -27,6 +27,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/trait-manager/trait-manager.module').then(mod => mod.TraitManagerModule)
   },
   {
+    path: 'deckManager',
+    loadChildren: () => import('./modules/deck-manager/deck-manager.module').then(mod => mod.DeckManagerModule)
+  },
+  {
     path: 'guide',
     loadChildren: () => import('./modules/guide/guide.module').then(mod => mod.GuideModule)
   }

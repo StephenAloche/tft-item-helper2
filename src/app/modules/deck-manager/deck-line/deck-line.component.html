@@ -1,0 +1,12 @@
+<div *ngFor="let champion of deckChampions" class="champion">
+    <img src="https://raw.communitydragon.org/latest/game/{{champion.icon}}"
+        class="brd-cost-{{champion.cost}} champion__img champion__border" />
+    <div>
+        <!-- items -->
+    </div>
+    <span class="champion__name">{{ champion.name }}</span>
+</div>
+
+<div *ngFor="let trait of deckTraits" class="trait">
+    <app-active-traits [activesTraits]=""></app-active-traits>
+</div>

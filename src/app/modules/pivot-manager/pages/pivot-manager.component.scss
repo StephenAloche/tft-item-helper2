@@ -1,0 +1,28 @@
+.sc-pivot-manager-row-board{ //TODO : a modifier
+    height: 700px;
+    display: flex;
+}
+  .sc-pivot-manager-btn-refresh
+  {
+    width: 100%;
+    height : 50%;
+  }
+
+  /*les progress surcharge la classe bootstrap il ne faut pas les renommer*/
+  .progress {
+    background-color: rgb(32, 32, 32);
+    justify-content: end;
+    margin : auto;
+    height : 10px;
+    width : 40%
+
+}
+.progress-bar {
+    background-color: #5efff4;
+  justify-content: end;
+}
+
+.progress-bar.fight {
+    background-color: #ff5e5e;
+  justify-content: end;
+}

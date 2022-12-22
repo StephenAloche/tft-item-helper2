@@ -23,7 +23,8 @@ export class Champion {
     equippedItems : Item[] = new Array();
     dataTraits: Trait[] = [];
     synergies : Synergie[] = [];
-    typeAdAp : TypeAdAp = TypeAdAp.Ad;        
+    typeAdAp : TypeAdAp = TypeAdAp.Ad;    
+    isCore : boolean;    
     
     recommandedItemsObs$ : Observable<Item[]>;
 }
