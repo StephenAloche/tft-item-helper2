@@ -52,7 +52,8 @@ export class PivotManagerComponent implements OnInit {
     private changeDetection: ChangeDetectorRef) { }
     
   ngOnInit(): void {
-    this.traitService.getAll();
+    this.traitService.getAll().subscribe(()=>{
+      
     this.currentStage = new StageData(this.stageData[0]);
       this.timeLeft = this.currentStage.prepDuration;
 
@@ -74,6 +75,7 @@ export class PivotManagerComponent implements OnInit {
           this.board[tri].push(new HexCase());
         }
       }
+    });
   }
   
 
@@ -458,6 +460,7 @@ export class PivotManagerComponent implements OnInit {
       }
       this.currentGold -= champion.cost;
       
+          //TODO remplacer les clones par l'utilisation de ...object
       ind = this.bench.findIndex(hex=>hex.champion==undefined)
       
       var tempcopy = JSON.stringify(champion)

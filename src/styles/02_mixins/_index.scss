@@ -1,0 +1,14 @@
+/**
+  Méthodes / Mixins pour faciliter l’écriture des règles. Si vous n’utilisez pas de préprocesseurs, cette couche ne sera pas utilisée.
+
+  Dans le cas inverse, je conseille de limiter au maximum l’écriture de nouvelles fonction.
+  En effet, celles-ci vont générer du CSS qui ne sera pas visible lors de l’écriture de la règle.
+
+  Elles peuvent par contre être très utile pour l’écriture des médias queries en limitant le nombre de break-points et en homogénéisant leur écriture.
+*/
+@import './grid.scss';
+@import './champion.scss';
+
+@import './shadow.scss';
+@import './borders.scss';
+@import './responsive-breakpoints.scss';

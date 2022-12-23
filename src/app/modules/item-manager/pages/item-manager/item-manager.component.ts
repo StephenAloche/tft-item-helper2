@@ -107,6 +107,7 @@ export class ItemManagerComponent implements OnInit {
           newChamp.equippedItems = [];
           
           //TODO créer un clone pour ne pas avoir la meme liste d'item
+          //TODO remplacer les clones par l'utilisation de ...object
           newChamp.ability = {};
           newChamp.synergies = [];
           newChamp.dataTraits?.forEach(trait => { trait.desc = ""; trait.effects = [], trait.champions = [] });

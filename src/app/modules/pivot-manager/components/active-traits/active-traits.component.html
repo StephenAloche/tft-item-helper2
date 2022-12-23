@@ -1,17 +1,20 @@
 <ng-container *ngIf="activesTraits != undefined">
-    <div *ngFor="let trait of activesTraits" class="col flex-column d-flex trait-icon">
-        <ng-template #traitDescTooltip >
+    <div *ngFor="let trait of activesTraits" class="col flex-column d-flex sc-active-trait__icon">
+
+        <ng-template #traitDescTooltip>
             <span>{{trait.name}}</span>
-            <br/>
+            <br />
             <span [innerHTML]="trait.desc"></span>
         </ng-template>
-        
-        <span id="background-img" [tooltip]="$any(traitDescTooltip)"  placement="right" contentType="template" [ngClass]="{'unactive-img' : trait.state == State.Unactive, 'bronze-img' : trait.state == State.Bronze, 
+
+        <span id="background-img" [tooltip]="$any(traitDescTooltip)" placement="right" contentType="template"
+            class="sc-active-trait__img-bg"
+            [ngClass]="{'unactive-img' : trait.state == State.Unactive, 'bronze-img' : trait.state == State.Bronze, 
         'silver-img' : trait.state == State.Silver, 'gold-img' : trait.state == State.Gold, 'prisma-img' : trait.state == State.Prisma}">
-        <img src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"
-        style="--trait-url : url('https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}');"/>
-    </span>
-    <span>{{trait.currentNumber}}</span>
-    <span>{{trait.currentPallier}}/{{trait.nextPallier}}</span>
-</div>
+            <img src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"
+                style="--trait-url : url('https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}');" />
+        </span>
+        <span>{{trait.currentNumber}}</span>
+        <span>{{trait.currentPallier}}/{{trait.nextPallier}}</span>
+    </div>
 </ng-container>

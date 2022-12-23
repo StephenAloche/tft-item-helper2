@@ -4,7 +4,7 @@ import { Champion } from 'src/app/shared/models/champion.model';
 @Component({
   selector: 'app-champion-hexagone',
   templateUrl: './champion-hexagone.component.html',
-  styleUrls: ['./champion-hexagone.component.css']
+  styleUrls: ['./champion-hexagone.component.scss']
 })
 export class ChampionHexagoneComponent implements OnInit {
   @Input() champion : Champion | undefined;

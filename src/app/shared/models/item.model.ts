@@ -1,17 +1,39 @@
-export class Item {
-        id: number = 0;
-        name?: string;
-        desc?: string;
-        effects?: any;
-        from?: number[];
-        icon?: string;
-        unique: boolean = false;
-        ratio : number = 0;
-        
-        recipe : Item[] = new Array();
-        recipeItem1? : Item;
-        recipeItem2? : Item;
-        isGlowing: boolean = false;
-        isWrong: boolean = false;
-        isEquiped: boolean = false;
-    }
+export interface Item {
+    id: number;
+    name?: string;
+    desc?: string;
+    effects?: any;
+    from?: number[];
+    icon?: string;
+    unique: boolean;
+    ratio: number;
+
+    recipe: Item[];
+    recipeItem1?: Item;
+    recipeItem2?: Item;
+    isGlowing: boolean;
+    isWrong: boolean;
+    isEquiped: boolean;
+}
+
+const templateItem: Item = {
+    id: 0,
+    name: '',
+    desc: '',
+    effects: null,
+    from: [],
+    icon: '',
+    unique: false,
+    ratio: 0,
+
+    recipe: [],
+    recipeItem1: undefined,
+    recipeItem2: undefined,
+    isGlowing: false,
+    isWrong: false,
+    isEquiped: false,
+};
+
+export const newItem = (
+    item?: Item
+): Item => ({ ...templateItem, ...item });

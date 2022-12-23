@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Champion } from 'src/app/shared/models/champion.model';
+import { Component, Input } from '@angular/core';
 import { Trait } from 'src/app/shared/models/traits.model';
+import { Deck } from '../models/deck.models';
 
 @Component({
   selector: 'app-deck-line',
@@ -8,6 +8,6 @@ import { Trait } from 'src/app/shared/models/traits.model';
   styleUrls: ['./deck-line.component.scss']
 })
 export class DeckLineComponent {
-  deckChampions : Champion[];
-  deckTraits : Trait[];
+  @Input() deck : Deck;
+  activeTraits : Trait[];
 }

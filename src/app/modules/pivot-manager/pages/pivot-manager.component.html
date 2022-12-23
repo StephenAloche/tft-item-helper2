@@ -39,7 +39,7 @@
         <div class="col-1 u-scroll" (drop)="sellChampion($event)" (dragover)="allowDrop($event)">
             <app-active-traits [activesTraits]="activesTraitsPH"></app-active-traits>
         </div>
-        <div class="col u-column u-space-around">
+        <div class="col flex-column u-space-around">
             <app-board [board]="board" (onDropEvent)="onDrop($event)" (onDragEvent)="onDrag($event)"
                 (allowDropEvent)="allowDrop($event)">
             </app-board>

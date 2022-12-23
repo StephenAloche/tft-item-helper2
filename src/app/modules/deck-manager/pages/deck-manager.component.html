@@ -1,3 +1,18 @@
-<div>
-    
+<button (click)="createDeck()" class="sc-deck-manager__btn">Create new deck</button>
+
+
+<div *ngFor="let deck of decks">
+    <span class="sc-deck-manager__deck_name">{{ deck.name }}</span>
+    <app-deck-line [deck]="deck"></app-deck-line>
+    <div>
+        <!-- items -->
+    </div>
 </div>
+
+<ng-container *ngIf="creationOrUpdate">
+    creation en cours
+    <app-deck-line [deck]="newDeck!"></app-deck-line>
+    <app-champion-list  (childEvent)="selectChampion($event)"></app-champion-list>
+    <button (click)="saveNewDeck()" class="sc-deck-manager__btn">save</button>
+    <button (click)="cancelNewDeck()" class="sc-deck-manager__btn">cancel</button>
+</ng-container>

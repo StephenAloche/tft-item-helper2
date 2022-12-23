@@ -1,15 +1,14 @@
-/*TODO : revoir tout le css*/
 tr{
     display: flex;
 }
 
-#board{
+.sc-board{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#board tr:nth-child(even)
+.sc-board tr:nth-child(even)
 {
     margin-left: 42px;
 }

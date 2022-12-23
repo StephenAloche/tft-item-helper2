@@ -1,6 +1,7 @@
 
-<table id="board">
+<table id="board" class="sc-board">
     <tbody>
+        <th></th>
         <tr *ngFor="let row of board; let itr = index">
             <td *ngFor="let hexBoardChamp of row; let itd = index">
                 <div class="case" id="div-board-{{itr}}-{{itd}}"  (drop)="onDrop($event)" (dragover)="allowDrop($event)">

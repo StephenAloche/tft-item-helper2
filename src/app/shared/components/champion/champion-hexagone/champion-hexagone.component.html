@@ -1,25 +1,29 @@
-<div class="center flex-column hex hex-all">     
-    <div class="d-flex" class="trait-over-image">
-        <img  *ngFor="let trait of champion?.dataTraits" src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"/>
-    </div>  
-    <svg width="84px" height="96px" viewBox="0 0 84 96" class="hex-champ">
+<div class="center flex-column hex sc-hex__global">
+    <div class="d-flex sc-hex__trait">
+        <img *ngFor="let trait of champion?.dataTraits"
+            src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}" />
+    </div>
+    <svg width="84px" height="96px" viewBox="0 0 84 96" class="sc-hex__champ">
         <defs>
             <clipPath id="myMask">
-                <polygon points="184 24 226 -3.16413562e-15 268 24 268 72 226 96 184 72" transform="translate(-184, 0)"></polygon>
+                <polygon points="184 24 226 -3.16413562e-15 268 24 268 72 226 96 184 72" transform="translate(-184, 0)">
+                </polygon>
             </clipPath>
-        </defs>        
+        </defs>
         <!-- ngif sinon image manquante -->
-        <image *ngIf="champion?.name" attr.xlink:href="https://raw.communitydragon.org/latest/game/{{champion?.icon}}" clip-path="url(#myMask)" transform="translate(0, 0)" class="champ-miniature">
+        <image *ngIf="champion?.name" attr.xlink:href="https://raw.communitydragon.org/latest/game/{{champion?.icon}}"
+            clip-path="url(#myMask)" transform="translate(0, 0)" class="sc-hex__champ__img">
         </image>
-        <path stroke="none" stroke-width="4" fill="var(--general-base-500)" d="M186,25.1606451 L186,70.8393549 L226,93.6964978 L266,70.8393549 L266,25.1606451 L226,2.30350221 L186,25.1606451 Z" transform="translate(-184, 0)" id="slot-overlay-icon" style="opacity: 0;"></path>
-        <path id="test" attr.stroke="var(--cost{{champion?.cost || '1'}})" stroke-width="4" fill="none" class="slot-border" d="M186,25.1606451 L186,70.8393549 L226,93.6964978 L266,70.8393549 L266,25.1606451 L226,2.30350221 L186,25.1606451 Z" transform="translate(-184, 0)"></path>
+            <path id="test"  fill="none" [ngStyle]="{'stroke' : 'var(--cost'+(champion?.cost || '1')+')'}" transform="translate(-184, 0)"
+            class="sc-hex_champ__border"></path>
     </svg>
     <div [ngSwitch]="champion?.stars">
         <span *ngSwitchCase="2" class="star2">⭐⭐</span>
         <span *ngSwitchCase="3" class="star3">⭐⭐⭐</span>
     </div>
-    <span class="elemText center label-under-image">{{ champion?.name }}</span>
-    <div class="d-flex  center item-under-image">
-        <img *ngFor="let item of champion?.equippedItems" src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="equiped">
+    <span class="u-center sc-hex__label">{{ champion?.name }}</span>
+    <div class="d-flex  u-center sc-hex__item">
+        <img *ngFor="let item of champion?.equippedItems"
+            src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="sc-hex__item__equiped">
     </div>
 </div>

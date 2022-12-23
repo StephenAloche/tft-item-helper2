@@ -1,0 +1,30 @@
+.sc-champion-pic{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    margin: 3px;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sc-champion-pic__img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: 100% 0;
+  }
+
+.sc-champion-pic__name{
+  //@include sc-champion-pic-name;
+  white-space: break-spaces;
+  bottom : 17px;
+  position: relative;
+  background-color: #00000073;
+  font-size: smaller;  
+}
+
+.sc-champion-pic__border{
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 6px;
+  }

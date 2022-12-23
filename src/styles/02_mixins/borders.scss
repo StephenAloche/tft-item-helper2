@@ -1,0 +1,16 @@
+$border-radius-default: 0.25rem;
+$border-size-default: 0.075rem;
+$border-size-large: 0.5rem;
+$border-size-extra-large: 0.75rem;
+
+$border-type-default: solid;
+
+$border-primary: $border-size-default $border-type-default $color-primary;
+$border-focus: $border-size-default $border-type-default $color-secondary;
+$border-disabled: $border-size-default $border-type-default $color-empty;
+
+$border-size-default: 0.075rem; // 1 px
+$border-size-medium: 0.125rem; // 2 px
+$border-size-large: 0.25rem; // 4 px
+
+$border-transparent-medium: $border-size-medium $border-type-default transparent;

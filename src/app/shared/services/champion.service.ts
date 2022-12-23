@@ -6,7 +6,7 @@ import { TypeAdAp } from '../enums/TypeAdAp.enum';
 import { cleanName } from '../helpers/cleanSource.helper';
 import { orderBy } from '../helpers/orderBy.helper';
 import { Ability, Champion } from '../models/champion.model';
-import { Item } from '../models/item.model';
+import { Item, newItem } from '../models/item.model';
 import { Trait } from '../models/traits.model';
 import { ItemService } from './item.service';
 import { SetService } from './set.service';
@@ -91,9 +91,12 @@ export class ChampionService {
               (itemChamp: Item | undefined) => {
                 if (itemChamp) {
 
+                  //TODO tester le remplacement des clones par l'utilisation de ...object voir class item
+                  var cloneItem = newItem(itemChamp);
+/*
                   var tempcopy = JSON.stringify(itemChamp)
                   var cloneItem = JSON.parse(tempcopy);
-
+*/
                   cloneItem.ratio = +item.ratio; //cast int
 
                   recommandedItems.push(cloneItem);

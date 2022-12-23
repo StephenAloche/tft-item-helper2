@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+    --cost1 : rgba(173, 173, 173,1);
+    --cost2 : rgba(12, 181, 18,1);
+    --cost3 : rgba(7,143,255,1);
+    --cost4 : rgba(222,8,165,1);
+    --cost8 : rgba(222,8,165,1);
+    --cost5 : rgba(214,148,24,1);
+    --cost10 : rgba(214,148,24,1);
+  }
+
 $cost1 : rgba(173, 173, 173,1);
 $cost2 : rgba(12, 181, 18,1);
 $cost3 : rgba(7,143,255,1);
@@ -109,3 +119,21 @@ $unactive-img : url("https://cdn.lolchess.gg/images/tft/traits/background/darken
 .color-cost-10{
     color: $cost5;
 }
+
+.unactive-img{
+    background-image: $unactive-img;
+  }
+
+  .bronze-img{
+    background-image: $bronze-img;
+  }
+  
+  .silver-img{
+    background-image: $silver-img;
+  }
+  .gold-img{
+    background-image: $gold-img;
+  }
+  .prisma-img{
+    background-image: $prismatic-img;
+  }

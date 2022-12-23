@@ -1,0 +1,61 @@
+.sc-hex__global{    
+    //position : fixed;
+}
+
+
+.sc-hex__champ__img{
+  width: 171px;
+  height: 98px;
+  x: -77px;
+  y: -1px;
+}
+
+.sc-hex_champ__border{
+  stroke-width: 4;
+  fill: none;
+  d: path("M 186 25.1606 L 186 70.8394 L 226 93.6965 L 266 70.8394 L 266 25.1606 L 226 2.3035 L 186 25.1606 Z");
+}
+
+.sc-hex__trait{
+    display: flex;
+    position : relative;
+    justify-content: space-evenly;
+    height : 0px;
+  }
+
+  .sc-hex__trait > img{
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: #787878;
+    padding: 2px;
+    height: 25px;
+  }
+
+  .sc-hex__champ{
+    display: block;
+    margin: auto;
+    top: 7px;
+    z-index: -1;
+    position: relative;
+    width : 84px;
+     height : 96px;
+}
+
+.sc-hex__item{
+    top: -35px;
+    position: relative;
+    height : 0px;
+  }
+
+  .sc-hex__label{
+    //@include champion-name;
+    white-space: break-spaces;
+    top: -35px;
+    position: relative;
+    background-color: #00000073;
+    font-size: smaller;  
+  }
+
+  .sc-hex__item__equiped{
+      width: 30px;
+      height: 30px;
+  }
