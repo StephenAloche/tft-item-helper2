@@ -4,6 +4,8 @@ import { FormControl } from '@angular/forms';
 import { TraitService } from 'src/app/shared/services/trait.service';
 import { Trait } from 'src/app/shared/models/traits.model';
 import { State } from 'src/app/shared/enums/State.enum';
+import { Champion } from 'src/app/shared/models/champion.model';
+import { ChampionService } from 'src/app/shared/services/champion.service';
 
 const BLOCK_MAX_WIDTH = 82;
 
@@ -14,7 +16,7 @@ const BLOCK_MAX_WIDTH = 82;
 })
 export class ActiveTraitsComponent implements OnInit {
   
-  constructor(private readonly traitService : TraitService) { }
+  constructor(private readonly traitService : TraitService, public readonly championService : ChampionService) { }
   
   public State = State;
   private _activesTraits: Trait[] |undefined = [];
@@ -25,6 +27,7 @@ export class ActiveTraitsComponent implements OnInit {
   @Input() displayPalliers : boolean = true;
   @Input() showUnactive : boolean = true;
   @Input() blockMaxWidth : number = BLOCK_MAX_WIDTH;
+  champions : Champion[];
   
   @Input('activesTraits')
   set activesTraits(traitsActiv: Trait[]|undefined ) {

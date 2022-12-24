@@ -15,14 +15,14 @@
                 <button (click)="updateDeck(deck)" class="sc-deck-manager__btn">update</button>
             </div>
 
-            <ng-container *ngIf="isCreateOrUpdate">
+            <ng-container *ngIf="isCreateOrUpdate()">
                 creation en cours
 
                 <mat-form-field>
                     <mat-label>Name :</mat-label>
-                    <input matInput type="text" [(ngModel)]="newDeck!.name">
+                    <input matInput type="text" [(ngModel)]="deckEdit!.name">
                 </mat-form-field>
-                <app-deck-line [deck]="newDeck!" (clickChampionDeckLine)="removeChampion($event)"></app-deck-line>
+                <app-deck-line [deck]="deckEdit!" (clickChampionDeckLine)="removeChampion($event)"></app-deck-line>
                 <app-champion-list (selectChampion)="selectChampion($event)"></app-champion-list>
                 <button (click)="saveNewDeck()" class="sc-deck-manager__btn">save</button>
                 <button (click)="cancelNewDeck()" class="sc-deck-manager__btn">cancel</button>

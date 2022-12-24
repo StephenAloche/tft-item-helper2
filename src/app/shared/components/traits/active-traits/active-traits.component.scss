@@ -24,3 +24,7 @@ filter: invert(1);
     font-weight: bold;
     color: white;
 }
+
+::ng-deep  .sc-active-trait__tooltip{ //TODO : trouver une alternative ng-deep deprécié et important à proscrir
+  max-width: none !important;
+}

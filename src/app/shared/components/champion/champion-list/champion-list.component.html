@@ -1,2 +1,19 @@
-<app-champion-pic *ngFor="let champion of champions$ | async ; let i = index" (click)="selectChampionChild(champion)" [champion]="champion"></app-champion-pic>
-  
+<div class="sc-champion-list__sort">
+    <span (click)="orderList(Order.Cost)">Cost</span>
+    <span (click)="orderList(Order.Name)">Name</span>
+    <span (click)="orderList(Order.Trait)">Trait</span>
+</div>
+
+<!-- <div *ngFor="let dico of championOrderedList; let ig = index">
+    <div *ngFor="let elem of dico  | keyvalue ">
+        {{elem.key}}
+        <app-champion-pic *ngFor="let champion of elem.value" (click)="selectChampionChild(champion)" [champion]="champion"></app-champion-pic>
+    </div>
+</div> -->
+
+<div *ngFor="let dico of championOrderedList | keyvalue; let ig = index">
+        <p>{{dico.key}}</p>
+        <app-champion-pic *ngFor="let champion of dico.value" (click)="selectChampionChild(champion)" [champion]="champion"></app-champion-pic>
+</div>
+
+<app-champion-pic style="display:none" *ngFor="let champion of champions$ | async ; let i = index" (click)="selectChampionChild(champion)" [champion]="champion"></app-champion-pic>

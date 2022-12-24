@@ -1,23 +1,31 @@
 <ng-container *ngIf="activesTraits != undefined">
-    <div *ngFor="let trait of activesTraits" class="col flex-column d-flex sc-active-trait__block" [ngStyle]="{'max-width':blockMaxWidth+'px'}">
+    <div *ngFor="let trait of activesTraits" class="col flex-column d-flex sc-active-trait__block"
+        [ngStyle]="{'max-width':blockMaxWidth+'px'}">
 
         <ng-template #traitDescTooltip>
             <span>{{trait.name}}</span>
             <br />
             <span [innerHTML]="trait.desc"></span>
+            <div class="d-flex">
+                <app-champion-pic *ngFor="let champ of championService.getByTrait(trait.name) | async"
+                    [champion]="champ"></app-champion-pic>
+            </div>
         </ng-template>
 
-        <div id="background-img" [tooltip]="$any(traitDescTooltip)" placement="right" contentType="template" class="sc-active-trait__img-bg"
+        <div id="background-img" [tooltip]="$any(traitDescTooltip)" tooltipClass="sc-active-trait__tooltip"
+            placement="right" contentType="template" class="sc-active-trait__img-bg"
             [ngClass]="{'unactive-img' : trait.state == State.Unactive, 'bronze-img' : trait.state == State.Bronze, 
         'silver-img' : trait.state == State.Silver, 'gold-img' : trait.state == State.Gold, 'prisma-img' : trait.state == State.Prisma}">
-            <img src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}" class="sc-active-trait__img"
+            <img src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"
+                class="sc-active-trait__img"
                 style="--trait-url : url('https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}');" />
         </div>
         <ng-container *ngIf="displayPalliers">
             <span>{{trait.currentNumber}}</span>
             <span class="sc-active-trait__palier">
                 <ng-container *ngFor="let pallier of trait.palliers">
-                    <span [ngClass]="pallier == trait.currentPallier?'sc-active-trait__palier-current':''">{{pallier}}</span>
+                    <span
+                        [ngClass]="pallier == trait.currentPallier?'sc-active-trait__palier-current':''">{{pallier}}</span>
                     <span *ngIf="pallier != trait.palliers.at(-1)"> > </span>
                 </ng-container>
             </span>

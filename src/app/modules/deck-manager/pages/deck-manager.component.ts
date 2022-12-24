@@ -11,13 +11,14 @@ const LOCALSTORAGE_NAME = 'tft-helper-decks'; 3
   styleUrls: ['./deck-manager.component.scss']
 })
 export class DeckManagerComponent implements OnInit {
-  isCreateOrUpdate: boolean;
+  isCreate: boolean;
+  isUpdate: boolean;
   decks: Deck[];
 
   board: Champion[] = [];
   bench: Champion[] = [];
 
-  newDeck: Deck | undefined;
+  deckEdit: Deck | undefined;
 
   constructor(private readonly championService: ChampionService) {
   }
@@ -33,13 +34,13 @@ export class DeckManagerComponent implements OnInit {
   }
 
   createDeck() {
-    this.isCreateOrUpdate = true;
-    this.newDeck = deckFactory(null);
+    this.isCreate = true;
+    this.deckEdit = deckFactory(null);
   }
 
   updateDeck(deck: Deck) {
-    this.isCreateOrUpdate = true;
-    this.newDeck = deckFactory(deck);
+    this.isUpdate = true;
+    this.deckEdit = deck;
   }
 
   deleteDeck(deck:Deck) {
@@ -47,21 +48,25 @@ export class DeckManagerComponent implements OnInit {
     if (index > -1) {
       this.decks.splice(index, 1);
     }
-    this.newDeck = deckFactory(null);
+    this.deckEdit = deckFactory(null);
   }
 
   cancelNewDeck() {
-    this.isCreateOrUpdate = false;
-    this.newDeck = undefined;
+    this.isCreate = this.isUpdate = false;
+    this.deckEdit = undefined;
   }
 
   saveNewDeck() {
-    if (this.newDeck && this.newDeck.champions.length > 0) {
-      this.decks.push(deckFactory(this.newDeck));
+    if (this.deckEdit && this.deckEdit.champions.length > 0) {
+
+      if (this.isCreate) {
+        this.decks.push(deckFactory(this.deckEdit));
+      }
+
       localStorage.setItem(LOCALSTORAGE_NAME, JSON.stringify(this.decks, (key, value) => this.replacer(key, value))
       );
-      this.isCreateOrUpdate = false;
-      this.newDeck = undefined;
+      this.isCreate = this.isUpdate = false;
+      this.deckEdit = undefined;
     }
     else {
       alert('sauvegarde impossible : pas assez de champion dans ce deck');
@@ -76,22 +81,23 @@ export class DeckManagerComponent implements OnInit {
   }
 
   selectChampion(champion: Champion): void {
-    if (!this.isCreateOrUpdate || !this.newDeck) {
+    if (!this.isCreateOrUpdate || !this.deckEdit) {
       return;
     }
-    this.newDeck.champions.push(champion);
-    this.newDeck.championsName.push(champion.name);
+    this.deckEdit.champions.push(champion);
+    this.deckEdit.championsName.push(champion.name);
   }
 
   removeChampion(champion: Champion): void {
-    if (!this.isCreateOrUpdate || !this.newDeck) {
+    if (!this.isCreateOrUpdate || !this.deckEdit) {
       return;
     }
-    const index = this.newDeck.champions.indexOf(champion, 0);
+    const index = this.deckEdit.champions.indexOf(champion, 0);
     if (index > -1) {
-      this.newDeck.champions.splice(index, 1);
+      this.deckEdit.champions.splice(index, 1);
     }
   }
+  
   selectChampionBoard(champion: Champion): void {
     if(this.board.length<10){
       this.board.push(champion);
@@ -105,6 +111,9 @@ export class DeckManagerComponent implements OnInit {
     }
   }
 
+  isCreateOrUpdate(): boolean{
+    return this.isCreate || this.isUpdate;
+  }
 
 
 }

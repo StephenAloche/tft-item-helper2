@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActiveTraitsComponent } from './active-traits.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { TooltipModule } from 'ng2-tooltip-directive';
+import { ChampionPicModule } from '../../champion/champion-pic/champion-pic.module';
 
 
 
@@ -13,6 +14,7 @@ import { TooltipModule } from 'ng2-tooltip-directive';
       CommonModule,    
       TooltipModule,
       MatTooltipModule,  
+      ChampionPicModule
     ],
     exports : [
       ActiveTraitsComponent
