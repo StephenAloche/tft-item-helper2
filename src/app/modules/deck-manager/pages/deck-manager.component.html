@@ -1,18 +1,39 @@
-<button (click)="createDeck()" class="sc-deck-manager__btn">Create new deck</button>
+<div class="container-fluid">
+    <div class="flex-column">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+            <button (click)="createDeck()" class="sc-deck-manager__btn">Create new deck</button>
 
+            <div *ngFor="let deck of decks" class="sc-deck-manager__deck_line">
+                <span class="sc-deck-manager__deck_name">{{ deck.name }}</span>
+                <app-deck-line [deck]="deck"></app-deck-line>
+                <div>
+                    <!-- items -->
+                </div>
+                <button (click)="deleteDeck(deck)" class="sc-deck-manager__btn">delete</button>
+                <button (click)="updateDeck(deck)" class="sc-deck-manager__btn">update</button>
+            </div>
 
-<div *ngFor="let deck of decks">
-    <span class="sc-deck-manager__deck_name">{{ deck.name }}</span>
-    <app-deck-line [deck]="deck"></app-deck-line>
-    <div>
-        <!-- items -->
+            <ng-container *ngIf="isCreateOrUpdate">
+                creation en cours
+
+                <mat-form-field>
+                    <mat-label>Name :</mat-label>
+                    <input matInput type="text" [(ngModel)]="newDeck!.name">
+                </mat-form-field>
+                <app-deck-line [deck]="newDeck!" (clickChampionDeckLine)="removeChampion($event)"></app-deck-line>
+                <app-champion-list (selectChampion)="selectChampion($event)"></app-champion-list>
+                <button (click)="saveNewDeck()" class="sc-deck-manager__btn">save</button>
+                <button (click)="cancelNewDeck()" class="sc-deck-manager__btn">cancel</button>
+            </ng-container>
+        </div>
+            <div class="col-2">
+                <app-champion-list (selectChampion)="selectChampionBoard($event)"></app-champion-list>
+            </div>
+        </div>
+        <div class="row">
+                <app-champion-pic *ngFor="let champion of board" [champion]="champion" (clickChampionPic)="removeChampionBoard($event)"></app-champion-pic>
+        </div>
     </div>
 </div>
-
-<ng-container *ngIf="creationOrUpdate">
-    creation en cours
-    <app-deck-line [deck]="newDeck!"></app-deck-line>
-    <app-champion-list  (childEvent)="selectChampion($event)"></app-champion-list>
-    <button (click)="saveNewDeck()" class="sc-deck-manager__btn">save</button>
-    <button (click)="cancelNewDeck()" class="sc-deck-manager__btn">cancel</button>
-</ng-container>

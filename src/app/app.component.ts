@@ -16,8 +16,6 @@ export class AppComponent {
   
   ngOnInit(): void {
     this.setService.LoadSetData();
-    this.setService.getTraits();
-    this.setService.getChampions();
     this.itemService.loadItems()
 
   }  

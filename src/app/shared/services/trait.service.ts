@@ -20,11 +20,6 @@ export class TraitService {
     return traits;
   }
 
-  getPerma(): Observable<Trait[]> {
-    var traits = this.setService.getTraits();
-    return traits;
-  }
-
   getByName(name: string): Observable<Trait | undefined> {
     return this.getAll().pipe(map(
       (traits: Trait[]) => {
@@ -95,7 +90,7 @@ export class TraitService {
     return pallierArray;
   }
 
-  reorderTraits(traitsActiv: Trait[]): Trait[] {
+  reorderTraits(traitsActiv: Trait[],showUnactive : boolean = true): Trait[] {
 
     var traitsClean: Trait[] = [];
     var activesTraits : Trait[] = [];
@@ -153,9 +148,11 @@ export class TraitService {
       // {
       //   this._activesTraits.forEach(t=>{if(t.name=="Brise-écaille") t.state = State.Unactive});        
       // }
+      if(!showUnactive){
+        activesTraits = activesTraits.filter(t=>t.state != State.Unactive);
+      }
 
-      //activesTraits?.sort((n1, n2) => n2.state - n1.state)
-      orderByDescending(activesTraits,"state"); // a tester
+      orderByDescending(activesTraits,"state");       
     }
     return activesTraits;
   }

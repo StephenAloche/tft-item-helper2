@@ -26,7 +26,7 @@ export class TraitManagerComponent {
   constructor(private traitService: TraitService, private championService: ChampionService, private itemService: ItemService ) { }
   
   ngOnInit(): void {
-    this.traitService.getPerma().subscribe(traits=>
+    this.traitService.getAll().subscribe(traits=>
       {
         this.allTraits = orderBy(traits,"name");
       }

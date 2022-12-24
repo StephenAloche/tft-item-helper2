@@ -5,6 +5,8 @@ import { TraitService } from 'src/app/shared/services/trait.service';
 import { Trait } from 'src/app/shared/models/traits.model';
 import { State } from 'src/app/shared/enums/State.enum';
 
+const BLOCK_MAX_WIDTH = 82;
+
 @Component({
   selector: 'app-active-traits',
   templateUrl: './active-traits.component.html',
@@ -20,11 +22,15 @@ export class ActiveTraitsComponent implements OnInit {
     return this._activesTraits;
   }
   
+  @Input() displayPalliers : boolean = true;
+  @Input() showUnactive : boolean = true;
+  @Input() blockMaxWidth : number = BLOCK_MAX_WIDTH;
+  
   @Input('activesTraits')
   set activesTraits(traitsActiv: Trait[]|undefined ) {
     if(traitsActiv)
     {
-      this._activesTraits = this.traitService.reorderTraits(traitsActiv);
+      this._activesTraits = this.traitService.reorderTraits(traitsActiv,this.showUnactive);
     }
     else{
       this._activesTraits = undefined;

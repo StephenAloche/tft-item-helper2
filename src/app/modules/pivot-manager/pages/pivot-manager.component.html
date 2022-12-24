@@ -25,7 +25,7 @@
         <div class="col-1">{{timeLeft}}</div>
     </div>
 
-    <div class="">
+    <div>
         <div class="progress col">
             <div class="progress-bar"
                 [ngClass]="{'fight' : (currentStage.IsFight && prepaDone)}"
@@ -59,7 +59,7 @@
         </div>
 
         <div class="col-3">
-            <app-champion-list (childEvent)="selectChampion($event)"></app-champion-list>
+            <app-champion-list (selectChampion)="selectChampion($event)"></app-champion-list>
         </div>
     </div>
 

@@ -12,7 +12,7 @@ import { ChampionTileModule } from 'src/app/shared/components/champion/champion-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BoardModule } from './components/board/board.module';
 import { ChampionHexagoneModule } from 'src/app/shared/components/champion/champion-hexagone/champion-hexagone.module';
-import { ActiveTraitsModule } from './components/active-traits/active-traits.module';
+import { ActiveTraitsModule } from '../../shared/components/traits/active-traits/active-traits.module';
 
 
 @NgModule({

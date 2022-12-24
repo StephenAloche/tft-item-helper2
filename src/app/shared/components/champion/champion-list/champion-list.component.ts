@@ -14,7 +14,7 @@ export class ChampionListComponent  implements OnInit {
   @Input() champion : Champion = new Champion ();
   //@Input() champions : Champion[] = new Array();
 champions$ : Observable<Champion[]>
-  @Output() childEvent = new EventEmitter();
+  @Output() selectChampion = new EventEmitter();
   @Input() index!: number;
 
   constructor(private championService : ChampionService) {
@@ -25,8 +25,8 @@ champions$ : Observable<Champion[]>
     this.champions$ = this.championService.getAll();
   }
   
-  selectChampion(champ : Champion) : void{  
-    this.childEvent.emit(champ);
+  selectChampionChild(champ : Champion) : void{  
+    this.selectChampion.emit(champ);
   }
 
   firstLetter(name :string | undefined) {

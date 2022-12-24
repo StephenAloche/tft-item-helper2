@@ -122,18 +122,23 @@ $unactive-img : url("https://cdn.lolchess.gg/images/tft/traits/background/darken
 
 .unactive-img{
     background-image: $unactive-img;
+    background-repeat: no-repeat;
   }
 
   .bronze-img{
     background-image: $bronze-img;
+    background-repeat: no-repeat;
   }
   
   .silver-img{
     background-image: $silver-img;
+    background-repeat: no-repeat;
   }
   .gold-img{
     background-image: $gold-img;
+    background-repeat: no-repeat;
   }
   .prisma-img{
     background-image: $prismatic-img;
+    background-repeat: no-repeat;
   }

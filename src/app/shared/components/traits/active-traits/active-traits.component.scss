@@ -1,0 +1,26 @@
+.sc-active-trait__block {
+  max-width: 82px;
+  text-align: center;
+}
+
+.sc-active-trait__img-bg {
+  max-width: 60px;
+  width: 100%;
+  margin: auto;
+}
+
+.sc-active-trait__img {
+padding : 17%;
+width : 100%;
+filter: invert(1);
+}
+
+.sc-active-trait__palier{  
+  font-size: smaller;
+  color: grey;
+}
+
+.sc-active-trait__palier-current{
+    font-weight: bold;
+    color: white;
+}

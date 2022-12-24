@@ -51,6 +51,15 @@ export class ChampionService {
     return champ;
   }
 
+  getManyByName(names: string[]): Observable<Champion[]> {
+    return this.getAll().pipe(
+      map(        
+        (champions : Champion[]) => {
+          return champions.filter(champ => names?.includes(champ.name));
+        }
+      ))
+  }
+
   getByTrait(traitName: string): Observable<Champion[]> {
     let champs: Champion[] = [];
     return this.getAll().pipe(
@@ -68,7 +77,6 @@ export class ChampionService {
         }
       )
     )
-    return of(champs);
    }
 
   getRecommandedItem(champion: Champion): Observable<Item[]> {

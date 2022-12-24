@@ -1,12 +1,14 @@
-<div class="d-flex">
-    <div *ngFor="let champion of deck.champions">
-        <app-champion-pic [champion]="champion"></app-champion-pic>
-        <div>
-            <!-- items -->
+<div class="row sc-deck-line">
+    <app-active-traits class="sc-deck-line__traits"  [displayPalliers]="false"
+        [blockMaxWidth]="30" [showUnactive]="false" [activesTraits]="activeTraits"></app-active-traits>
+    <div class="sc-deck-line__champion">
+        <div *ngFor="let champion of deck.champions">
+            <app-champion-pic [champion]="champion" (clickChampionPic)="clickChampion($event)"
+                [ngClass]="{'sc-deck-line-champion-pic-core':isCore(champion)}"></app-champion-pic>
+            <div>
+                <!-- items -->
+            </div>
         </div>
-        <span class="champion__name">{{ champion.name }}</span>
     </div>
-    
-    <app-active-traits [activesTraits]="activeTraits"></app-active-traits>
     <!-- a--active-traits a revoir car actuellement en column -->
 </div>
