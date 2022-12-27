@@ -55,7 +55,7 @@ export class ChampionService {
     return this.getAll().pipe(
       map(        
         (champions : Champion[]) => {
-          return champions.filter(champ => names?.includes(champ.name));
+          return champions.filter(champ => names?.map(n=>cleanName(n)).includes(cleanName(champ.name)));
         }
       ))
   }

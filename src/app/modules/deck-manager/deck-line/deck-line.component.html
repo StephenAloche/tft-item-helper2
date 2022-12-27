@@ -1,14 +1,17 @@
 <div class="row sc-deck-line">
-    <app-active-traits class="sc-deck-line__traits"  [displayPalliers]="false"
-        [blockMaxWidth]="30" [showUnactive]="false" [activesTraits]="activeTraits"></app-active-traits>
-    <div class="sc-deck-line__champion">
+    <div class="sc-deck-line__champion col-5">
         <div *ngFor="let champion of deck.champions">
-            <app-champion-pic [champion]="champion" (clickChampionPic)="clickChampion($event)"
+            <app-champion-pic [champion]="champion" (clickChampionPic)="clickChampionDeckLine(champion)"
                 [ngClass]="{'sc-deck-line-champion-pic-core':isCore(champion)}"></app-champion-pic>
             <div>
                 <!-- items -->
             </div>
         </div>
     </div>
-    <!-- a--active-traits a revoir car actuellement en column -->
+    <app-active-traits class="sc-deck-line__traits col-5"  [displayPalliers]="false"
+        [blockMaxWidth]="30" [showUnactive]="false" [activesTraits]="activeTraits"></app-active-traits>
+        <div class="col-2 flex-column d-flex">
+            <button (click)="clickDeleteDeckLine(deck)" class="sc-deck-manager__btn">delete</button>
+            <button (click)="clickUpdateDeckLine(deck)" class="sc-deck-manager__btn">update</button>
+        </div>
 </div>

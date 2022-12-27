@@ -13,7 +13,10 @@ import { Deck } from '../models/deck.models';
 export class DeckLineComponent implements OnInit {
   @Input() deck : Deck;
   @Input() isCreateOrUpdate : boolean;
-  @Output() clickChampionDeckLine = new EventEmitter();
+  @Output() clickChampionDeck = new EventEmitter();
+
+  @Output() clickDeleteDeck = new EventEmitter();
+  @Output() clickUpdateDeck = new EventEmitter();
   activeTraits : Trait[];
 
   constructor(private readonly traitService : TraitService,private readonly championService : ChampionService) {    
@@ -28,11 +31,20 @@ export class DeckLineComponent implements OnInit {
       );
   }
 
-  clickChampion(champ : Champion) : void{  
-    this.clickChampionDeckLine.emit(champ);
+  clickChampionDeckLine(champ : Champion) : void{  
+    this.clickChampionDeck.emit(champ);
   }
 
   isCore(champion : Champion):boolean{
     return this.deck?.championsCore?.includes(champion.name);
+  }
+
+  
+  clickUpdateDeckLine(deck: Deck) : void {
+    this.clickUpdateDeck.emit(deck);
+  }
+
+  clickDeleteDeckLine(deck:Deck) : void {
+    this.clickDeleteDeck.emit(deck);
   }
 }

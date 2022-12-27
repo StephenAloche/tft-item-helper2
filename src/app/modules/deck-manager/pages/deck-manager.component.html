@@ -7,12 +7,10 @@
 
             <div *ngFor="let deck of decks" class="sc-deck-manager__deck_line">
                 <span class="sc-deck-manager__deck_name">{{ deck.name }}</span>
-                <app-deck-line [deck]="deck"></app-deck-line>
-                <div>
-                    <!-- items -->
-                </div>
-                <button (click)="deleteDeck(deck)" class="sc-deck-manager__btn">delete</button>
-                <button (click)="updateDeck(deck)" class="sc-deck-manager__btn">update</button>
+                <app-deck-line [deck]="deck"  
+                (clickChampionDeck)="removeChampion($event)"  
+                (clickDeleteDeck)="deleteDeck($event)"  
+                (clickUpdateDeck)="updateDeck($event)"></app-deck-line>
             </div>
 
             <ng-container *ngIf="isCreateOrUpdate()">
@@ -22,18 +20,25 @@
                     <mat-label>Name :</mat-label>
                     <input matInput type="text" [(ngModel)]="deckEdit!.name">
                 </mat-form-field>
-                <app-deck-line [deck]="deckEdit!" (clickChampionDeckLine)="removeChampion($event)"></app-deck-line>
+                <app-deck-line [deck]="deckEdit!" (clickChampionDeck)="removeChampion($event)"></app-deck-line>
                 <app-champion-list (selectChampion)="selectChampion($event)"></app-champion-list>
                 <button (click)="saveNewDeck()" class="sc-deck-manager__btn">save</button>
                 <button (click)="cancelNewDeck()" class="sc-deck-manager__btn">cancel</button>
             </ng-container>
+
+            <div class="sc-deck-manager__board">
+                <app-champion-pic *ngFor="let champion of board" [champion]="champion" (clickChampionPic)="removeChampionBoard($event)"></app-champion-pic>
+                <button (click)="clearChampions()" class="sc-deck-manager__btn">Clear</button>
+            </div>
+            <div class="sc-deck-manager__myItems">
+                <div class="col-11"></div>
+
+                <button (click)="clearItems()" class="sc-deck-manager__btn">Clear</button>
+            </div>
         </div>
             <div class="col-2">
                 <app-champion-list (selectChampion)="selectChampionBoard($event)"></app-champion-list>
             </div>
-        </div>
-        <div class="row">
-                <app-champion-pic *ngFor="let champion of board" [champion]="champion" (clickChampionPic)="removeChampionBoard($event)"></app-champion-pic>
         </div>
     </div>
 </div>
