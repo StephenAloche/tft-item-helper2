@@ -10,10 +10,11 @@
         <app-champion-pic *ngFor="let champion of elem.value" (click)="selectChampionChild(champion)" [champion]="champion"></app-champion-pic>
     </div>
 </div> -->
-
-<div *ngFor="let dico of championOrderedList | keyvalue; let ig = index">
+<div>
+    <div *ngFor="let dico of championOrderedList | keyvalue; let ig = index">
         <p>{{dico.key}}</p>
         <app-champion-pic *ngFor="let champion of dico.value" (click)="selectChampionChild(champion)" [champion]="champion"></app-champion-pic>
+    </div>
 </div>
 
 <app-champion-pic style="display:none" *ngFor="let champion of champions$ | async ; let i = index" (click)="selectChampionChild(champion)" [champion]="champion"></app-champion-pic>

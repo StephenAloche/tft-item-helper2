@@ -32,6 +32,7 @@ export class ChampionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.champions$ = this.championService.getAll();
+    this.orderList(Order.Cost) 
   }
 
   selectChampionChild(champ: Champion): void {
