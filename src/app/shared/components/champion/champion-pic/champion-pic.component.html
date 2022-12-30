@@ -1,4 +1,10 @@
-<div class="sc-champion-pic" (click)="clickChampion(champion)">
+<div class="sc-champion-pic" (click)="clickChampion(champion)" 
+[tooltip]="$any(championTooltip)" contentType="template" [showDelay]="300"
+>
     <img src="https://raw.communitydragon.org/latest/game/{{champion.icon}}" class="brd-cost-{{champion.cost}} sc-champion-pic__img sc-champion-pic__border" />
     <span class="sc-champion-pic__name">{{ champion.name }}</span>
 </div>
+
+<ng-template #championTooltip>
+    <app-champion-tooltip [champion]="champion"></app-champion-tooltip>
+</ng-template>

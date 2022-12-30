@@ -37,6 +37,7 @@ export class Variable {
 export class Ability {
 
     easyDesc?: string="";
+    easyDesc$?: Observable<string>;
 
     desc?: string;
     icon?: string;

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { firstValueFrom, map, Observable, Subject, takeUntil, mergeMap, of, forkJoin, from, flatMap } from 'rxjs';
+import { ControlContainer } from '@angular/forms';
+import { firstValueFrom, map, Observable, Subject, takeUntil, mergeMap, of, forkJoin, from, flatMap, concat } from 'rxjs';
 import { currentSetNum } from 'src/app/app.component';
 import { TypeAdAp } from '../enums/TypeAdAp.enum';
 import { cleanName } from '../helpers/cleanSource.helper';
@@ -17,6 +18,7 @@ import { TraitService } from './trait.service';
 })
 export class ChampionService {
   champions: Champion[]
+  descs: any[]
   recommandedItems: Item[];
   private readonly unsubscribe$ = new Subject();
 
@@ -35,6 +37,11 @@ export class ChampionService {
       map(
         (champs: Champion[]) => {
           champs.forEach(champ => {
+            /*
+            let dataTraits$ = this.LoadDataTraitsObservable(champ);
+            return dataTraits$
+            */
+           
             champ = this.cleanChampionAttributes(champ);
             this.LoadDataTraits(champ);
           });
@@ -98,13 +105,7 @@ export class ChampionService {
             var itemChamp = this.itemService.getByName(item.name).subscribe(
               (itemChamp: Item | undefined) => {
                 if (itemChamp) {
-
-                  //TODO tester le remplacement des clones par l'utilisation de ...object voir class item
                   var cloneItem = newItem(itemChamp);
-/*
-                  var tempcopy = JSON.stringify(itemChamp)
-                  var cloneItem = JSON.parse(tempcopy);
-*/
                   cloneItem.ratio = +item.ratio; //cast int
 
                   recommandedItems.push(cloneItem);
@@ -146,8 +147,20 @@ export class ChampionService {
     return of(champ);
   }
 
-  LoadEasyDesc(champName: string): string {
-    return "";//JSONEASYDESC75.filter(c=>c.champion==champName)[0]?.desc;
+  LoadEasyDesc(champName: string): Observable<string> {
+    if (this.descs) {
+      return of(this.descs.find(d=>d.champion === champName)?.desc)
+    }
+    
+    let jsonURL = `assets/dataSets/Set${currentSetNum}/champEasyDesc.json`;
+    return this.http.get<any[]>(jsonURL).pipe(
+      map(
+        (listAllDesc: any[]) =>{
+          this.descs = listAllDesc;
+          return listAllDesc.find(d=>d.champion === champName).desc;
+        }
+      )
+    );
   }
 
   formatDesc(ability: Ability | undefined, star: number): string {
@@ -179,7 +192,7 @@ export class ChampionService {
 
     if (champ.ability) {
       champ.ability.desc = this.formatDesc(champ.ability, champ.stars);
-      champ.ability.easyDesc = this.LoadEasyDesc(champ.name);
+      //champ.ability.easyDesc$ = this.LoadEasyDesc(champ.name);
     }
 
     if (champ.ability)

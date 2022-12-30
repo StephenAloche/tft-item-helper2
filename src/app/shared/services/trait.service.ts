@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { State } from '../enums/State.enum';
 import {  orderByDescending } from '../helpers/orderBy.helper';
 import { Trait } from '../models/traits.model';
@@ -10,14 +10,22 @@ import { SetService } from './set.service';
   providedIn: 'root'
 })
 export class TraitService {
+  traits: Trait[]
   constructor(
     private setService: SetService,
     private itemService: ItemService
   ) { }
 
   getAll(): Observable<Trait[]> {
-    var traits = this.setService.getTraits();
-    return traits;
+    if (this.traits) {
+      return of(this.traits)
+    }
+    return this.setService.getTraits().pipe(map(
+      (traits: Trait[])=>{
+        this.traits = traits;
+        return this.traits
+      }
+    ));
   }
 
   getByName(name: string): Observable<Trait | undefined> {

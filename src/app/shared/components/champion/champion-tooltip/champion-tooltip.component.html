@@ -1,0 +1,34 @@
+<span class="sc-champion-tooltip__name">{{champion.name}}</span>
+<div class="d-flex" class="sc-champion-tooltip__traits">
+    <img *ngFor="let trait of champion.dataTraits"
+        src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}" />
+</div>
+<div>
+    <span>Range :</span>
+    <span>{{champion.stats?.range ?? 0}}</span>
+</div>
+<div>
+    <span>Mana :</span>
+    <div>initialMana : {{champion.stats?.initialMana}} / {{champion.stats?.mana}}
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="currentChampion.stats?.initialMana"
+                aria-valuemin="0" aria-valuemax="currentChampion.stats?.mana"
+                [style.width.%]="currentChampionManaWidth">
+            </div>
+        </div>
+    </div>
+    <div>
+
+        <span>desc :</span>
+        <span>{{champion.ability?.desc ?? 'no champion ability description found'}}</span>
+    </div>
+    <div>
+
+        <span>easy desc :</span>
+        <span>{{champion.ability?.easyDesc$ ?? 'no champion easy description found'}}</span>
+    </div>
+
+    <div class="d-flex sc-champion-tooltip__items">
+        <img *ngFor="let item of champion.recommandedItemsObs$ | async"
+            src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="d-flex flex-row" />
+    </div>

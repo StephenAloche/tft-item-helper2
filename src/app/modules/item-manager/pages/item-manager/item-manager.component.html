@@ -79,7 +79,7 @@
                             </app-champion-tile>
 
                             <app-champion-items-list [champion]="champion" class="col"></app-champion-items-list>
-
+                            
                             <div class="col-2 d-flex" id="equippedItemDiv">
                                 <div class="d-flex sc-item-manager__drop-zone" cdkDropList
                                     id="cdk-drop-list-champion-{{champion.id}}"
@@ -87,16 +87,17 @@
                                     (cdkDropListDropped)="equipItem($event,champion)">
                                     <div *ngFor="let item of champion.equippedItems"
                                         class="col sc-item-manager__drop-zone__equipped-item">
-                                        <ng-template #itemTooltip>
-                                            <span style="color:orange">{{item.name}}</span>
-                                            <div [innerHTML]="item.desc"></div>
-                                        </ng-template>
-
+                                        
                                         <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
-                                            tooltipClass="tooltip--item">
-                                            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
-                                                [ngClass]="item.isWrong ? 'sc-item-manager__drop-zone__equipped-item__img--wrong' : 'sc-item-manager__drop-zone__equipped-item__img'">
-                                        </span>
+                                        tooltipClass="tooltip--item">
+                                        <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                                        [ngClass]="item.isWrong ? 'sc-item-manager__drop-zone__equipped-item__img--wrong' : 'sc-item-manager__drop-zone__equipped-item__img'">
+                                    </span>
+
+                                    <ng-template #itemTooltip>
+                                        <span style="color:orange">{{item.name}}</span>
+                                        <div [innerHTML]="item.desc"></div>
+                                    </ng-template>
                                     </div>
                                 </div>
                             </div>
@@ -132,32 +133,7 @@
             <app-champion-list (selectChampion)="selectChampion($event)"></app-champion-list>
 
             Items
-            <div class="items-grid">
-                <div *ngFor="let item of items" class="items-grid__item"
-                    style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[1] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[0] }};"
-                    (click)="selectItem(item)">
-                    <ng-template #itemTooltip>
-                        <span style="color:orange">{{item.name}}</span>
-                        <div [innerHTML]="item.desc"></div>
-                    </ng-template>
-
-                    <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
-                        tooltipClass="tooltip--item">
-                        <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
-                            class="items-grid__item__img" />
-                    </span>
-                </div>
-
-                <div *ngFor="let item of itemsComble" class="items-grid__item"
-                    style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[0] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[1] }};"
-                    (click)="selectItem(item)">
-                    <span>
-                        <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
-                            class="items-grid__item__img" />
-                    </span>
-                </div>
-
-            </div>
+            <app-item-list (selectItem)="selectItem($event)"></app-item-list>
         </div>
     </div>
 </div>

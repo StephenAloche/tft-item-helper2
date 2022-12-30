@@ -1,0 +1,25 @@
+<div class="items-grid">
+    <div *ngFor="let item of items" class="items-grid__item"
+        style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[1] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[0] }};"
+        (click)="selectItemChild(item)">
+        <ng-template #itemTooltip>
+            <span style="color:orange">{{item.name}}</span>
+            <div [innerHTML]="item.desc"></div>
+        </ng-template>
+
+        <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
+            tooltipClass="tooltip--item">
+            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                class="items-grid__item__img" />
+        </span>
+    </div>
+
+    <div *ngFor="let item of itemsComble" class="items-grid__item"
+        style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[0] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[1] }};"
+        (click)="selectItemChild(item)">
+        <span>
+            <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                class="items-grid__item__img" />
+        </span>
+    </div>
+</div>

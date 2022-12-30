@@ -23,7 +23,6 @@ export class ItemManagerComponent implements OnInit {
   champions: Champion[] = [];
   champions$: Observable<Champion[]>;
   items: Item[] = [];
-  itemsComble: Item[] = [];
   
   myChampions: Champion[] = [];
   myItems: Item[] = [];
@@ -58,12 +57,6 @@ export class ItemManagerComponent implements OnInit {
           startWith(''),
           map(value => this._filter(value || '')),
           );
-        }
-        );
-        
-        this.itemService.getAll()?.subscribe(items => {
-          this.items = items
-          this.itemsComble = this.items.filter(i => i.id < 10);
         }
         );
         

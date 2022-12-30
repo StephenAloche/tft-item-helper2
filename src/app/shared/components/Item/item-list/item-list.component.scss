@@ -1,0 +1,24 @@
+.items-grid{
+    display: grid; 
+    width: fit-content;
+}
+
+.items-grid__item{
+    grid-row-start: var(--item-grid-x);
+    grid-column-start: var(--item-grid-y);
+    
+    grid-row-end: calc(var(--item-grid-x) + 1);
+    grid-column-end: calc(var(--item-grid-y) + 1);  
+    width: 45px; 
+    height: 45px; 
+    display: inline-block;
+    margin: 3px;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.items-grid__item__img{
+    width: 45px; 
+    height: 45px; 
+}

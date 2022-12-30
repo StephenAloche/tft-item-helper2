@@ -21,6 +21,7 @@ import { ChampionTileModule } from 'src/app/shared/components/champion/champion-
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { ChampionItemsListModule } from 'src/app/shared/components/champion/champion-items-list/champion-items-list.module';
+import { ItemListModule } from 'src/app/shared/components/Item/item-list/item-list.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ChampionItemsListModule } from 'src/app/shared/components/champion/cham
     ReactiveFormsModule,
 
     ItemManagerRoutingModule,
+    ItemListModule,
     ChampionListModule,
     ChampionItemsListModule,
     ChampionTileModule,

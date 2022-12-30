@@ -9,7 +9,7 @@ import { HeaderModule } from './shared/layouts/layout.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

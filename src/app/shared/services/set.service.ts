@@ -67,6 +67,10 @@ export class SetService {
     if (this.setDataFiltered) {
       return of(this.setDataFiltered)
     }
+    if(JSON.parse(localStorage.getItem('setDataFiltered')?? 'null')){      
+      this.setDataFiltered = JSON.parse(localStorage.getItem('setDataFiltered')??'null');
+      return of(JSON.parse(localStorage.getItem('setDataFiltered')?? 'null'));
+    }
     return this.http.get<string>(`${this.SETDATAURL}?${new Date().getTime()}`)
       .pipe(takeUntil(this.unsubscribe$), map(
         (response: any) => {
@@ -74,6 +78,8 @@ export class SetService {
 
           //TODO : faire les verif de demi-set (stage2) :  && set.mutator.includes("Stage2")
           this.setDataFiltered = this.setData.filter(set => set.number == currentSetNum)[0];
+          
+        localStorage.setItem('setDataFiltered', JSON.stringify(this.setDataFiltered));
           return this.setDataFiltered;
         }
       ));

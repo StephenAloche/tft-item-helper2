@@ -1,5 +1,5 @@
 <div class="row sc-deck-line">
-    <div class="sc-deck-line__champion col-5">
+    <div class="sc-deck-line__champion col-6">
         <div *ngFor="let champion of deck.champions">
             <app-champion-pic [champion]="champion" (clickChampionPic)="clickChampionDeckLine(champion)"
                 [ngClass]="{'sc-deck-line-champion-pic-core':isCore(champion)}"></app-champion-pic>
@@ -8,7 +8,7 @@
             </div>
         </div>
     </div>
-    <app-active-traits class="sc-deck-line__traits col-5"  [displayPalliers]="false"
+    <app-active-traits class="sc-deck-line__traits col-4"  [displayPalliers]="false"
         [blockMaxWidth]="30" [showUnactive]="false" [activesTraits]="activeTraits"></app-active-traits>
         <div class="col-2 flex-column d-flex">
             <button (click)="clickDeleteDeckLine(deck)" class="sc-deck-manager__btn">delete</button>
