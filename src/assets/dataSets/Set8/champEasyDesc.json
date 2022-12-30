@@ -1,238 +1,238 @@
 [
     {
         "champion": "Alistar",
-        "desc": "test easy desc Alistar"
+        "desc": "AP at target bump1.5s heal himself + lowest ally 20% of max health"
     },
     {
         "champion": "Annie",
-        "desc": "test easy desc Annie"
+        "desc": "AP cone in front, health shield 4s"
     },
     {
         "champion": "Aphelios",
-        "desc": "test easy desc Aphelios"
+        "desc": "select weapon : 1)(if group) Binding Eclipse : AD largest group stun  2)(if group) Duskwave : AP in cone at target and lock them, delay then AP at all locked target  3)(if isolated) Onslaught : AD for 1.75s 6atk at nearest 2"
     },
     {
         "champion": "Ashe",
-        "desc": "test easy desc Ashe"
+        "desc": "gain AD for 4s"
     },
     {
         "champion": "Aurelion Sol",
-        "desc": "test easy desc Sol"
+        "desc": "AP at random burn for 10s, % of target max health as TD, reduce heal by 33%"
     },
     {
         "champion": "BelVeth",
-        "desc": "test easy desc BelVeth"
+        "desc": "AD dash around ennemy, gain 30% AS"
     },
     {
         "champion": "Blitzcrank",
-        "desc": "test easy desc Blitzcrank"
+        "desc": "reduce damage 4s"
     },
     {
         "champion": "Camille",
-        "desc": "test easy desc Camille"
+        "desc": "AD disarm"
     },
     {
         "champion": "Cho'Gath",
-        "desc": "test easy desc Gath"
+        "desc": "passive : 75MR, AP in arc mana reaves"
     },
     {
         "champion": "Draven",
-        "desc": "test easy desc Draven"
+        "desc": "AD at target through all map, reduce after each enemy"
     },
     {
         "champion": "Ekko",
-        "desc": "test easy desc Ekko"
+        "desc": "dive in shield 5s taunts, when shield break : AP to nearby reduce AS by 50% for 2s"
     },
     {
         "champion": "Ezreal",
-        "desc": "test easy desc Ezreal"
+        "desc": "AP at target reduce AS 4s, second shot aera at target"
     },
     {
         "champion": "Fiddlesticks",
-        "desc": "test easy desc Fiddlesticks"
+        "desc": "teleport at largest group, fear, AP life steal 20%"
     },
     {
         "champion": "Fiora",
-        "desc": "test easy desc Fiora"
+        "desc": "AD at target aera, reduce damage 15% 8s heal by attack"
     },
     {
         "champion": "Galio",
-        "desc": "test easy desc Galio"
+        "desc": "AP dash at target, health shield himself and closest ally 4s"
     },
     {
         "champion": "Gangplank",
-        "desc": "test easy desc Gangplank"
+        "desc": "shed CC, AP at target reduce healing by 33% 8s"
     },
     {
         "champion": "Janna",
-        "desc": "test easy desc Janna"
+        "desc": "AP over time 3s at largest group bump stun 1.5s "
     },
     {
         "champion": "Jax",
-        "desc": "test easy desc Jax"
+        "desc": "passive: AP at target every 3rd attack increase up to 7x"
     },
     {
         "champion": "Jinx",
-        "desc": "test easy desc Jinx"
+        "desc": "AP aera at target stun 1.5s"
     },
     {
         "champion": "Kai'Sa",
-        "desc": "test easy desc Sa"
+        "desc": "passive : apply stack, at 2 stack more AP damage, gain stackable AS 10s"
     },
     {
         "champion": "Kayle",
-        "desc": "test easy desc Kayle"
+        "desc": "AD at target, AP in aera"
     },
     {
         "champion": "LeBlanc",
-        "desc": "test easy desc LeBlanc"
+        "desc": "AP x atk, if target die then at nearest remaining atk+1"
     },
     {
         "champion": "Lee Sin",
-        "desc": "test easy desc Sin"
+        "desc": "dash to nearby ally, shield himslef + ally, AD at dashback to target, if no ally more health shield"
     },
     {
         "champion": "Leona",
-        "desc": "test easy desc Leona"
+        "desc": "TS per seconds at target,AP to nearby enemy"
     },
     {
         "champion": "Lulu",
-        "desc": "test easy desc Lulu"
+        "desc": "AP  fire at target, dmg first hit and behind"
     },
     {
         "champion": "Lux",
-        "desc": "test easy desc Lux"
+        "desc": "AP? at random and nearby, after delay reduce target AD by 40% 4s"
     },
     {
         "champion": "Malphite",
-        "desc": "test easy desc Malphite"
+        "desc": "AP to nearby, Armor for 4s"
     },
     {
         "champion": "MissFortune",
-        "desc": "test easy desc MissFortune"
+        "desc": "AP 8atk at target direction in cone, target receive less dmg at each hit"
     },
     {
         "champion": "Mordekaiser",
-        "desc": "test easy desc Mordekaiser"
+        "desc": "AP, reduce MR to all, aera"
     },
     {
         "champion": "Nasus",
-        "desc": "test easy desc Nasus"
+        "desc": "AD at target reduce AS by 40% 3s"
     },
     {
         "champion": "Nilah",
-        "desc": "test easy desc Nilah"
+        "desc": "AP to nearby, heal herslef and ally over 1s, burst aera?"
     },
     {
         "champion": "Nunu",
-        "desc": "test easy desc Nunu"
+        "desc": "passive : AP roll on board, gain 30mana/s, active : grow the ball radius, increase speed and dmg by 40%"
     },
     {
         "champion": "Poppy",
-        "desc": "test easy desc Poppy"
+        "desc": "AP at farthest, %of armor, then grant herself shield 3s"
     },
     {
         "champion": "Rammus",
-        "desc": "test easy desc Rammus"
+        "desc": "passive : 50armor, active : AP at largest group nearby, bump 1.25, reduce AD by 40% for 4s"
     },
     {
         "champion": "Rell",
-        "desc": "test easy desc Rell"
+        "desc": "AP between her and lowest % health ally, Armor hrslef and ally % of armor and MR for 4s"
     },
     {
         "champion": "Renekton",
-        "desc": "test easy desc Renekton"
+        "desc": "gain max health, bonus AP 6% of maxHealth 8s"
     },
     {
         "champion": "Riven",
-        "desc": "test easy desc Riven"
+        "desc": "health shield 4s, AP boost 3 atk, if more health tahn target dmg double"
     },
     {
         "champion": "Samira",
-        "desc": "test easy desc Samira"
+        "desc": "AD for 1.5s at target bounce to nearby with 20% less dmg"
     },
     {
         "champion": "Sejuani",
-        "desc": "test easy desc Sejuani"
+        "desc": "AP at closest delay 2s, stun aera 3hex"
     },
     {
         "champion": "Senna",
-        "desc": "test easy desc Senna"
+        "desc": "AD at nearby, aera in line"
     },
     {
         "champion": "Sett",
-        "desc": "test easy desc Sett"
+        "desc": "health shield, imune to CC 2.5s, when shield break AD in cone"
     },
     {
         "champion": "Sivir",
-        "desc": "test easy desc Sivir"
+        "desc": "AD at target, heal nearest ally"
     },
     {
         "champion": "Sona",
-        "desc": "test easy desc Sona"
+        "desc": "2 atk 3 phases : 1 :AP to nearest, 2 : heal lowest health, 3 : AP to nearest + stun"
     },
     {
         "champion": "Soraka",
-        "desc": "test easy desc Soraka"
+        "desc": "AP at target, heal 10% of max health, 3rd cast each of nearest"
     },
     {
         "champion": "Sylas",
-        "desc": "test easy desc Sylas"
+        "desc": "AP aera nearby, heal himslef"
     },
     {
         "champion": "Syndra",
-        "desc": "test easy desc Syndra"
+        "desc": "take random ally on bench, health shield him, AP at closesst, bump"
     },
     {
         "champion": "Taliyah",
-        "desc": "test easy desc Taliyah"
+        "desc": "AP aera line , delay additional AP to nearby"
     },
     {
         "champion": "Talon",
-        "desc": "test easy desc Talon"
+        "desc": "AP at furthest from center, if kill ,heal hiself"
     },
     {
         "champion": "Urgot",
-        "desc": "test easy desc Urgot"
+        "desc": "passive :AD  5atk/s, AP in line from behind enemy %of their max health, bring 1hex closer stun, can give loot/gold"
     },
     {
         "champion": "Vayne",
-        "desc": "test easy desc Vayne"
+        "desc": "TS at target"
     },
     {
         "champion": "Velkoz",
-        "desc": "test easy desc Velkoz"
+        "desc": "AP at most dmg champion this round,"
     },
     {
         "champion": "Vi",
-        "desc": "test easy desc Vi"
+        "desc": "health shield herself, reduce Armor nearby 4s, then AD to nearby"
     },
     {
         "champion": "Viego",
-        "desc": "test easy desc Viego"
+        "desc": "unstoppable, diving at largest group, at lowest enemy, AP aera, if kill cast again reduced"
     },
     {
         "champion": "Wukong",
-        "desc": "test easy desc Wukong"
+        "desc": "AP to nearby, Armor and MR for each hit 3s"
     },
     {
         "champion": "Yasuo",
-        "desc": "test easy desc Yasuo"
+        "desc": "AP at traget, bump, can dash 1hex to get better target"
     },
     {
         "champion": "Yuumi",
-        "desc": "test easy desc Yuumi"
+        "desc": "AP at furthest in atk range, in curve first hit"
     },
     {
         "champion": "Zac",
-        "desc": "test easy desc Zac"
+        "desc": "Passive : uppon dying, split %max health and taunt, active : AP to nearby heal 20% of max health"
     },
     {
         "champion": "Zed",
-        "desc": "test easy desc Zed"
+        "desc": "AD at target, teleport behind, bonus AD and 3rd atk deal more and in aera"
     },
     {
         "champion": "Zoe",
-        "desc": "test easy desc Zoe"
+        "desc": "AP over time 10s, at nearst not infected, affected take more dmg"
     }
 ]
