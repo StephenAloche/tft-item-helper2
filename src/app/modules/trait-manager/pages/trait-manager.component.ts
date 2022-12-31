@@ -7,7 +7,7 @@ import { Trait } from 'src/app/shared/models/traits.model';
 import { ChampionService } from 'src/app/shared/services/champion.service';
 import { ItemService } from 'src/app/shared/services/item.service';
 import { TraitService } from 'src/app/shared/services/trait.service';
-import { map } from 'rxjs';
+import { ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
 
 @Component({
   selector: 'app-trait-manager',
@@ -15,6 +15,10 @@ import { map } from 'rxjs';
   styleUrls: ['./trait-manager.component.scss']
 })
 export class TraitManagerComponent {
+  ITEM_IMG_URL = ITEM_IMG_URL;
+  ITEM_SPAT_IMG_URL = ITEM_SPAT_IMG_URL;
+  TRAIT_IMG_URL = TRAIT_IMG_URL;
+
   traitChampions : Champion[] = [];
   championDuplicate : Champion[] = [];
   allTraits : Trait[] = [];

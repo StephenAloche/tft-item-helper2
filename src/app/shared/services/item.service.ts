@@ -133,7 +133,7 @@ export class ItemService implements OnInit {
   }
 
   formatItem(item: Item): Item {
-    item.icon = item.icon?.toLowerCase().replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
+    item.icon = item.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
     const regex = /%i:[a-zA-Z]*%/;
     for (let effName in item.effects) {
       //remplacement variable par leur nom

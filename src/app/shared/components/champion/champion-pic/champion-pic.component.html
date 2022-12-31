@@ -1,7 +1,7 @@
 <div class="sc-champion-pic" (click)="clickChampion(champion)" 
-[tooltip]="$any(championTooltip)" contentType="template" [showDelay]="300"
+[tooltip]="$any(championTooltip)" contentType="template" [showDelay]="600"
 >
-    <img src="https://raw.communitydragon.org/latest/game/{{champion.icon}}" class="brd-cost-{{champion.cost}} sc-champion-pic__img sc-champion-pic__border" />
+    <img src="{{CHAMPION_IMG_URL}}/{{champion.icon}}" class="brd-cost-{{champion.cost}} sc-champion-pic__img sc-champion-pic__border" />
     <span class="sc-champion-pic__name">{{ champion.name }}</span>
 </div>
 

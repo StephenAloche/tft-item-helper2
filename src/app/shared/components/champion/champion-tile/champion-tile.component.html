@@ -1,10 +1,10 @@
 <span id="traits" class="{{champion.typeAdAp == 0 ? 'ad-ico-small' : 'ap-ico-small'}} sc-champion-tile__ico"></span> 
 <div contextmenu="onRightClick(champion)" [tooltip]="$any(championTooltip)" contentType="template" [showDelay]="300">
-  <img src="https://raw.communitydragon.org/latest/game/{{champion.icon}}" class="brd-cost-{{champion.cost}} sc-champion-tile__img"/>
+  <img src="{{CHAMPION_IMG_URL}}/{{champion.icon}}" class="brd-cost-{{champion.cost}} sc-champion-tile__img"/>
 </div>
 <span class="sc-champion-tile__name" [ngStyle]="{'color': (champion.priorItem)?'yellow':''}">{{champion.name}}</span>
 <div class="d-flex" class="sc-champion-tile__traits">
-    <img  *ngFor="let trait of champion.dataTraits" src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"/>
+    <img  *ngFor="let trait of champion.dataTraits" src="{{TRAIT_IMG_URL}}/{{trait.icon}}"/>
 </div>  
 
 

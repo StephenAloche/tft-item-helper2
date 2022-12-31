@@ -42,7 +42,7 @@ export class ChampionService {
             return dataTraits$
             */
            
-            champ = this.cleanChampionAttributes(champ);
+            champ = this.formatChampion(champ);
             this.LoadDataTraits(champ);
           });
           orderBy(champs, "name");
@@ -185,18 +185,18 @@ export class ChampionService {
     return desc ?? "";
   }
 
-  cleanChampionAttributes(champ: Champion): Champion {
-    champ.icon = champ.icon?.toLowerCase().replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
+  formatChampion(champ: Champion): Champion {
+    champ.icon = champ.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
     champ.typeAdAp = champ.ability?.desc?.toLowerCase().includes("attack damage") ? TypeAdAp.Ad : TypeAdAp.Ap
     champ.stars = 1;
 
     if (champ.ability) {
       champ.ability.desc = this.formatDesc(champ.ability, champ.stars);
-      //champ.ability.easyDesc$ = this.LoadEasyDesc(champ.name);
+      champ.ability.easyDesc$ = this.LoadEasyDesc(champ.name);
     }
 
     if (champ.ability)
-      champ.ability.icon = champ.ability?.icon?.toLowerCase().replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
+      champ.ability.icon = champ.ability?.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
     if (champ.stats) {
       champ.stats.hpDisplay = champ.stats.hp;
       champ.stats.damageDisplay = champ.stats.damage;

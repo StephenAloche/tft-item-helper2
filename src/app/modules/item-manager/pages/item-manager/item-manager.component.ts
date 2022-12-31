@@ -10,6 +10,7 @@ import { Trait } from 'src/app/shared/models/traits.model';
 import { ChampionService } from 'src/app/shared/services/champion.service';
 import { ItemService } from 'src/app/shared/services/item.service';
 import { TraitService } from 'src/app/shared/services/trait.service';
+import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
 
 @Component({
   selector: 'app-item-manager',
@@ -18,6 +19,10 @@ import { TraitService } from 'src/app/shared/services/trait.service';
 })
 
 export class ItemManagerComponent implements OnInit {
+  ITEM_IMG_URL = ITEM_IMG_URL;
+  ITEM_SPAT_IMG_URL = ITEM_SPAT_IMG_URL;
+  CHAMPION_IMG_URL = CHAMPION_IMG_URL;
+  TRAIT_IMG_URL = TRAIT_IMG_URL;
   //#region variable
   showMyContainer: boolean = false;
   champions: Champion[] = [];

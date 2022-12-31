@@ -6,6 +6,7 @@ import { Trait } from 'src/app/shared/models/traits.model';
 import { State } from 'src/app/shared/enums/State.enum';
 import { Champion } from 'src/app/shared/models/champion.model';
 import { ChampionService } from 'src/app/shared/services/champion.service';
+import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
 
 const BLOCK_MAX_WIDTH = 82;
 
@@ -15,6 +16,10 @@ const BLOCK_MAX_WIDTH = 82;
   styleUrls: ['./active-traits.component.scss']
 })
 export class ActiveTraitsComponent implements OnInit {
+  ITEM_IMG_URL = ITEM_IMG_URL;
+  ITEM_SPAT_IMG_URL = ITEM_SPAT_IMG_URL;
+  CHAMPION_IMG_URL = CHAMPION_IMG_URL;
+  TRAIT_IMG_URL = TRAIT_IMG_URL;
   
   constructor(private readonly traitService : TraitService, public readonly championService : ChampionService) { }
   

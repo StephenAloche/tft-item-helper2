@@ -12,7 +12,7 @@ export class Trait {
     apiName: string = "";
     desc: string = "";
     effects: Effect[] = [];
-    icon: string = "";
+    icon?: string = "";
     name: string = "";
     
     currentNumber : number = 1;

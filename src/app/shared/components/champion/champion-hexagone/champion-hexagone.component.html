@@ -1,7 +1,7 @@
 <div class="center flex-column hex sc-hex__global">
     <div class="d-flex sc-hex__trait">
         <img *ngFor="let trait of champion?.dataTraits"
-            src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}" />
+            src="{{TRAIT_IMG_URL}}/{{trait.icon}}" />
     </div>
     <svg width="84px" height="96px" viewBox="0 0 84 96" class="sc-hex__champ">
         <defs>
@@ -11,7 +11,7 @@
             </clipPath>
         </defs>
         <!-- ngif sinon image manquante -->
-        <image *ngIf="champion?.name" attr.xlink:href="https://raw.communitydragon.org/latest/game/{{champion?.icon}}"
+        <image *ngIf="champion?.name" attr.xlink:href="{{CHAMPION_IMG_URL}}/{{champion?.icon}}"
             clip-path="url(#myMask)" transform="translate(0, 0)" class="sc-hex__champ__img">
         </image>
             <path id="test"  fill="none" [ngStyle]="{'stroke' : 'var(--cost'+(champion?.cost || '1')+')'}" transform="translate(-184, 0)"
@@ -24,6 +24,6 @@
     <span class="u-center sc-hex__label">{{ champion?.name }}</span>
     <div class="d-flex  u-center sc-hex__item">
         <img *ngFor="let item of champion?.equippedItems"
-            src="https://raw.communitydragon.org/latest/game/{{item.icon}}" class="sc-hex__item__equiped">
+            src="{{ITEM_IMG_URL}}/{{item.icon}}" class="sc-hex__item__equiped">
     </div>
 </div>

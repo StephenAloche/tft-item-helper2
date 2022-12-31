@@ -1,5 +1,6 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { Champion } from 'src/app/shared/models/champion.model';
+import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
 
 @Component({
   selector: 'app-champion-tile',
@@ -7,6 +8,10 @@ import { Champion } from 'src/app/shared/models/champion.model';
   styleUrls: ['./champion-tile.component.scss']
 })
 export class ChampionTileComponent implements OnInit {
+  ITEM_IMG_URL = ITEM_IMG_URL;
+  ITEM_SPAT_IMG_URL = ITEM_SPAT_IMG_URL;
+  CHAMPION_IMG_URL = CHAMPION_IMG_URL;
+  TRAIT_IMG_URL = TRAIT_IMG_URL;
   @HostBinding('class') componentClass = 'sc-champion-tile';
   
   @Input() champion : Champion = new Champion ();

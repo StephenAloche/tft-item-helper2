@@ -22,7 +22,11 @@ export class TraitService {
     }
     return this.setService.getTraits().pipe(map(
       (traits: Trait[])=>{
+        traits.forEach(trait => {
+          this.formatTrait(trait);
+        })
         this.traits = traits;
+        localStorage.setItem('dataTraitTemp', JSON.stringify(this.traits));
         return this.traits
       }
     ));
@@ -163,6 +167,11 @@ export class TraitService {
       orderByDescending(activesTraits,"state");       
     }
     return activesTraits;
+  }
+  
+  formatTrait(trait: Trait): Trait {
+    trait.icon = trait.icon?.toLowerCase().split('/').pop()?.replace(".tex", ".png");
+    return trait;
   }
 }
 

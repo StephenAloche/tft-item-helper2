@@ -1,5 +1,6 @@
 import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 import { Champion } from 'src/app/shared/models/champion.model';
+import { CHAMPION_IMG_URL } from 'src/assets/const-path-img';
 
 @Component({
   selector: 'app-champion-pic',
@@ -7,6 +8,7 @@ import { Champion } from 'src/app/shared/models/champion.model';
   styleUrls: ['./champion-pic.component.scss']
 })
 export class ChampionPicComponent {
+  CHAMPION_IMG_URL = CHAMPION_IMG_URL;
   @HostBinding('class') componentClass = 'sc-champion-pic';
   
   @Input() champion : Champion = new Champion ();

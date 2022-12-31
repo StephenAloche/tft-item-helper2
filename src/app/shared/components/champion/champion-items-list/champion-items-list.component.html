@@ -11,7 +11,7 @@
 
                 <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
                     tooltipClass="tooltip--item">
-                    <img src="https://raw.communitydragon.org/latest/game/{{item.icon}}"
+                    <img src="{{ITEM_IMG_URL}}/{{item.icon}}"
                         class="d-flex flex-row" />
                     <span>{{item.ratio}}</span>
                 </span>
@@ -28,7 +28,7 @@
                     <span [tooltip]="$any(itemTooltip)" contentType="template"
                         [showDelay]="300" tooltipClass="tooltip--item">
                         <img
-                            src="https://raw.communitydragon.org/latest/game/{{itemr.icon}}" />
+                            src="{{ITEM_IMG_URL}}/{{itemr.icon}}" />
                     </span>
                 </div>
             </div>

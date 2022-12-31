@@ -16,9 +16,9 @@
             placement="right" contentType="template" class="sc-active-trait__img-bg"
             [ngClass]="{'unactive-img' : trait.state == State.Unactive, 'bronze-img' : trait.state == State.Bronze, 
         'silver-img' : trait.state == State.Silver, 'gold-img' : trait.state == State.Gold, 'prisma-img' : trait.state == State.Prisma}">
-            <img src="https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}"
+            <img src="{{TRAIT_IMG_URL}}/{{trait.icon}}"
                 class="sc-active-trait__img"
-                style="--trait-url : url('https://raw.communitydragon.org/latest/game/{{trait.icon.toLowerCase()}}');" />
+                style="--trait-url : url('{{TRAIT_IMG_URL}}/{{trait.icon}}');" />
         </div>
         <ng-container *ngIf="displayPalliers">
             <span>{{trait.currentNumber}}</span>

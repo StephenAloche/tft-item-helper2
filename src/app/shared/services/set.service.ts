@@ -28,8 +28,6 @@ export class SetService {
 
   private readonly unsubscribe$ = new Subject();
   SETDATAURL: string = "https://raw.communitydragon.org/latest/cdragon/tft/en_us.json"
-  TRAITURL: string = "https://raw.communitydragon.org/latest/game/assets/ux/traiticons/"
-  TRAITSUFFIXE: string = "trait_icon_"//exemple trait_icon_6_hero.png
   setData: SetData[];
 
   setDataFiltered: SetData;
@@ -79,7 +77,7 @@ export class SetService {
           //TODO : faire les verif de demi-set (stage2) :  && set.mutator.includes("Stage2")
           this.setDataFiltered = this.setData.filter(set => set.number == currentSetNum)[0];
           
-        localStorage.setItem('setDataFiltered', JSON.stringify(this.setDataFiltered));
+          localStorage.setItem('setDataFiltered', JSON.stringify(this.setDataFiltered));
           return this.setDataFiltered;
         }
       ));
@@ -89,15 +87,15 @@ export class SetService {
     if (this.dataTraits) {
       return of(this.dataTraits);
     }
+    if(JSON.parse(localStorage.getItem('dataTraitTemp')?? 'null')){      
+      this.dataTraits = JSON.parse(localStorage.getItem('dataTraitTemp')??'null');
+      return of(JSON.parse(localStorage.getItem('dataTraitTemp')?? 'null'));
+    }
     if (!this.setDataFiltered) {
       return this.LoadSetData().pipe(map(
         (setData: SetData) => {
           this.dataTraits = cleanSetVariable<Trait>(setData.traits!);
-
-          this.dataTraits.forEach(trait => {
-            trait.icon = trait.icon.replace(".tex", ".png");
-          }
-          );
+          localStorage.setItem('dataTraitTemp', JSON.stringify(this.dataTraits));
           return this.dataTraits;
         }
       )
@@ -105,6 +103,7 @@ export class SetService {
     }
     else {
       this.dataTraits = cleanSetVariable<Trait>(this.setDataFiltered.traits!);
+      localStorage.setItem('dataTraitTemp', JSON.stringify(this.dataTraits));
       return of(this.dataTraits);
     }
   }

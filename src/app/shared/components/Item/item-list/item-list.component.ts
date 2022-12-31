@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Item } from 'src/app/shared/models/item.model';
 import { ItemService } from 'src/app/shared/services/item.service';
+import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
 
 @Component({
   selector: 'app-item-list',
@@ -8,6 +9,11 @@ import { ItemService } from 'src/app/shared/services/item.service';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit{
+  ITEM_IMG_URL = ITEM_IMG_URL;
+  ITEM_SPAT_IMG_URL = ITEM_SPAT_IMG_URL;
+  CHAMPION_IMG_URL = CHAMPION_IMG_URL;
+  TRAIT_IMG_URL = TRAIT_IMG_URL;
+
   @Output() selectItem = new EventEmitter();
   items: Item[] = [];
   itemsComble: Item[] = [];
