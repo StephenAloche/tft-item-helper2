@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Champion } from 'src/app/shared/models/champion.model';
-import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
+import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/app/app.component';
 
 @Component({
   selector: 'app-champion-items-list',

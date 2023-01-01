@@ -26,7 +26,7 @@ export class DeckLineComponent implements OnInit {
       this.championService.getManyByName(this.deck.championsName).subscribe(
         (champions: Champion[]) =>{
           this.deck.champions = champions;
-          this.activeTraits = this.traitService.reorderTraits(this.deck.champions.flatMap(c=>c.dataTraits));
+          this.activeTraits = this.deck.champions.flatMap(c=>c.dataTraits);
         }
       );
   }

@@ -19,13 +19,13 @@
                                 <span style="color:orange">{{item.name}}</span>
                                 <div [innerHTML]="item.desc"></div>
                                 <img *ngFor="let itemr of item.recipe"
-                                    src="{{ITEM_IMG_URL}}/{{itemr.icon}}"
+                                    src="{{itemr.icon}}"
                                     class="selectElem" />
                             </ng-template>
 
                             <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
                                 tooltipClass="tooltip--item">
-                                <img src="{{ITEM_IMG_URL}}/{{item.icon}}" cdkDrag />
+                                <img src="{{item.icon}}" cdkDrag />
                             </span>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                     <div class="my-items__grid" cdkDropList id="myItemList" [cdkDropListData]="myItems"
                         [cdkDropListConnectedTo]="LIST_IDS">
                         <div *ngFor="let item of myItems">
-                            <img src="{{ITEM_IMG_URL}}/{{item.icon}}" cdkDrag
+                            <img src="{{item.icon}}" cdkDrag
                                 class="my-items__grid__item" />
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                 <div class="draft-ico" (click)="checkItemCaroussel()">Carousel</div>
                 <div class="my-items__grid">
                     <div *ngFor="let item of itemsCarousel" class="flex-column">
-                        <img src="{{ITEM_IMG_URL}}/{{item.icon}}"
+                        <img src="{{item.icon}}"
                             (click)="getItemCaroussel(item)" class="my-items__grid__item" />
                     </div>
                 </div>
@@ -57,7 +57,7 @@
             </div>
             <div id="allTraits" class="all-traits__grid">
                 <div *ngFor="let trait of allTraits">
-                    <img src="{{TRAIT_IMG_URL}}/{{trait.icon}}"
+                    <img src="{{trait.icon}}"
                         (click)="selectTrait(trait)" />
                 </div>
             </div>
@@ -90,7 +90,7 @@
                                         
                                         <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
                                         tooltipClass="tooltip--item">
-                                        <img src="{{ITEM_IMG_URL}}/{{item.icon}}"
+                                        <img src="{{item.icon}}"
                                         [ngClass]="item.isWrong ? 'sc-item-manager__drop-zone__equipped-item__img--wrong' : 'sc-item-manager__drop-zone__equipped-item__img'">
                                     </span>
 

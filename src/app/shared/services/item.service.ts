@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable, of, Subject, takeUntil, switchMap, } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { currentSetNum } from 'src/app/app.component';
+import { currentSetNum, ITEM_IMG_URL, ITEM_SPAT_IMG_URL } from 'src/app/app.component';
 import { cleanItemVariable } from '../helpers/cleanSource.helper';
 import { Item } from '../models/item.model';
 
@@ -133,7 +133,10 @@ export class ItemService implements OnInit {
   }
 
   formatItem(item: Item): Item {
-    item.icon = item.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
+    item.icon = item.icon?.toLowerCase().includes('spatula/') 
+    ? ITEM_SPAT_IMG_URL + item.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png')
+    : ITEM_IMG_URL + item.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png');
+
     const regex = /%i:[a-zA-Z]*%/;
     for (let effName in item.effects) {
       //remplacement variable par leur nom

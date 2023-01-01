@@ -11,7 +11,7 @@
 
                 <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
                     tooltipClass="tooltip--item">
-                    <img src="{{ITEM_IMG_URL}}/{{item.icon}}"
+                    <img src="{{item.icon}}"
                         class="d-flex flex-row" />
                     <span>{{item.ratio}}</span>
                 </span>
@@ -28,7 +28,7 @@
                     <span [tooltip]="$any(itemTooltip)" contentType="template"
                         [showDelay]="300" tooltipClass="tooltip--item">
                         <img
-                            src="{{ITEM_IMG_URL}}/{{itemr.icon}}" />
+                            src="{{itemr.icon}}" />
                     </span>
                 </div>
             </div>

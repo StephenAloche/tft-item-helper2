@@ -6,7 +6,7 @@ import { Trait } from 'src/app/shared/models/traits.model';
 import { State } from 'src/app/shared/enums/State.enum';
 import { Champion } from 'src/app/shared/models/champion.model';
 import { ChampionService } from 'src/app/shared/services/champion.service';
-import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
+import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/app/app.component';
 
 const BLOCK_MAX_WIDTH = 82;
 
@@ -24,21 +24,24 @@ export class ActiveTraitsComponent implements OnInit {
   constructor(private readonly traitService : TraitService, public readonly championService : ChampionService) { }
   
   public State = State;
-  private _activesTraits: Trait[] |undefined = [];
-  get activesTraits(): Trait[]|undefined {
-    return this._activesTraits;
-  }
   
   @Input() displayPalliers : boolean = true;
   @Input() showUnactive : boolean = true;
   @Input() blockMaxWidth : number = BLOCK_MAX_WIDTH;
   champions : Champion[];
   
+  private _activesTraits: Trait[] |undefined = [];
+  get activesTraits(): Trait[]|undefined {
+    return this._activesTraits;
+  }
   @Input('activesTraits')
   set activesTraits(traitsActiv: Trait[]|undefined ) {
     if(traitsActiv)
     {
-      this._activesTraits = this.traitService.reorderTraits(traitsActiv,this.showUnactive);
+      let clone : Trait[] = [];
+      traitsActiv.forEach(val => clone.push(Object.assign({}, val)));
+      this._activesTraits = this.traitService.reorderTraits(clone,this.showUnactive);
+      var o=1;
     }
     else{
       this._activesTraits = undefined;

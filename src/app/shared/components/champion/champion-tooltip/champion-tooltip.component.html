@@ -1,11 +1,13 @@
 <span class="sc-champion-tooltip__name">{{champion.name}}</span>
 <div class="d-flex" class="sc-champion-tooltip__traits">
-    <img *ngFor="let trait of champion.dataTraits" src="{{TRAIT_IMG_URL}}/{{trait.icon}}" />
+    <img *ngFor="let trait of champion.dataTraits" src="{{trait.icon}}" />
 </div>
+
 <div>
     <span>Range :</span>
     <span>{{champion.stats?.range ?? 0}}</span>
 </div>
+
 <div>
     <span>Mana :</span>
     <div>initialMana : {{champion.stats?.initialMana}} / {{champion.stats?.mana}}
@@ -18,16 +20,17 @@
     </div>
 </div>
 
-<div class="sc-champion-tooltip__desc">
-    <span>desc :</span>
-    <span>{{champion.ability?.desc ?? 'no champion ability description found'}}</span>
-</div>
 <div class="sc-champion-tooltip__easy-desc">
     <span>easy desc :</span>
     <span>{{(champion.ability?.easyDesc$ | async) ?? 'no champion easy description found'}}</span>
 </div>
 
+<div class="sc-champion-tooltip__desc">
+    <span>desc :</span>
+    <span>{{champion.ability?.desc ?? 'no champion ability description found'}}</span>
+</div>
+
 <div class="d-flex sc-champion-tooltip__items">
-    <img *ngFor="let item of champion.recommandedItemsObs$ | async" src="{{ITEM_IMG_URL}}/{{item.icon}}"
+    <img *ngFor="let item of champion.recommandedItemsObs$ | async" src="{{item.icon}}"
         class="d-flex flex-row" />
 </div>

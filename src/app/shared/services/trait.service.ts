@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { map, Observable, of } from 'rxjs';
+import { TRAIT_IMG_URL } from 'src/app/app.component';
 import { State } from '../enums/State.enum';
 import {  orderByDescending } from '../helpers/orderBy.helper';
 import { Trait } from '../models/traits.model';
@@ -170,7 +171,7 @@ export class TraitService {
   }
   
   formatTrait(trait: Trait): Trait {
-    trait.icon = trait.icon?.toLowerCase().split('/').pop()?.replace(".tex", ".png");
+    trait.icon = TRAIT_IMG_URL + trait.icon?.toLowerCase().split('/').pop()?.replace(".tex", ".png");
     return trait;
   }
 }

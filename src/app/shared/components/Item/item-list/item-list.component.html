@@ -9,7 +9,7 @@
 
         <span [tooltip]="$any(itemTooltip)" contentType="template" [showDelay]="300"
             tooltipClass="tooltip--item">
-            <img src="{{ITEM_IMG_URL}}/{{item.icon}}"
+            <img src="{{item.icon}}"
                 class="items-grid__item__img" />
         </span>
     </div>
@@ -18,7 +18,7 @@
         style="--item-grid-x : {{ ('00' + item.id ).slice(-2)[0] }}; --item-grid-y : {{('00' + item.id ).slice(-2)[1] }};"
         (click)="selectItemChild(item)">
         <span>
-            <img src="{{ITEM_IMG_URL}}/{{item.icon}}"
+            <img src="{{item.icon}}"
                 class="items-grid__item__img" />
         </span>
     </div>

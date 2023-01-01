@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ControlContainer } from '@angular/forms';
-import { firstValueFrom, map, Observable, Subject, takeUntil, mergeMap, of, forkJoin, from, flatMap, concat } from 'rxjs';
-import { currentSetNum } from 'src/app/app.component';
+import { map, Observable, Subject, of } from 'rxjs';
+import { CHAMPION_IMG_URL, currentSetNum } from 'src/app/app.component';
 import { TypeAdAp } from '../enums/TypeAdAp.enum';
 import { cleanName } from '../helpers/cleanSource.helper';
 import { orderBy } from '../helpers/orderBy.helper';
@@ -186,7 +185,7 @@ export class ChampionService {
   }
 
   formatChampion(champ: Champion): Champion {
-    champ.icon = champ.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png'); //.replace('.tft_set','_mobile.tft_set')
+    champ.icon = CHAMPION_IMG_URL + champ.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png');
     champ.typeAdAp = champ.ability?.desc?.toLowerCase().includes("attack damage") ? TypeAdAp.Ad : TypeAdAp.Ap
     champ.stars = 1;
 

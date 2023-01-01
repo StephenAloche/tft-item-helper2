@@ -367,7 +367,7 @@
             5
         ],
         "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Edge_Of_Night.dds",
-        "id": 94,
+        "id": 15,
         "name": "Edge of Night",
         "unique": true
     },
@@ -812,5 +812,125 @@
         "id": 13,
         "name": "Hextech Gunblade",
         "unique": false
+    },
+    {
+        "apiName": "TFT8_Item_OxForceEmblemItem",
+        "desc": "The holder gains the Ox Force Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "Armor": 20.0
+        },
+        "from": [
+            8,
+            5
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/OxForce.TFT_Set8.dds",
+        "id": 58,
+        "name": "Ox Force Emblem",
+        "unique": true
+    },
+    {
+        "apiName": "TFT8_Item_ADMINEmblemItem",
+        "desc": "The holder gains the A.D.M.I.N. Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "MagicResist": 20.0
+        },
+        "from": [
+            6,
+            8
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/Admin.TFT_Set8.dds",
+        "id": 68,
+        "name": "A.D.M.I.N. Emblem",
+        "unique": true
+    },
+    {
+        "apiName": "TFT8_Item_AnimaSquadEmblemItem",
+        "desc": "The holder gains the Anima Squad Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "AP": 10.0
+        },
+        "from": [
+            8,
+            3
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/AnimaSquad.TFT_Set8.dds",
+        "id": 38,
+        "name": "Anima Squad Emblem",
+        "unique": true
+    },
+    {
+        "apiName": "TFT8_Item_HeartEmblemItem",
+        "desc": "The holder gains the Heart Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "Mana": 15.0
+        },
+        "from": [
+            8,
+            4
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/Heart.TFT_Set8.dds",
+        "id": 48,
+        "name": "Heart Emblem",
+        "unique": true
+    },
+    {
+        "apiName": "TFT8_Item_InterPolarisEmblemItem",
+        "desc": "The holder gains the LaserCorps Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "AD": 0.10000000149011612
+        },
+        "from": [
+            8,
+            1
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/LaserCorps.TFT_Set8.dds",
+        "id": 18,
+        "name": "LaserCorps Emblem",
+        "unique": true
+    },
+    {
+        "apiName": "TFT8_Item_MascotEmblemItem",
+        "desc": "The holder gains the Mascot Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "Health": 150.0
+        },
+        "from": [
+            8,
+            7
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/Mascot.TFT_Set8.dds",
+        "id": 78,
+        "name": "Mascot Emblem",
+        "unique": true
+    },
+    {
+        "apiName": "TFT8_Item_RenegadeEmblemItem",
+        "desc": "The holder gains the Renegade Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "CritChance": 20.0
+        },
+        "from": [
+            9,
+            8
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/Renegade.TFT_Set8.dds",
+        "id": 98,
+        "name": "Renegade Emblem",
+        "unique": true
+    },
+    {
+        "apiName": "TFT8_Item_DuelistEmblemItem",
+        "desc": "The holder gains the Duelist Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+        "effects": {
+            "AS": 10.0
+        },
+        "from": [
+            8,
+            2
+        ],
+        "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/Duelist.TFT_Set8.dds",
+        "id": 28,
+        "name": "Duelist Emblem",
+        "unique": true
     }
 ]

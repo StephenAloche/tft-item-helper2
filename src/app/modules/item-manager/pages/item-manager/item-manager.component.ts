@@ -10,7 +10,7 @@ import { Trait } from 'src/app/shared/models/traits.model';
 import { ChampionService } from 'src/app/shared/services/champion.service';
 import { ItemService } from 'src/app/shared/services/item.service';
 import { TraitService } from 'src/app/shared/services/trait.service';
-import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/assets/const-path-img';
+import { CHAMPION_IMG_URL, ITEM_IMG_URL, ITEM_SPAT_IMG_URL, TRAIT_IMG_URL } from 'src/app/app.component';
 
 @Component({
   selector: 'app-item-manager',
