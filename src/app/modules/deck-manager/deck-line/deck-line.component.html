@@ -1,17 +1,41 @@
 <div class="row sc-deck-line">
+    <div  class="sc-deck-line__traits col-6" >
+        <app-active-traits class="d-flex" [displayPalliers]="false" [blockMaxWidth]="30"
+        [showUnactive]="false" [activesTraits]="activeTraits"></app-active-traits>
+    </div>
+    <div>
+        <span>{{deck.percentageAD | number:'1.0-2'}}% AD - {{(100-deck.percentageAD) | number:'1.0-2'}}% AP</span>
+    </div>
+</div>
+
+<div class="row sc-deck-line">
     <div class="sc-deck-line__champion col-6">
         <div *ngFor="let champion of deck.champions">
             <app-champion-pic [champion]="champion" (clickChampionPic)="clickChampionDeckLine(champion)"
                 [ngClass]="{'sc-deck-line-champion-pic-core':isCore(champion)}"></app-champion-pic>
-            <div>
-                <!-- items -->
+
+            <!-- items -->
+            <div *ngVar="getDeckChampion(champion.name) as deckChampion" class="d-flex flex-row">
+                <ng-container *ngIf="(deckChampion?.itemsName?.length??0)>0">
+                    <img *ngFor="let item of getItems(deckChampion.itemsName) | async" src="{{item.icon}}"
+                        class="sc-deck-line__item-img" />
+                </ng-container>
             </div>
         </div>
     </div>
-    <app-active-traits class="sc-deck-line__traits col-4"  [displayPalliers]="false"
-        [blockMaxWidth]="30" [showUnactive]="false" [activesTraits]="activeTraits"></app-active-traits>
-        <div class="col-2 flex-column d-flex">
-            <button (click)="clickDeleteDeckLine(deck)" class="sc-deck-manager__btn">delete</button>
-            <button (click)="clickUpdateDeckLine(deck)" class="sc-deck-manager__btn">update</button>
+
+    <div class="col-2  flex-column d-flex">
+        <div *ngFor="let augment of deck.augments">
+            <span>{{augment}}</span>
         </div>
+    </div>
+    <div class="col-3  flex-column d-flex">
+        <span>avg Pl. : {{deck.avgPl}}</span>
+        <span>top 4 : {{deck.top4}}</span>
+        <a href="{{deck.link}}" target="_blank">builder ></a>
+    </div>
+    <div class="col-1 flex-column d-flex">
+        <button (click)="clickDeleteDeckLine(deck)" class="sc-deck-manager__btn">delete</button>
+        <button (click)="clickUpdateDeckLine(deck)" class="sc-deck-manager__btn">update</button>
+    </div>
 </div>

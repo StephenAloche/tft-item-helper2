@@ -1,6 +1,7 @@
 export interface Item {
     id: number;
     name?: string;
+    cleanName?: string;
     desc?: string;
     effects?: any;
     from?: number[];

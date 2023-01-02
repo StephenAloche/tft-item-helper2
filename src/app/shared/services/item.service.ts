@@ -3,7 +3,7 @@ import { Injectable, OnInit } from '@angular/core';
 import { Observable, of, Subject, takeUntil, switchMap, } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { currentSetNum, ITEM_IMG_URL, ITEM_SPAT_IMG_URL } from 'src/app/app.component';
-import { cleanItemVariable } from '../helpers/cleanSource.helper';
+import { cleanItemName, cleanItemVariable } from '../helpers/cleanSource.helper';
 import { Item } from '../models/item.model';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class ItemService implements OnInit {
 
   unsubscribe$ = new Subject();
 
-  public itemsList: Item[];  
+  public itemsList: Item[];
 
   constructor(
     private http: HttpClient
@@ -94,12 +94,22 @@ export class ItemService implements OnInit {
     return this.getAll().pipe(map(
       (items: Item[]) => {
         let item = items.find(
-          it => it?.name?.trim().toUpperCase().includes(name.trim().toUpperCase().replace('’', '\''))
+          it => it?.cleanName?.toUpperCase().includes(cleanItemName(name!).toUpperCase())
         )
         return item
       }
     )
     );
+  }
+
+  getManyByName(names: string[]): Observable<Item[]> {
+    names = names.map(n=>cleanItemName(n.toUpperCase()));
+    return this.getAll().pipe(
+      map(
+        (items : Item[]) => {
+          return items.filter(item => names?.includes(item.cleanName!.toUpperCase()));
+        }
+      ))
   }
 
   getById(id: number): Observable<Item | undefined> {
@@ -133,9 +143,11 @@ export class ItemService implements OnInit {
   }
 
   formatItem(item: Item): Item {
-    item.icon = item.icon?.toLowerCase().includes('spatula/') 
+    item.icon = item.icon?.toLowerCase().includes('spatula/')
     ? ITEM_SPAT_IMG_URL + item.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png')
     : ITEM_IMG_URL + item.icon?.toLowerCase().split('/').pop()?.replace('dds', 'png');
+
+item.cleanName = cleanItemName(item.name??'');
 
     const regex = /%i:[a-zA-Z]*%/;
     for (let effName in item.effects) {

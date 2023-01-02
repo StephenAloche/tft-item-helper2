@@ -1,281 +1,1387 @@
 [
     {
-        "name": "Samira Sett",
-        "championsName": [
-            "Wukong",
-            "Alistar",
-            "Samira",
-            "Sett",
-            "Aphelios",
-            "Fiddlesticks",
-            "Leona",
-            "Nunu",
-            "Urgot"
-        ]
+        "name": "Aegis Samira",
+        "champions": [
+            {
+                "name": "Wukong",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Samira",
+                "isCore": true,
+                "itemsName": [
+                    "LastWhisper",
+                    "GiantSlayer",
+                    "InfinityEdge"
+                ]
+            },
+            {
+                "name": "Sett",
+                "isCore": true,
+                "itemsName": [
+                    "Redemption",
+                    "SunfireCape",
+                    "IronWill"
+                ]
+            },
+            {
+                "name": "Aphelios",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Fiddlesticks",
+                "isCore": false,
+                "itemsName": [
+                    "IonicSpark",
+                    "ArcaneGauntlet",
+                    "RabadonsDeathcap"
+                ]
+            },
+            {
+                "name": "Leona",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Nunu",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Urgot",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "portableforge2",
+            "Sett2HeroAugment_1668226503-Sett",
+            "levelup3"
+        ],
+        "avgPl": "#3.22",
+        "top4": "60.3%",
+        "link": "https://lolchess.gg/en/decks/d49214b04b7df96e93de2ed73e9c150a/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
-        "name": "6Heart Annie Zoe",
-        "championsName": [
-            "Lulu",
-            "Annie",
-            "Yuumi",
-            "Alistar",
-            "Sona",
-            "Zoe",
-            "Ekko",
-            "Soraka",
-            "Syndra"
-        ]
+        "name": "Mascot Yuumi Nunu",
+        "champions": [
+            {
+                "name": "Galio",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Gangplank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Nasus",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "LeeSin",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Malphite",
+                "isCore": false,
+                "itemsName": [
+                    "SunfireCape",
+                    "IronWill",
+                    "IonicSpark"
+                ]
+            },
+            {
+                "name": "Yuumi",
+                "isCore": true,
+                "itemsName": [
+                    "BlueBuff",
+                    "GiantSlayer",
+                    "ArcaneGauntlet"
+                ]
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Nunu",
+                "isCore": true,
+                "itemsName": [
+                    "IonicSpark",
+                    "Morellonomicon",
+                    "HextechGunblade"
+                ]
+            },
+            {
+                "name": "Urgot",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Yuumi1HeroAugment_1668225040-Yuumi",
+            "GoldenTicket_1662627362-goldenticket3",
+            "MascotHeart_1668736016-mascot-heart"
+        ],
+        "avgPl": "#3.39",
+        "top4": "57.3%",
+        "link": "https://lolchess.gg/en/decks/1e96e7d02c05f783689486e639dae41b/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
-        "name": "Spellslinger Annie Taliyah",
-        "championsName": [
-            "Lux",
-            "Annie",
-            "Yuumi",
-            "Alistar",
-            "Sona",
-            "Ekko",
-            "Taliyah",
-            "Janna",
-            "Syndra"
-        ]
+        "name": "Heart Annie Zoe",
+        "champions": [
+            {
+                "name": "Annie",
+                "isCore": true,
+                "itemsName": [
+                    "IronWill",
+                    "3083",
+                    "IonicSpark"
+                ]
+            },
+            {
+                "name": "Yuumi",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Sona",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Zoe",
+                "isCore": true,
+                "itemsName": [
+                    "Morellonomicon",
+                    "BlueBuff",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Soraka",
+                "isCore": false,
+                "itemsName": [
+                    "GiantSlayer",
+                    "BlueBuff",
+                    "ArcaneGauntlet"
+                ]
+            },
+            {
+                "name": "Fiddlesticks",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Syndra",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Zoe2HeroAugment_1668225583-Zoe",
+            "BlueBattery1_1662613855-blue-battery-i",
+            "second--wind-ii"
+        ],
+        "avgPl": "#3.47",
+        "top4": "55.2%",
+        "link": "https://lolchess.gg/en/decks/032ae275f46a78946a9de0d6ddba1bd5/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
-        "name": "Civilian Sureshot Samira Zac",
-        "championsName": [
-            "Galio",
-            "Sivir",
-            "Alistar",
-            "Senna",
-            "Samira",
-            "Zac",
-            "Aphelios",
-            "Janna",
-            "Urgot"
-        ]
+        "name": "Star Guardian Annie Taliyah",
+        "champions": [
+            {
+                "name": "Lux",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Annie",
+                "isCore": true,
+                "itemsName": [
+                    "SunfireCape",
+                    "IonicSpark",
+                    "IronWill"
+                ]
+            },
+            {
+                "name": "Yuumi",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Nilah",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": [
+                    "SunfireCape",
+                    "IronWill",
+                    "IonicSpark"
+                ]
+            },
+            {
+                "name": "Taliyah",
+                "isCore": true,
+                "itemsName": [
+                    "ArcaneGauntlet",
+                    "SpearofShojin",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Janna",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Syndra",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "StarGuardianHeart_1668733950-star-guardian-heart",
+            "StarGuardianCrest_1668733964-star-guardian-crest",
+            "Annie2HeroAugment_1668225510-Annie"
+        ],
+        "avgPl": "#3.48",
+        "top4": "55.2%",
+        "link": "https://lolchess.gg/en/decks/c95061d57504533849d83105b8abe123/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
-        "name": "Mascot Galio Yuumi",
-        "championsName": [
-            "Galio",
-            "Gangplank",
-            "Nasus",
-            "LeeSin",
-            "Malphite",
-            "Yuumi",
-            "Alistar",
-            "Ekko",
-            "Nunu"
-        ]
-    },
-    {
-        "name": "Duelist Kayle Yasuo",
-        "championsName": [
-            "Gangplank",
-            "Kayle",
-            "Fiora",
-            "LeeSin",
-            "Malphite",
-            "Yasuo",
-            "Vayne",
-            "Sejuani",
-            "Zed"
-        ]
+        "name": "Heart Mascot Malphite Yuumi",
+        "champions": [
+            {
+                "name": "Galio",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Gangplank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "LeeSin",
+                "isCore": false,
+                "itemsName": [
+                    "MascotEmblemItem",
+                    "SunfireCape",
+                    "IonicSpark"
+                ]
+            },
+            {
+                "name": "Malphite",
+                "isCore": true,
+                "itemsName": [
+                    "IronWill",
+                    "3083",
+                    "SunfireCape"
+                ]
+            },
+            {
+                "name": "Yuumi",
+                "isCore": true,
+                "itemsName": [
+                    "BlueBuff",
+                    "ArcaneGauntlet",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Soraka",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Nunu",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Syndra",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "MascotHeart_1668736016-mascot-heart",
+            "Soraka2HeroAugment_1668226325-Soraka",
+            "MascotCrest_1668736029-mascot-crest"
+        ],
+        "avgPl": "#3.52",
+        "top4": "55.7%",
+        "link": "https://lolchess.gg/en/decks/1497394f510feba6137c2c206baaf1a1/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "Aurelion Sol BelVeth",
-        "championsName": [
-            "Chogath",
-            "Rammus",
-            "Velkoz",
-            "AurelionSol",
-            "BelVeth",
-            "Sejuani",
-            "Zac",
-            "Fiddlesticks",
-            "Urgot"
-        ]
+        "champions": [
+            {
+                "name": "Chogath",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Rammus",
+                "isCore": false,
+                "itemsName": [
+                    "SunfireCape",
+                    "BrambleVest",
+                    "3083"
+                ]
+            },
+            {
+                "name": "Velkoz",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "AurelionSol",
+                "isCore": true,
+                "itemsName": [
+                    "SpearofShojin",
+                    "ArcaneGauntlet",
+                    "LudensEcho"
+                ]
+            },
+            {
+                "name": "BelVeth",
+                "isCore": true,
+                "itemsName": [
+                    "Bloodthirster",
+                    "LastWhisper",
+                    "GuinsoosRageblade"
+                ]
+            },
+            {
+                "name": "Zac",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Fiddlesticks",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Janna",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Urgot",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "ThreatLevelMaxiumum_1668735884-threatlevelmaxiumum-ii",
+            "grandgambler3",
+            "Belveth1HeroAugment_1668226522-BelVeth"
+        ],
+        "avgPl": "#3.59",
+        "top4": "53.5%",
+        "link": "https://lolchess.gg/en/decks/e47a0d9bd2ad3146cfa0e1ca5dfea724/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
-        "name": "9Star Guardian Nilah Taliyah",
-        "championsName": [
-            "Lux",
-            "Rell",
-            "Yuumi",
-            "Kaisa",
-            "Nilah",
-            "Ekko",
-            "Taliyah",
-            "Syndra",
-            "Urgot"
-        ]
+        "name": "Star Guardian Kai'Sa Taliyah",
+        "champions": [
+            {
+                "name": "Rell",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Yuumi",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Kaisa",
+                "isCore": true,
+                "itemsName": [
+                    "StatikkShiv",
+                    "GuinsoosRageblade",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Nilah",
+                "isCore": false,
+                "itemsName": [
+                    "BrambleVest",
+                    "IronWill",
+                    "IonicSpark"
+                ]
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Taliyah",
+                "isCore": true,
+                "itemsName": [
+                    "ArcaneGauntlet",
+                    "SpearofShojin",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Janna",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Syndra",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Rell2HeroAugment_1668225251-Rell",
+            "celestialblessing1",
+            "StarGuardianCrest_1668733964-star-guardian-crest"
+        ],
+        "avgPl": "#3.6",
+        "top4": "53.1%",
+        "link": "https://lolchess.gg/en/decks/a0d81bd008534ca9f500ae76c7da3367/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
-        "name": "Mecha: PRIME Draven Leona",
-        "championsName": [
-            "Gangplank",
-            "Wukong",
-            "Draven",
-            "LeeSin",
-            "Malphite",
-            "Jax",
-            "Sett",
-            "Fiddlesticks",
-            "Leona"
-        ]
+        "name": "Duelist Kayle Yasuo",
+        "champions": [
+            {
+                "name": "Gangplank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Kayle",
+                "isCore": true,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "GiantSlayer",
+                    "InfinityEdge"
+                ]
+            },
+            {
+                "name": "Fiora",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "LeeSin",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Malphite",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Yasuo",
+                "isCore": true,
+                "itemsName": [
+                    "ArcaneGauntlet",
+                    "TitansResolve",
+                    "HandofJustice"
+                ]
+            },
+            {
+                "name": "Vayne",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Sejuani",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Zed",
+                "isCore": false,
+                "itemsName": [
+                    "GuardianAngel",
+                    "RunaansHurricane",
+                    "HandofJustice"
+                ]
+            }
+        ],
+        "augments": [
+            "Zed2HeroAugment_1668226281-Zed",
+            "newrecruit3",
+            "thrillhunt1"
+        ],
+        "avgPl": "#3.63",
+        "top4": "52.9%",
+        "link": "https://lolchess.gg/en/decks/5d355e5d27283e33fe3de8be120f541d/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
-        "name": "Supers Ashe reroll",
-        "championsName": [
-            "Ashe",
-            "Gangplank",
-            "Renekton",
-            "LeeSin",
-            "Malphite",
-            "Yasuo",
-            "Sejuani",
-            "Zed",
-            "Mordekaiser"
-        ]
-    },
-    {
-        "name": "6Renegade Camille Viego",
-        "championsName": [
-            "Blitzcrank",
-            "Sylas",
-            "Talon",
-            "Camille",
-            "Vi",
-            "Alistar",
-            "Viego",
-            "Aphelios",
-            "Leona"
-        ]
+        "name": "Mecha: PRIME Draven Fiddlesticks",
+        "champions": [
+            {
+                "name": "Gangplank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Wukong",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Draven",
+                "isCore": true,
+                "itemsName": [
+                    "Bloodthirster",
+                    "InfinityEdge",
+                    "TitansResolve"
+                ]
+            },
+            {
+                "name": "LeeSin",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Malphite",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Jax",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Sett",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Fiddlesticks",
+                "isCore": true,
+                "itemsName": [
+                    "Morellonomicon",
+                    "ArcaneGauntlet",
+                    "LudensEcho"
+                ]
+            },
+            {
+                "name": "Leona",
+                "isCore": false,
+                "itemsName": [
+                    "3083",
+                    "Redemption",
+                    "SunfireCape"
+                ]
+            }
+        ],
+        "augments": [
+            "Draven1HeroAugment_1668225367-Draven",
+            "thrillhunt1",
+            "thrillhunt2"
+        ],
+        "avgPl": "#3.72",
+        "top4": "51.9%",
+        "link": "https://lolchess.gg/en/decks/9e1893abac0a53fdd7f410bfbfb23e69/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "8Brawler Jax Soraka",
-        "championsName": [
-            "Blitzcrank",
-            "Renekton",
-            "LeeSin",
-            "Vi",
-            "Jax",
-            "Riven",
-            "Sejuani",
-            "Soraka",
-            "Leona"
-        ]
+        "champions": [
+            {
+                "name": "Blitzcrank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Renekton",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "LeeSin",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Vi",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Jax",
+                "isCore": true,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "Bloodthirster",
+                    "3094"
+                ]
+            },
+            {
+                "name": "Riven",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Sejuani",
+                "isCore": false,
+                "itemsName": [
+                    "SunfireCape",
+                    "Redemption",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Soraka",
+                "isCore": true,
+                "itemsName": [
+                    "BrawlerEmblemItem",
+                    "BlueBuff",
+                    "ArcaneGauntlet"
+                ]
+            },
+            {
+                "name": "Leona",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "BrawlerCrest_1668736176-brawler-crest",
+            "BrawlerHeart_1668736145-brawler-heart",
+            "Jax2HeroAugment_1668225903-Jax"
+        ],
+        "avgPl": "#3.76",
+        "top4": "49.8%",
+        "link": "https://lolchess.gg/en/decks/ea4d52d77b47137b2d002b53f0b74de4/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
+    },
+    {
+        "name": "Supers Ashe reroll",
+        "champions": [
+            {
+                "name": "Ashe",
+                "isCore": true,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "LastWhisper",
+                    "LordsEdge"
+                ]
+            },
+            {
+                "name": "Gangplank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Renekton",
+                "isCore": true,
+                "itemsName": [
+                    "SunfireCape",
+                    "Redemption",
+                    "3083"
+                ]
+            },
+            {
+                "name": "LeeSin",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Malphite",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Yasuo",
+                "isCore": false,
+                "itemsName": [
+                    "HandofJustice",
+                    "ArcaneGauntlet",
+                    "TitansResolve"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Zed",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Mordekaiser",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Zed2HeroAugment_1668226281-Zed",
+            "GoldenTicket_1662627362-goldenticket3",
+            "componentgrabbag-ii"
+        ],
+        "avgPl": "#3.79",
+        "top4": "48.7%",
+        "link": "https://lolchess.gg/en/decks/185ac61be61f2bab2f5c595144a77e8d/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "6Renegade A.D.M.I.N. Camille Viego",
-        "championsName": [
-            "Blitzcrank",
-            "Sylas",
-            "Talon",
-            "Camille",
-            "Leblanc",
-            "Zoe",
-            "Soraka",
-            "Viego",
-            "Leona"
-        ]
+        "champions": [
+            {
+                "name": "Blitzcrank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Sylas",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Talon",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Camille",
+                "isCore": true,
+                "itemsName": [
+                    "Bloodthirster",
+                    "TitansResolve",
+                    "InfinityEdge"
+                ]
+            },
+            {
+                "name": "Leblanc",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Zoe",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Soraka",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Viego",
+                "isCore": true,
+                "itemsName": [
+                    "IonicSpark",
+                    "ArcaneGauntlet",
+                    "HandofJustice"
+                ]
+            },
+            {
+                "name": "Leona",
+                "isCore": false,
+                "itemsName": [
+                    "3083",
+                    "Redemption",
+                    "SunfireCape"
+                ]
+            }
+        ],
+        "augments": [
+            "RenegadeHeart_1668733899-renegade-heart",
+            "Camille2HeroAugment_1668224835-Camille",
+            "RenegadeCrest_1668733913-renegade-crest"
+        ],
+        "avgPl": "#3.81",
+        "top4": "50.4%",
+        "link": "https://lolchess.gg/en/decks/12aca406174d4ea3cf1834f18229f27a?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "Annie Taliyah",
-        "championsName": [
-            "Annie",
-            "Alistar",
-            "Leblanc",
-            "Zoe",
-            "Ekko",
-            "Taliyah",
-            "Janna",
-            "Nunu",
-            "Syndra"
-        ]
-    },
-    {
-        "name": "Defender Mecha: PRIME Jax Leona",
-        "championsName": [
-            "Wukong",
-            "Draven",
-            "Rell",
-            "Vi",
-            "Jax",
-            "Riven",
-            "Sejuani",
-            "Sett",
-            "Leona"
-        ]
+        "champions": [
+            {
+                "name": "Annie",
+                "isCore": true,
+                "itemsName": [
+                    "IronWill",
+                    "3083",
+                    "SunfireCape"
+                ]
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Leblanc",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Zoe",
+                "isCore": false,
+                "itemsName": [
+                    "BlueBuff",
+                    "Morellonomicon",
+                    "ArcaneGauntlet"
+                ]
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Taliyah",
+                "isCore": true,
+                "itemsName": [
+                    "SpearofShojin",
+                    "ArcaneGauntlet",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Janna",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Nunu",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Syndra",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Annie2HeroAugment_1668225510-Annie",
+            "BlueBattery1_1662613855-blue-battery-i",
+            "jeweled-lotus-ii"
+        ],
+        "avgPl": "#3.82",
+        "top4": "47.9%",
+        "link": "https://lolchess.gg/en/decks/7c1f7e1293ca70035ae21b5d156c3958/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "Anima Squad Riven MissFortune",
-        "championsName": [
-            "Nasus",
-            "Jinx",
-            "Alistar",
-            "Riven",
-            "Vayne",
-            "Ekko",
-            "MissFortune",
-            "Sejuani",
-            "Leona"
-        ]
+        "champions": [
+            {
+                "name": "Nasus",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Jinx",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Riven",
+                "isCore": true,
+                "itemsName": [
+                    "SunfireCape",
+                    "3083",
+                    "IronWill"
+                ]
+            },
+            {
+                "name": "Vayne",
+                "isCore": false,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "StatikkShiv",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "MissFortune",
+                "isCore": true,
+                "itemsName": [
+                    "SpearofShojin",
+                    "ArcaneGauntlet",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Leona",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Missfortune2HeroAugment_1668226371-MissFortune",
+            "AxiomArcII_1653545065",
+            "BandofThievesI_1653545314"
+        ],
+        "avgPl": "#3.9",
+        "top4": "46.6%",
+        "link": "https://lolchess.gg/en/decks/a17af283ad5fb963416dc72a3451cac2/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "Supers Ezreal reroll",
-        "championsName": [
-            "Gangplank",
-            "Ezreal",
-            "LeeSin",
-            "Malphite",
-            "Vi",
-            "Alistar",
-            "Sona",
-            "Ekko",
-            "Leona"
-        ]
+        "champions": [
+            {
+                "name": "Gangplank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Ezreal",
+                "isCore": true,
+                "itemsName": [
+                    "GiantSlayer",
+                    "BlueBuff",
+                    "ArcaneGauntlet"
+                ]
+            },
+            {
+                "name": "LeeSin",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Malphite",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Vi",
+                "isCore": false,
+                "itemsName": [
+                    "IronWill",
+                    "3083",
+                    "SunfireCape"
+                ]
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Sona",
+                "isCore": true,
+                "itemsName": [
+                    "BlueBuff",
+                    "GiantSlayer",
+                    "ArcaneGauntlet"
+                ]
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Leona",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Ezreal1HeroAugment_1668224943-Ezreal",
+            "BlueBattery1_1662613855-blue-battery-i",
+            "GoldenTicket_1662627362-goldenticket3"
+        ],
+        "avgPl": "#3.91",
+        "top4": "48.3%",
+        "link": "https://lolchess.gg/en/decks/53eebc2e49fae7f58396bad0243d6200/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
+    },
+    {
+        "name": "A.D.M.I.N. Renegade Camille Viego",
+        "champions": [
+            {
+                "name": "Blitzcrank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Talon",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Camille",
+                "isCore": true,
+                "itemsName": [
+                    "Bloodthirster",
+                    "TitansResolve",
+                    "InfinityEdge"
+                ]
+            },
+            {
+                "name": "Vi",
+                "isCore": false,
+                "itemsName": [
+                    "Redemption",
+                    "SunfireCape",
+                    "3083"
+                ]
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Soraka",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Viego",
+                "isCore": true,
+                "itemsName": [
+                    "ArcaneGauntlet",
+                    "ADMINEmblemItem",
+                    "HandofJustice"
+                ]
+            }
+        ],
+        "augments": [
+            "ADMINHeart_1668735757-admin-heart",
+            "Camille2HeroAugment_1668224835-Camille",
+            "ADMINCrest_1668735786-admin-crest"
+        ],
+        "avgPl": "#3.92",
+        "top4": "47.5%",
+        "link": "https://lolchess.gg/en/decks/81683f24bb7e32d31ce32293cae387d7/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
+    },
+    {
+        "name": "Defender Mecha: PRIME Jax Leona",
+        "champions": [
+            {
+                "name": "Wukong",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Draven",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Rell",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Vi",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Jax",
+                "isCore": true,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "Bloodthirster",
+                    "TitansResolve"
+                ]
+            },
+            {
+                "name": "Riven",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Sejuani",
+                "isCore": false,
+                "itemsName": [
+                    "Morellonomicon",
+                    "Redemption",
+                    "3083"
+                ]
+            },
+            {
+                "name": "Sett",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Leona",
+                "isCore": true,
+                "itemsName": [
+                    "3083",
+                    "HextechGunblade",
+                    "Bloodthirster"
+                ]
+            }
+        ],
+        "augments": [
+            "Jax2HeroAugment_1668225903-Jax",
+            "ScopedWeaponsI_1661401674-scopedweapons2",
+            "thrillhunt1"
+        ],
+        "avgPl": "#3.97",
+        "top4": "44.8%",
+        "link": "https://lolchess.gg/en/decks/419a9f1ce95b4ab58d8084c823e60248/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "8Duelist Sejuani Zed",
-        "championsName": [
-            "Gangplank",
-            "Kayle",
-            "Fiora",
-            "Yasuo",
-            "Nilah",
-            "Vayne",
-            "Sejuani",
-            "Zed",
-            "Fiddlesticks"
-        ]
+        "champions": [
+            {
+                "name": "Gangplank",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Kayle",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Fiora",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Yasuo",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Nilah",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Vayne",
+                "isCore": false,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "GiantSlayer",
+                    "InfinityEdge"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "isCore": true,
+                "itemsName": [
+                    "DuelistEmblemItem",
+                    "Redemption",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Zed",
+                "isCore": true,
+                "itemsName": [
+                    "GuardianAngel",
+                    "LastWhisper",
+                    "RunaansHurricane"
+                ]
+            },
+            {
+                "name": "Fiddlesticks",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "DuelistCrest_1668734055-duelist-crest",
+            "DuelistHeart_1668734044-duelist-heart",
+            "Vayne2HeroAugment_1668225994-Vayne"
+        ],
+        "avgPl": "#4.04",
+        "top4": "43%",
+        "link": "https://lolchess.gg/en/decks/45211cfe1067a13ce49bbde45d2a02ab/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "Recon Kai'Sa Rammus",
-        "championsName": [
-            "Ezreal",
-            "Chogath",
-            "Kaisa",
-            "Rammus",
-            "Vayne",
-            "Velkoz",
-            "Zac",
-            "Fiddlesticks"
-        ]
+        "champions": [
+            {
+                "name": "Ashe",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Ezreal",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Chogath",
+                "isCore": false,
+                "itemsName": [
+                    "3083",
+                    "DragonsClaw",
+                    "Redemption"
+                ]
+            },
+            {
+                "name": "Kaisa",
+                "isCore": true,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "StatikkShiv",
+                    "GiantSlayer"
+                ]
+            },
+            {
+                "name": "Rammus",
+                "isCore": true,
+                "itemsName": [
+                    "BrambleVest",
+                    "IronWill",
+                    "3083"
+                ]
+            },
+            {
+                "name": "Vayne",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Zac",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "Ezreal2HeroAugment_1668224961-Ezreal",
+            "portableforge2",
+            "ludens-echo-i"
+        ],
+        "avgPl": "#4.22",
+        "top4": "40.5%",
+        "link": "https://lolchess.gg/en/decks/a8c2f06b343f3593d28a594916bfbdb3/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     },
     {
         "name": "Kai’sa Vayne reroll",
-        "championsName": [
-            "Jinx",
-            "Vi",
-            "Alistar",
-            "Kaisa",
-            "Nilah",
-            "Riven",
-            "Vayne",
-            "Ekko",
-            "Leona"
-        ]
+        "champions": [
+            {
+                "name": "Jinx",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Vi",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Alistar",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Kaisa",
+                "isCore": true,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "ArcaneGauntlet",
+                    "StatikkShiv"
+                ]
+            },
+            {
+                "name": "Nilah",
+                "isCore": false,
+                "itemsName": [
+                    "SunfireCape",
+                    "3083",
+                    "Redemption"
+                ]
+            },
+            {
+                "name": "Riven",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Vayne",
+                "isCore": true,
+                "itemsName": [
+                    "GuinsoosRageblade",
+                    "GiantSlayer",
+                    "InfinityEdge"
+                ]
+            },
+            {
+                "name": "Ekko",
+                "isCore": false,
+                "itemsName": []
+            },
+            {
+                "name": "Leona",
+                "isCore": false,
+                "itemsName": []
+            }
+        ],
+        "augments": [
+            "newrecruit3",
+            "Kaisa1HeroAugment_1668225723-Kaisa",
+            "portableforge2"
+        ],
+        "avgPl": "#4.31",
+        "top4": "38.3%",
+        "link": "https://lolchess.gg/en/decks/4345bc49d6b419c4bb724c523bcad9ac/guide?shard=global&patch=1223&dt=0&revision=1&tier=diamond_over"
     }
 ]

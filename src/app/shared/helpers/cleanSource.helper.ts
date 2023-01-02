@@ -5,7 +5,7 @@ export function cleanSetVariable<Type>(data : Type[]):Type[] {
     stringified = stringified.replace(/{45c7ed6b}/g,"BonusCritDmgPerCritAbove100");
     stringified = stringified.replace(/{9f2eb1e2}/g,"CritChanceAmpPercent");
     stringified = stringified.replace(/{268f634e}/g,"CritAmpPercent");
-    stringified = stringified.replace(/{bdd452e8}/g,"PercentDamageReduction");        
+    stringified = stringified.replace(/{bdd452e8}/g,"PercentDamageReduction");
     stringified = stringified.replace(/{cb6b5298}/g,"PercentBonusDamage");
     stringified = stringified.replace(/{bdd452e8}/g,"AttackPercent");
     stringified = stringified.replace(/{ff57f232}/g,"AttackPercent*100");
@@ -35,7 +35,7 @@ export function cleanSetVariable<Type>(data : Type[]):Type[] {
 
 export function cleanItemVariable<Type> (data : Type[]):Type[] {
     var stringified = JSON.stringify(data);
-    
+
     //les chiffres sont d'abord remplacer par le texte de la description, ensuite celui ci est reformatter dans fomratItem de item.service
     stringified = stringified.replace(/{45c7ed6b}/g,"BonusCritDmgPerCritAbove100");
     stringified = stringified.replace(/{d34ac151}/g,"BonusCritDamage");
@@ -92,7 +92,7 @@ export function cleanItemVariable<Type> (data : Type[]):Type[] {
     stringified = stringified.replace(/{18a98153}/g,"BaseAD");
     stringified = stringified.replace(/{41cb629d}/g,"BaseSP");
     stringified = stringified.replace(/{f2474447}/g,"TooltipBonus");
-    
+
     //QSS Quicksliver
     stringified = stringified.replace(/{a2b76524}/g,"SpellShieldDuration");
     //statick
@@ -101,9 +101,34 @@ export function cleanItemVariable<Type> (data : Type[]):Type[] {
     return valueCorrected;
 }
 
-export function cleanName(name : string) : string{
-    if(name=='Nunu & Willump'){
+export function cleanChampionName(name : string) : string{
+    if(!name){
+        console.error('pas de nom fournis (name): ' + name);
+        return '';
+    }
+    if(name==='Nunu & Willump'){
         name = 'Nunu';
     }
-    return name.replaceAll(' ','').replaceAll('.','').replaceAll('\'','').replaceAll('-','');
+    return cleanName(name);
+}
+
+export function cleanItemName(name : string) : string{
+    if(!name){
+        console.error('pas de nom fournis (name): ' + name);
+        return '';
+    }
+    if(cleanName(name).toUpperCase()==='IRONWILL'){
+        name = 'GARGOYLESTONEPLATE';
+    }
+    else if(cleanName(name).toUpperCase()==='ARCANEGAUNTLET'){
+        name = 'JEWELEDGAUNTLET';
+    }
+    else if(cleanName(name).toUpperCase()==='3083'){
+        name = 'WARMOGSARMOR';
+    }
+    return cleanName(name);
+}
+
+function cleanName(name : string) : string{
+    return name.trim().replaceAll(' ','').replaceAll('.','').replaceAll('\'','').replaceAll('-','').replaceAll('_','');
 }

@@ -10,19 +10,21 @@ import { ChampionListModule } from 'src/app/shared/components/champion/champion-
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
     DeckLineComponent,
-    DeckManagerComponent
+    DeckManagerComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
     DeckManagerRoutingModule,
     ActiveTraitsModule,
     ChampionPicModule,
     ChampionListModule,
-    
+
     MatFormFieldModule,
     MatInputModule,
     FormsModule,

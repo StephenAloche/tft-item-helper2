@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable, Subject, of } from 'rxjs';
 import { CHAMPION_IMG_URL, currentSetNum } from 'src/app/app.component';
 import { TypeAdAp } from '../enums/TypeAdAp.enum';
-import { cleanName } from '../helpers/cleanSource.helper';
+import { cleanChampionName } from '../helpers/cleanSource.helper';
 import { orderBy } from '../helpers/orderBy.helper';
 import { Ability, Champion } from '../models/champion.model';
 import { Item, newItem } from '../models/item.model';
@@ -40,7 +40,7 @@ export class ChampionService {
             let dataTraits$ = this.LoadDataTraitsObservable(champ);
             return dataTraits$
             */
-           
+
             champ = this.formatChampion(champ);
             this.LoadDataTraits(champ);
           });
@@ -58,10 +58,11 @@ export class ChampionService {
   }
 
   getManyByName(names: string[]): Observable<Champion[]> {
+    names = names?.map(n=>cleanChampionName(n));
     return this.getAll().pipe(
-      map(        
+      map(
         (champions : Champion[]) => {
-          return champions.filter(champ => names?.map(n=>cleanName(n)).includes(cleanName(champ.name)));
+          return champions.filter(champ => names?.includes(cleanChampionName(champ.name)));
         }
       ))
   }
@@ -78,7 +79,7 @@ export class ChampionService {
          if (costDiff) return costDiff;
          return a.name.localeCompare(b.name); // Use a polyfill for IE support
        });
-   
+
        return champs;
         }
       )
@@ -92,7 +93,7 @@ export class ChampionService {
     return this.http.get<any[]>(jsonURL).pipe(
       map(
         (listJsonRecoItem: any[]) => {
-          let recoitem = listJsonRecoItem.filter(json => cleanName(json.champion).toLowerCase() == cleanName(champion.name).toLowerCase())[0];
+          let recoitem = listJsonRecoItem.filter(json => cleanChampionName(json.champion).toLowerCase() == cleanChampionName(champion.name).toLowerCase())[0];
           if (!recoitem) {
             console.error(`erreur:  pas d'items recommandé pour ce perso : ${champion.name}`);
           }
@@ -150,7 +151,7 @@ export class ChampionService {
     if (this.descs) {
       return of(this.descs.find(d=>d.champion === champName)?.desc)
     }
-    
+
     let jsonURL = `assets/dataSets/Set${currentSetNum}/champEasyDesc.json`;
     return this.http.get<any[]>(jsonURL).pipe(
       map(

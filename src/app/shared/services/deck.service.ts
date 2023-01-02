@@ -12,18 +12,22 @@ export class DeckService {
   constructor(private http: HttpClient) { }
 
   getFromSite(): Observable<Deck[]> {
-    let jsonURL = `assets/dataSets/Set${currentSetNum}/decksData_Set${currentSetNum}.json`;   
-    let decks: Deck[] = []; 
+    let jsonURL = `assets/dataSets/Set${currentSetNum}/decksData_Set${currentSetNum}.json`;
+    let decks: Deck[] = [];
     return this.http.get<any[]>(jsonURL).pipe(
       map(
         (listDeckData: any) => {
-          listDeckData.forEach((deckData : any) => {            
+          listDeckData.forEach((deckData : any) => {
             let newDeck : Deck = deckFactory(null);
-            newDeck.championsName = deckData.championsName;
+            newDeck.deckChampions = deckData.champions;
             newDeck.name = deckData.name;
-            decks.push(newDeck);    
+            newDeck.top4 = deckData.top4;
+            newDeck.avgPl = deckData.avgPl;
+            newDeck.link = deckData.link;
+            newDeck.augments = deckData.augments
+            decks.push(newDeck);
           });
-          return decks;      
+          return decks;
         }
       )
     )

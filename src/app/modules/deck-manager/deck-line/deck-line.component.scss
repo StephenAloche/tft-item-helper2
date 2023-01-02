@@ -1,6 +1,6 @@
 
 .sc-deck-line{
-    
+
 }
 
 .sc-deck-line__traits{
@@ -8,5 +8,9 @@
 }
 
 .sc-deck-line__champion{
-    display: flex;    
+    display: flex;
+}
+
+.sc-deck-line__item-img{
+    max-width: 20px;
 }
