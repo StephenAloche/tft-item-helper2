@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, Subject, of } from 'rxjs';
+import { map, Observable, Subject, of, mergeMap, toArray } from 'rxjs';
 import { CHAMPION_IMG_URL, currentSetNum } from 'src/app/app.component';
 import { TypeAdAp } from '../enums/TypeAdAp.enum';
 import { cleanChampionName } from '../helpers/cleanSource.helper';
-import { orderBy } from '../helpers/orderBy.helper';
+import { groupBy } from '../helpers/groupBy.helper';
+import { orderBy, orderByArrayLength } from '../helpers/orderBy.helper';
 import { Ability, Champion } from '../models/champion.model';
 import { Item, newItem } from '../models/item.model';
 import { Trait } from '../models/traits.model';
@@ -36,10 +37,6 @@ export class ChampionService {
       map(
         (champs: Champion[]) => {
           champs.forEach(champ => {
-            /*
-            let dataTraits$ = this.LoadDataTraitsObservable(champ);
-            return dataTraits$
-            */
 
             champ = this.formatChampion(champ);
             this.LoadDataTraits(champ);
@@ -58,10 +55,10 @@ export class ChampionService {
   }
 
   getManyByName(names: string[]): Observable<Champion[]> {
-    names = names?.map(n=>cleanChampionName(n));
+    names = names?.map(n => cleanChampionName(n));
     return this.getAll().pipe(
       map(
-        (champions : Champion[]) => {
+        (champions: Champion[]) => {
           return champions.filter(champ => names?.includes(cleanChampionName(champ.name)));
         }
       ))
@@ -71,20 +68,20 @@ export class ChampionService {
     let champs: Champion[] = [];
     return this.getAll().pipe(
       map(
-        (champions : Champion[]) => {
+        (champions: Champion[]) => {
           champs = champions.filter(c => c.traits?.some(t => t.toLowerCase() == traitName.toLowerCase()));
-       //tiré par cout
-       champs = champs.sort((a, b) => {
-         const costDiff = a.cost - b.cost;
-         if (costDiff) return costDiff;
-         return a.name.localeCompare(b.name); // Use a polyfill for IE support
-       });
+          //tiré par cout
+          champs = champs.sort((a, b) => {
+            const costDiff = a.cost - b.cost;
+            if (costDiff) return costDiff;
+            return a.name.localeCompare(b.name); // Use a polyfill for IE support
+          });
 
-       return champs;
+          return champs;
         }
       )
     )
-   }
+  }
 
   getRecommandedItem(champion: Champion): Observable<Item[]> {
     let jsonURL = `assets/dataSets/Set${currentSetNum}/championRecoItem_Set${currentSetNum}.json`;
@@ -120,6 +117,30 @@ export class ChampionService {
     )
   }
 
+  /*return base items order by usabillity in reco items */
+  getSimpleItems(champion: Champion): Observable<Item[]> {
+    let recommandedItems: Item[] = [];
+
+    return this.getRecommandedItem(champion).pipe(
+      map((recoItems: Item[]) => {
+
+        let flat = recoItems.flatMap(i => i.recipe); //on recupere tout les items des recipes
+        const groupedItems = groupBy<Item>('name', flat); // on les regroupes par nom et array
+
+        //on les ordonnes par length des array
+        recommandedItems = orderByArrayLength<Item[]>(
+          groupedItems.map(g => g.values)
+          , true
+        )
+        //on prends le premier item de chaques array
+          .map(g => g[0]);
+        return recommandedItems;
+      }
+      )
+    );
+  }
+
+
   LoadDataTraits(champ: Champion): void {
     champ.dataTraits = [];
     champ.traits?.forEach(trait => {
@@ -149,15 +170,15 @@ export class ChampionService {
 
   LoadEasyDesc(champName: string): Observable<string> {
     if (this.descs) {
-      return of(this.descs.find(d=>d.champion === champName)?.desc)
+      return of(this.descs.find(d => d.champion === champName)?.desc)
     }
 
     let jsonURL = `assets/dataSets/Set${currentSetNum}/champEasyDesc.json`;
     return this.http.get<any[]>(jsonURL).pipe(
       map(
-        (listAllDesc: any[]) =>{
+        (listAllDesc: any[]) => {
           this.descs = listAllDesc;
-          return listAllDesc.find(d=>d.champion === champName).desc;
+          return listAllDesc.find(d => d.champion === champName).desc;
         }
       )
     );
@@ -208,4 +229,8 @@ export class ChampionService {
     return champ
   }
 
+}
+
+interface Counts {
+  [key: string]: number;
 }

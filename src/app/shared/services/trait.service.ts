@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable, of } from 'rxjs';
 import { TRAIT_IMG_URL } from 'src/app/app.component';
 import { State } from '../enums/State.enum';
-import {  orderByDescending } from '../helpers/orderBy.helper';
+import { orderBy } from '../helpers/orderBy.helper';
 import { Trait } from '../models/traits.model';
 import { ItemService } from './item.service';
 import { SetService } from './set.service';
@@ -74,7 +74,7 @@ export class TraitService {
         trait.desc = trait.desc.replace("<expandRow>", "<li>");
         trait.desc = trait.desc.replace("</expandRow>", "</li>");
       }
-      //remplacement des variables      
+      //remplacement des variables
       trait.desc = trait.desc.replace("(@MinUnits@)", `<div class="trait-num">${effect.minUnits.toString()}</div>`);
       for (let variable in effect.variables) {
 
@@ -92,7 +92,7 @@ export class TraitService {
     trait.palliers = this.getPallier(trait);
     trait.currentNumber = 0;
     trait.currentPallier = 0;
-    //trait.isSpat = this.itemService.getByName(`${trait.name} Emblem`)!=undefined;    
+    //trait.isSpat = this.itemService.getByName(`${trait.name} Emblem`)!=undefined;
 
     return trait;
   }
@@ -159,17 +159,17 @@ export class TraitService {
       //on desactive les traits qui s'annule
       // if(this._activesTraits.some(t=>t.name=="Dragon") && this._activesTraits.some(t=>t.name=="Brise-écaille"))
       // {
-      //   this._activesTraits.forEach(t=>{if(t.name=="Brise-écaille") t.state = State.Unactive});        
+      //   this._activesTraits.forEach(t=>{if(t.name=="Brise-écaille") t.state = State.Unactive});
       // }
       if(!showUnactive){
         activesTraits = activesTraits.filter(t=>t.state != State.Unactive);
       }
 
-      orderByDescending(activesTraits,"state");       
+      orderBy(activesTraits,"state",true);
     }
     return activesTraits;
   }
-  
+
   formatTrait(trait: Trait): Trait {
     trait.icon = TRAIT_IMG_URL + trait.icon?.toLowerCase().split('/').pop()?.replace(".tex", ".png");
     return trait;
